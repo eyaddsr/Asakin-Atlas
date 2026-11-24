@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "inventoryVersion": "audit-2026-11-22+ede16c74665f",
+  "generatedAt": "2026-11-22",
+  "reviewedAt": null,
+  "importerVersion": "1.0.0",
+  "gitSha": null,
+  "sourceRefs": [
+    {
+      "name": "ASAKIN-INTEGRATION-AUDIT.zip",
+      "sha256": "ede16c74665ff478b33cb834c0d638aa84b7b2c1f390143998025c8c3f28c25b",
+      "members": 199
+    }
+  ],
+  "counts": {
+    "channels.total": 180,
+    "channels.two_sided": 1,
+    "conflicts.total": 0,
+    "evidence.total": 527,
+    "excluded.evidence": 29,
+    "excluded.fieldMappings": 8,
+    "excluded.integrations": 21,
+    "excluded.systems": 7,
+    "fieldMappings.matched": 868,
+    "fieldMappings.missing_integration_id": 223,
+    "fieldMappings.multi_integration": 40,
+    "fieldMappings.token_reference": 11,
+    "fieldMappings.total": 1282,
+    "fieldMappings.unmatched_reference": 140,
+    "flows.total": 217,
+    "integrations.inter_system": 181,
+    "integrations.intra_system": 4,
+    "integrations.total": 242,
+    "integrations.unresolved": 56,
+    "reviewQueue.total": 121,
+    "source.field_mapping_rows": 1290,
+    "source.integration_claims": 263,
+    "source.systems": 31,
+    "systems.audited_complete": 30,
+    "systems.audited_partial": 1,
+    "systems.not_audited": 17,
+    "systems.total": 48,
+    "withheld.secret": 2,
+    "withheld.security_finding": 22
+  },
+  "notes": [
+    "All integration, evidence and field claims are agent-reported (Replit project agents, 2026-11-22). None is independently verified by this importer.",
+    "Registry apps/grants/health are transcribed from the Registry admin UI: configuration and a monitor snapshot, not proof of data movement or live health.",
+    "Payments, Auth and Registry repositories were not code-audited; Chat Center audit is partial.",
+    "Excluded from the map by reviewed decision (DEC-006, DEC-007, DEC-003, DEC-004, DEC-002, DEC-005, DEC-001): EXT:GOOGLE-FONTS, EXT:UNSPLASH, EXT:EJAR, EXT:EXPO-PUSH, EXT:BROWSER-PUSH, EXT:GCS, EXT:REPLIT-OBJECT-STORAGE with 21 claims and 8 field-mapping rows that touch them. The archive itself is unchanged."
+  ]
+}

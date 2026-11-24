@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+# Raw audit inputs and confidential material stay out of Git by default
+docs/*.zip
+docs/CONFIDENTIAL*
+**/CONFIDENTIAL*
+data/private/candidate/

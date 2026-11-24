@@ -1,0 +1,3423 @@
+[
+  {
+    "id": "ch_00c84060505b",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_9c1ea5c91673",
+    "claimIds": [
+      "int_1357a4a251d2"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search employees, grant or revoke application access, resolve identity, sync profile name and email",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_03cc085b8c73",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_8d83e7e50aeb"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Report native status of linked requests back to Chat Center",
+    "evidenceLevel": "production_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_04105cecb8c2",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_22c71c92cf0f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Staff sign-in (authorization code + PKCE) and identity",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_05c8ed7edd49",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b5161d72c8",
+    "claimIds": [
+      "int_ea80415086d1"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Optional 'sign out of all Asakin apps' from the signed-out page.",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_060fd6ae743e",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_8177dc04bef9"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMP project detail (hero image)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_07d6483d14ea",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_5a763eb212a5",
+    "claimIds": [
+      "int_57bbcc1538ff"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_09d81f974c27",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_1e3050d0a7ca"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Legacy login: Chat Center WhatsApp OTP",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_0ce168d67360",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_cef8cfc72271"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP",
+    "evidenceLevel": "test_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_0db95be2176e",
+    "systemA": "sys_37b4a137fed5",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_ef40727ebf4f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Send and verify a WhatsApp OTP for legacy phone sign-in.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_0e9d1175ed6a",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_e301519b46c3"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Auth integration API: revoke application access",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_10f1f54035e4",
+    "systemA": "sys_291c509c26be",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_fdc158ade99c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Taqnyat delivery receipt webhook",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_112c23bc87dc",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_dd01bdf3f28f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "unknown"
+    ],
+    "label": "Grant application access",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_115e9aab6937",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_72db0c218f12"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "Search employees and read a directory entry when an admin or manager adds users; also used by the admin bootstrap script.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_11ac3b17fc8b",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_f3a4ae9fb8c5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Chat Center customer-request intake",
+    "evidenceLevel": "production_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1227615da503",
+    "systemA": "sys_bcce0887b171",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_3e7d8d689b94"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Registry provider catalog publication",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_12fc90cbbcd7",
+    "systemA": "sys_d749abcbfeda",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_c4382fb120f7"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Unit catalog sync",
+    "evidenceLevel": "production_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1374d9276d8e",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_58e9a5439b38"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Read APMP projects and units to create/refresh locally linked projects and apartments",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_13bad57e0643",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_4988c437c33b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth sign-in for the admin (OIDC)",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_13eeca56abb1",
+    "systemA": "sys_4d3c6e1ce42b",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_afda0c06143d"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Meta WhatsApp webhook (inbound)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_161843548167",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_0302f2133589",
+      "int_5f0299da206e"
+    ],
+    "matchBasis": "endpoint_match",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "PPE to APMP project document feed",
+    "evidenceLevel": "production_verified",
+    "corroboration": "two_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "mixed"
+  },
+  {
+    "id": "ch_184b0500a7d0",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_cc2c05088ffb"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Directory get person",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1955b0f3c176",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_c724e305bf6d"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Directory API transport (Asakin Auth integration/v1)",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_1a36f63ecfcc",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_0b395fe4c1c8"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "One-off legacy user linking script",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1a72ad3f48f9",
+    "systemA": "sys_aad0c0a85ddf",
+    "systemB": "sys_bcce0887b171",
+    "claimIds": [
+      "int_91de88c2db4f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Provider catalog publication",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_1b3293b24376",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_49f0b8594399"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "INT-ABP-AUTH-BACKCHANNEL-LOGOUT",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1b5431280b2e",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_64c1a211f6f1"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Read live project master data for linked opportunities",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1e467a86c045",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_3437c506aca0"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth employee sign-in (OIDC)",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_1f3e56f5e1c4",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_9a1d35888a13"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth directory API (Add User / Remove Access / profile refresh)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_20cd8f71513e",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_1667235e4b4c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "PPE → Chat Center WhatsApp OTP (legacy login)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_2700f3157716",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_a2ca69758b6f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Employee sign-in via OpenID Connect Authorization Code + PKCE",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_27877da53583",
+    "systemA": "sys_e30a602002dd",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_83adb248421a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Portal reads APMS data via Asakin Registry and AsakinTiny",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_295f1a9a1e3f",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_26e171d62020"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "INT-ABP-AUTH-DIRECTORY-GRANT",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_2cd7b2647e2c",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_9c738d819705"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Auth integration API: identity resolution at first sign-in",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3021bfd020f4",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_87e6ad6c9143"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Remove access (revoke) and first-sign-in identity resolution",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_329b930ab4bd",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_580b037a969f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "At first sign-in of a pre-added person, resolve the canonical asakin_user_id to its directory entry and link the pre-created local row.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_32c047e0d049",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_5217b4edd1a4"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Single sign-on for admin pages only",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_330489dc2683",
+    "systemA": "sys_eee8d6e14f32",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_59bee7cfc9da"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMS rental contracts projection",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3457677a6627",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_3e40f522ecea"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_34dc5bade801",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_4e5c644e97de"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "WhatsApp-only one-time-password login for legacy admin accounts",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "legacy"
+  },
+  {
+    "id": "ch_353f8c108cb0",
+    "systemA": "sys_b3a76c990572",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_c21e01eead2a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Notify a Telegram chat of inquiries",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unused"
+  },
+  {
+    "id": "ch_354ceae1bb7d",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_2fe57647497c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Grant Auth entry to every active employee without it, so new hires can sign in",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_35bcf6728b8a",
+    "systemA": "sys_cb117452740c",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_8b0572b25228"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "AOP investment opportunities",
+    "evidenceLevel": "reported",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_36e2c6d0c1af",
+    "systemA": "sys_aad0c0a85ddf",
+    "systemB": "sys_bcce0887b171",
+    "claimIds": [
+      "int_e7cea1e7b778"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Registry public key fetch (supports INT-03/04)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_37f4572eb405",
+    "systemA": "sys_00837d94c34d",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_fda0bab08b64"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Snapchat lead webhook (inbound)",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3bf531a71699",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_a8f94a12667d"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Add user from directory (grant access)",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "legacy"
+  },
+  {
+    "id": "ch_3c1cc8c771b7",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_e8a9f492ce91"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Super admin searches company directory when adding users",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3cbb00231386",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_7cab2f6662f7"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Hero image push to APMP",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_3d16f4a8766f",
+    "systemA": "sys_3c89cb877461",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_a8f044047833"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Legacy WhatsApp OTP login",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_3d756734adc5",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_a9023ac41f2e"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout receiver",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3e6902ff6e99",
+    "systemA": "sys_6ce2bdf1055a",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_d42b5a9ec4c9"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "unknown"
+    ],
+    "label": "Asana lead import",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_3eb3a39b7d54",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_d9fd6891f2f3"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth directory: employee search and access grant/revoke",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3f00178f13c7",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_48aa1a669619"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Directory employee search (Add User dialog)",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_3f0fd7d0c4b9",
+    "systemA": "sys_da050cc3fbe6",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_679af1049e54"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "EXT-APMS-LEGACY-FILES",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_4404ff917345",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_bf311082681a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP login",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_447585dc66ad",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_c4716b1dfaf2"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Fetch the discovery document (issuer metadata) and signing keys used by INT-AUTH-OIDC-LOGIN and INT-AUTH-BACKCHANNEL-LOGOUT.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_4534ae83cd43",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_e53b12085c5c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMP units per project",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_47dc4936f9db",
+    "systemA": "sys_655659f0c164",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_63f972ed3ac2"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "TikTok lead webhook (inbound)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_4d3632633a75",
+    "systemA": "sys_6ce2bdf1055a",
+    "systemB": "sys_e30a602002dd",
+    "claimIds": [
+      "int_f4db56f27580"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "sdk_call"
+    ],
+    "label": "Asana task creation and manual status sync",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_4d677f1414ff",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_46402929ac6b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Global logout (RP-initiated)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_4faab65e6404",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d8953034c957",
+    "claimIds": [
+      "int_05c76c63609c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center: OTP send and verify",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_5184cfb311fa",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_f2b0338ab5d9"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center status events",
+    "evidenceLevel": "production_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_520f74b09ec5",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_842ea2dcd663"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "One-time legacy user linking at startup",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_555be0ad1e87",
+    "systemA": "sys_d8953034c957",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_353a1c4de214"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Portal to PPE: project progress reads",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_561e79820823",
+    "systemA": "sys_bcce0887b171",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_12a8bd6deb73"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Registry public-key fetch (for JWT verification)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_572e065561fb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_5a763eb212a5",
+    "claimIds": [
+      "int_789bfb61c63a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth directory integration/v1",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_5750b724e432",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b5161d72c8",
+    "claimIds": [
+      "int_d915c22378b9"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Auth notifies Calendar that a central session ended so the local session is removed.",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_5a907ff3b870",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_825deb2ac7fa"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Send a 4-digit WhatsApp OTP for legacy login",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_5c7097e859ae",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_e8b00c07a93f"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP: legacy login",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_5c9a2245d6ff",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_9d671b08fe79"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Auth tells the app to end local sessions for a signed-out user (sid, or sub when sid is absent).",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_5ea12c8fbf10",
+    "systemA": "sys_4d3c6e1ce42b",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_156503bf7181"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Meta WhatsApp Cloud API (send, media, templates)",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_5f24f0c749b5",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_4158af89f367"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Block a user locally and revoke the entry this application granted",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_623d6b6a699a",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_80d6b447adc6"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Interactive employee sign-in; the app creates a local server-side session after ID token validation.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_6341f3152cbb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_9c1ea5c91673",
+    "claimIds": [
+      "int_26bb6e3c00d2"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Employee sign-in (SSO) and single sign-out",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_64b7fe03a533",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_bbe82e9a2be9"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Optional global sign-out: after deleting the local session the browser is sent to Auth's end-session endpoint.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_64ecab4ea357",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_26bfae89a226"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_6a54aadffbdb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_9f5fc0b0e436"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Staff single sign-on and logout",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_6b8c98ad78cb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_37eba9968cb5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "End local sessions when Auth ends a central session",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_6cdb9364141d",
+    "systemA": "sys_efbface5fc7b",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_48eb9d9d83ba"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "file_export"
+    ],
+    "label": "Old Market (ASAR) photo import via signed download links",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "one_off"
+  },
+  {
+    "id": "ch_70f10ea5c4a5",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_16ac6fc4c95e"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Global logout via Auth end-session endpoint",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_7131504bad6c",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_833dd96a27c7"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in (authorization code + PKCE)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_747204951384",
+    "systemA": "sys_eee8d6e14f32",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_8558ff3457af"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Contract-order outcome (CONTRACTED or REJECTED) recorded after manager approval",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_76216cd13392",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_3c094184be0a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Auth integration API: employee directory search",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_76ffd8c264f4",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_452931563f30"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "INT-ABP-AUTH-DIRECTORY-SEARCH",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_7737c05ba294",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_c4e5b5d52da6"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout notice",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_775e65eaabdd",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_1a7bfa02e348"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search directory, grant and revoke AO access, resolve identity on first sign-in",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_7a663174e65c",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_f2e0eced99a8"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp template notifications",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_7b6d55ae6e82",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_8b1ef23686bd"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Employee sign-in via Authorization Code with PKCE",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_7d5260599c2b",
+    "systemA": "sys_eee8d6e14f32",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_c6a67c285171"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Unit catalog intake and availability reconciliation",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_7d93a6bb1135",
+    "systemA": "sys_aad0c0a85ddf",
+    "systemB": "sys_bcce0887b171",
+    "claimIds": [
+      "int_5bbb959f579a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Tiny to Registry token and app lookup (supports INT-06)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_7fe7df632e22",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_37b4a137fed5",
+    "claimIds": [
+      "int_6b03c611cf0b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search employee directory, grant or revoke this app's access, resolve an identity for first sign-in linking.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_832ee0e74a23",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_bc6301c2cfa3"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Customer requests become or link to leads",
+    "evidenceLevel": "production_verified",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_832fbbad2c4b",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_f3fa69194ae1"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Terminate local sessions when central session ends",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_84bcbb98b435",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_620161c2edee"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "unknown"
+    ],
+    "label": "Revoke application access",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_86215887828e",
+    "systemA": "sys_7b130690018b",
+    "systemB": "sys_c11b58836f50",
+    "claimIds": [
+      "int_458f775461d7"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "sdk_call"
+    ],
+    "label": "AI chat, project analysis, and optimization suggestions about the current calculator state",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_86fdc220df6f",
+    "systemA": "sys_4d3c6e1ce42b",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_9e73777ee9e8"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Meta Coexistence client",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_87b201061792",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d8953034c957",
+    "claimIds": [
+      "int_4c8b67a83362"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center: live-chat embed",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_87d742c2e084",
+    "systemA": "sys_e81fdaaf5e4c",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_e17919f43cac"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "PPE construction progress",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_883323cc7e9e",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_20d1e3c56d6c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unused"
+  },
+  {
+    "id": "ch_88af6135ff1e",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_c55f7539db31"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_8bcb62bdfd79",
+    "systemA": "sys_00837d94c34d",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_0652f8ee74b5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Snapchat OAuth and Marketing API",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_8c7c475999e1",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_5b2b2c6373de"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Local logout and optional global RP-initiated logout",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_8dc128db2282",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_533eb31fb664"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Directory search",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_8f0be800d236",
+    "systemA": "sys_dfcff6c92779",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_3253e32e4f79"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "PPE progress-photo upload (inbound only)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_9324fec9e4f8",
+    "systemA": "sys_36aee854d022",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_06b840f5dafb"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unused"
+  },
+  {
+    "id": "ch_93d165a8e3e9",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_58182915017a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP: generic proxy endpoints",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unused"
+  },
+  {
+    "id": "ch_964013c1afbe",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_12c896db3869"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "INT-ABP-AUTH-OIDC-LOGIN",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_99c09e17570f",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_7427b8377e1b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "INT-ABP-AUTH-DIRECTORY-REVOKE",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_9b26c409fb71",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_566ae7b2639e"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Verify the OTP and obtain the verified phone number",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_9d1938f0c96b",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_4efbaa218d2b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMP projects list",
+    "evidenceLevel": "runtime_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_9efbd215b70e",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b5161d72c8",
+    "claimIds": [
+      "int_0fe0593eb508"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Fetch the person's display name once, at first sign-in (or while users.name is empty).",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_9fc776f0ecad",
+    "systemA": "sys_d8953034c957",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_59a71fe83ea1"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Admin PPE diagnostic",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_9fefd112d9b0",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_5bd7ddffdf32"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in (authorization code + PKCE S256)",
+    "evidenceLevel": "runtime_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_a420af5d21b2",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_1f150c1e99a6"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Revoke local sessions when the user logs out centrally",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_a55457bc70dd",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_cfe540c2795e"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth Directory API",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_a56386431c64",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_4eeca336b42b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Start a live chat session and return the embed URL for the widget iframe",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_a785d302daec",
+    "systemA": "sys_da050cc3fbe6",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_0114eb5e6c18"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "INT-APMS-REGISTRY",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_a8f8ebc0475a",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_5a763eb212a5",
+    "claimIds": [
+      "int_787e978b2bd6"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "One-time legacy user migration",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_a9d0fb1d6f4a",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_d8953034c957",
+    "claimIds": [
+      "int_54f2a445d2f1"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center: welcome template message",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_a9ea68e0c076",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_9c1ea5c91673",
+    "claimIds": [
+      "int_91440ee68840"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Legacy phone OTP login via WhatsApp",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_aaf29f0c476e",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_158258bb494b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC login (mobile)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_ab1310174cb3",
+    "systemA": "sys_39b5161d72c8",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_4988046ff520"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "Legacy phone sign-in: send and verify a WhatsApp one-time code.",
+    "evidenceLevel": "reported",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_adf729c5a0a8",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_9c1ea5c91673",
+    "claimIds": [
+      "int_6bf22946b554"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Link ACC projects to APMP projects and mirror project fields and units",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_afbbb6a7fcad",
+    "systemA": "sys_eee8d6e14f32",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_df076d1fcbd5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Date a unit was approved for listing (pending to available), used for vacancy start",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b2fe4c41b5f1",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_7e032cfa8b92"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in (authorization code + PKCE)",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b372b6c19258",
+    "systemA": "sys_36aee854d022",
+    "systemB": "sys_5a763eb212a5",
+    "claimIds": [
+      "int_1d4119333e31"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMP project lookup (Registry + Tiny)",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b38d9abe78f1",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_622dea9942e4"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth directory: first-sign-in identity resolution",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b3aceadb7bee",
+    "systemA": "sys_aad0c0a85ddf",
+    "systemB": "sys_bcce0887b171",
+    "claimIds": [
+      "int_63dbff0ecdd2"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Provider readiness monitoring",
+    "evidenceLevel": "reported",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b683d9a53e3d",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_4dfc07ee10e5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_b6a0e572e7c7",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_a43b4dfa2dce"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search employees, resolve identity, grant or revoke application access for admin users",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_b752bb1671cc",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_cf7e232c67fb"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC sign-in",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_b8733a42033d",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_d66bb34e9a59"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Public live-chat widget",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_b902136dbb90",
+    "systemA": "sys_4d44e3131a83",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_14ca22ec5823"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP (send)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_ba442dbdf7a6",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_1663235e5a21"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMS to APMP (unit linking and reconciliation)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_bad4420f4795",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_a44b00c8c6a3"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "OIDC back-channel logout receiver",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_bd3edab3d73e",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7b130690018b",
+    "claimIds": [
+      "int_136cbd916623"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search employees, grant or revoke FMC access, and resolve a canonical identity to a directory entry",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_bf1c6bf5522e",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_4bc0ec576104"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth employee directory and entry grants",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c0252a397ffb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_bdaaeb3b4bed"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "INT-ABP-AUTH-IDENTITY-RESOLUTION",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_c1984ff41ceb",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_90ca4ff48fd0"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Auth integration API: directory person lookup",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c1a26f6b3b54",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_38c4adee8d46"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth global logout",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c2e868d45917",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3fadba103633",
+    "claimIds": [
+      "int_f8d914287ba5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "INT-ABP-AUTH-GLOBAL-LOGOUT",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_c376185ffe77",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_08e3e531faf8"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center Requests tab (all site forms)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c393ddea8ee6",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_b9e2615b6b97"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Terminate local sessions when the central session ends",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c3c381f22abd",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_6e9c9e387f8c"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Send WhatsApp template notifications to staff",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_c6d832cb4a57",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_d8953034c957",
+    "claimIds": [
+      "int_c9394616c986"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Admin APMP proxy routes",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_c85c60a7ad31",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_51e922145d9b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Search employees, grant and revoke RENT entry access, resolve identity at first sign-in, refresh profile",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_c9cfe40f62e0",
+    "systemA": "sys_bcce0887b171",
+    "systemB": "sys_e30a602002dd",
+    "claimIds": [
+      "int_7184644a6f81"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_call"
+    ],
+    "label": "Registry JWT verification public-key fetch",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_cd0d2a8ed182",
+    "systemA": "sys_00e935831fe6",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_27d1fcceee79"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "oidc_backchannel"
+    ],
+    "label": "Asakin Auth back-channel logout receiver",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_cd555a28483c",
+    "systemA": "sys_eee8d6e14f32",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_99edb289ee90"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Latest rent per unit as a reference for the manager's base price",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_cf0c1b720c50",
+    "systemA": "sys_d749abcbfeda",
+    "systemB": "sys_eee8d6e14f32",
+    "claimIds": [
+      "int_ffa9667a0ab8"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Rental snapshot sync",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_cfde09970d90",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_cb117452740c",
+    "claimIds": [
+      "int_e1c0e054dbba"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "WhatsApp OTP for legacy login",
+    "evidenceLevel": "unknown",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_d37f47a25f55",
+    "systemA": "sys_19305898134b",
+    "systemB": "sys_347e7c8c3723",
+    "claimIds": [
+      "int_819e6c1ef672"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "unknown"
+    ],
+    "label": "Identity resolution (first sign-in pre-link)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_d396315c4f11",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_d8953034c957",
+    "claimIds": [
+      "int_8c49bc5a8a88"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "Portal to APMP: investor, holding, company and project reads",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_d4c1ecc69d77",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_56e014c60723"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth OIDC login (web)",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_d685b084693a",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_36aee854d022",
+    "claimIds": [
+      "int_7e4da9cd143a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Profile sync from directory (name and email)",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_d808fbc87019",
+    "systemA": "sys_6ce2bdf1055a",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_b29e045f7d2a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Register or repair the webhook, fetch task details, list recent project tasks",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_d85cdc0c25a3",
+    "systemA": "sys_4d44e3131a83",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_22aedc612a51"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP (verify)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_da8a03f5e1e9",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_56cac354f391",
+    "claimIds": [
+      "int_443216f291fe"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Auth integration API: grant application access",
+    "evidenceLevel": "test_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_dbc7f24e1129",
+    "systemA": "sys_6ce2bdf1055a",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_d1d878f05ba6"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "webhook"
+    ],
+    "label": "Real-time lead import when a task is added to the renting project",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_dddfffa6c8d3",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_b73e63cf0650"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center live chat session start",
+    "evidenceLevel": "reported",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_dde9e81aadf0",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_c519b5b57e6b"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "On a first sign-in, resolve the verified asakin_user_id to a directory entry and create or link the local user",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_df6a13b98a22",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_fe02ea4f9991",
+    "claimIds": [
+      "int_1ad7e9534e34"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "WhatsApp one-time password sign-in (legacy login)",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "disabled"
+  },
+  {
+    "id": "ch_e0036c2ee81d",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_c34a688341f5"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "APMP project list pull",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_e2b0356f9dd6",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_da050cc3fbe6",
+    "claimIds": [
+      "int_eccb8f5b7e4d"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "EXT-CHAT-CENTER",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_e45a543131d1",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_dfcff6c92779",
+    "claimIds": [
+      "int_90cd5c4aa7ab"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth application directory",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_e6154b5a249c",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b8bcdd2559",
+    "claimIds": [
+      "int_4760dc85e43a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Grant or revoke this application's access entry for an employee when a user is added or removed.",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_e6db422bc944",
+    "systemA": "sys_5a763eb212a5",
+    "systemB": "sys_e81fdaaf5e4c",
+    "claimIds": [
+      "int_d533f0774975"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "PPE → APMP: read projects and document types",
+    "evidenceLevel": "proposed",
+    "corroboration": "one_sided",
+    "registryAssisted": true,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_e85760cfb486",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_f26d7358311a"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "script"
+    ],
+    "label": "One-time linking of legacy local users to Auth identities by exact company email",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "one_off"
+  },
+  {
+    "id": "ch_eb02a5f18c20",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_585dcc5ead60"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Create a local viewer and grant this application's entry in Auth",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_ece2ebfb28de",
+    "systemA": "sys_46e5af94aac2",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_a441d33bddc4"
+    ],
+    "matchBasis": "single_claim",
+    "data": "a_to_b",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Phone-possession verification via 4-digit OTP for login",
+    "evidenceLevel": "code_observed",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_edc7ff511d7b",
+    "systemA": "sys_770eafc97434",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_10888f187a51"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "registry_assisted_api"
+    ],
+    "label": "ASSA reads ASAR inquiries (enriched list)",
+    "evidenceLevel": "reported",
+    "corroboration": "provider_surface_match",
+    "registryAssisted": true,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_ee4bed68a08a",
+    "systemA": "sys_7a285aafb421",
+    "systemB": "sys_f4a9c580e222",
+    "claimIds": [
+      "int_a520b21aaf38"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Forward each public inquiry/reservation to Chat Center as a message",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_f408b2156204",
+    "systemA": "sys_56cac354f391",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_2f9685bd69d4"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "a",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Chat Center WhatsApp OTP (retired)",
+    "evidenceLevel": "proposed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_f61f20a6bc72",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_39b5161d72c8",
+    "claimIds": [
+      "int_7991793f0129"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Employee sign-in through central SSO; creates the local session and maps the person to a local user.",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_f6ded78c2b7f",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_37b4a137fed5",
+    "claimIds": [
+      "int_c7bf65d9d124"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Employee sign-in and sign-out; decides entry only, roles stay local.",
+    "evidenceLevel": "unknown",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_f8227d487f82",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_1085cc97de16"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Asakin Auth directory / access management",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_f8f9ea573c66",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_d749abcbfeda",
+    "claimIds": [
+      "int_56683b99f445"
+    ],
+    "matchBasis": "single_claim",
+    "data": "bidirectional",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "Asakin Auth SSO (OIDC)",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_fa6615b8ed86",
+    "systemA": "sys_012499a0fd20",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_6468d2d8f29e"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Authentica OTP send",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_fb0d76506908",
+    "systemA": "sys_e66caad5064f",
+    "systemB": "sys_efbface5fc7b",
+    "claimIds": [
+      "int_f1bc921a14ee"
+    ],
+    "matchBasis": "single_claim",
+    "data": "unknown",
+    "requestInitiator": "unknown",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Google Maps short-link resolver",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "unknown"
+  },
+  {
+    "id": "ch_fed119b6149d",
+    "systemA": "sys_291c509c26be",
+    "systemB": "sys_7a285aafb421",
+    "claimIds": [
+      "int_0d6ae82d34ff"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "rest_api"
+    ],
+    "label": "Taqnyat SMS send",
+    "evidenceLevel": "production_verified",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  },
+  {
+    "id": "ch_ff4e6e842275",
+    "systemA": "sys_347e7c8c3723",
+    "systemB": "sys_3c89cb877461",
+    "claimIds": [
+      "int_340d1e8f9730"
+    ],
+    "matchBasis": "single_claim",
+    "data": "b_to_a",
+    "requestInitiator": "b",
+    "mechanismKinds": [
+      "sso_oidc"
+    ],
+    "label": "RP-initiated logout: end local session then send the browser to Auth end-session",
+    "evidenceLevel": "code_observed",
+    "corroboration": "one_sided",
+    "registryAssisted": false,
+    "deploymentStatus": "active"
+  }
+]

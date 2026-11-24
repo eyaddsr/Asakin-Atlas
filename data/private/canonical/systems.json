@@ -1,0 +1,2643 @@
+[
+  {
+    "id": "sys_00837d94c34d",
+    "key": "EXT:SNAPCHAT",
+    "displayName": "Snapchat",
+    "agentName": null,
+    "aliases": [
+      "سناب شات"
+    ],
+    "codes": [],
+    "description": "Snapchat lead generation and marketing API.",
+    "shortDescription": "Snapchat lead generation and marketing API.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:SNAPCHAT)"
+      }
+    ]
+  },
+  {
+    "id": "sys_00e935831fe6",
+    "key": "DOCS",
+    "displayName": "Asakin Vibe Docs",
+    "agentName": "Asakin Vibe Docs",
+    "aliases": [
+      "Vibe Docs",
+      "Vibe-Docs",
+      "docs-web (Asakin Auth client family)",
+      "rest-express (package.json name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "DOCS",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Vibe-Docs",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "DOCS",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Internal documentation CMS where editors publish and organise guides, standards and integration notes.",
+    "shortDescription": "Internal documentation CMS where editors publish and organise guides, standards and integration notes.",
+    "category": "Internal documentation / knowledge base",
+    "domain": "internal_tools",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "docs.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Registry: no registration, grants, catalog, ASAKIN_APP_KEY/SECRET, or Tiny usage found. Is this app expected to register in Registry? Unknown.",
+      "Chat Center: its URL (CHAT_CENTER_URL) is a secret and was not read. Remote request and response schemas are not in the repository, so the field mappings for INT-007 and INT-008 beyond what the code reads are UNKNOWN.",
+      "Directory remote contract: only the local DirectoryUser type exists. Remote validation rules and the response bodies of grant/revoke are UNKNOWN (bodies are ignored by callers).",
+      "Is /api/otp/send and /api/otp/verify used by any external caller? No call site in this repository; production traffic is UNKNOWN.",
+      "Production verification: no production logs, traffic or database evidence was examined. All productionStatus values are UNKNOWN. Runtime verification (RUNTIME_VERIFIED) was not performed because no live requests were allowed; the agent notes in E21 claiming dev-side linking are DOCUMENTED_ONLY.",
+      "Does the login screen still offer the OTP tab while Asakin Auth is enabled? The UI code exists in client/src/pages/login.tsx but the server routes return 404 when the flag is on.",
+      "Contradictory documentation: replit.md line 10 lists only passport-local as auth; line 41 says production needs its own client values, but .replit already defines them; the routes table marks /api/auth/logout as Public although it requires a same-origin check; /api/otp/* and /api/uploads/request-url are not documented.",
+      "INT-005 and INT-006 are marked TEMPORARY in code; whether production has been fully linked and the code can be removed is UNKNOWN.",
+      "google-auth-library is declared in package.json but no import was found in server code (apparently unused)."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/30"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/vibe-docs.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_012499a0fd20",
+    "key": "EXT:AUTHENTICA",
+    "displayName": "Authentica OTP",
+    "agentName": null,
+    "aliases": [
+      "Authentica"
+    ],
+    "codes": [],
+    "description": "OTP delivery provider.",
+    "shortDescription": "OTP delivery provider.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:AUTHENTICA)"
+      }
+    ]
+  },
+  {
+    "id": "sys_19305898134b",
+    "key": "BUC",
+    "displayName": "BUC",
+    "agentName": null,
+    "aliases": [
+      "BUC"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "BUC",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "BUC",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "BUC",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Estimates the maximum number of apartments on Riyadh plots under the Developed Building System; saves studies.",
+    "shortDescription": "Estimates the maximum number of apartments on Riyadh plots under the Developed Building System; saves studies.",
+    "category": "Internal business tool: calculator with saved studies and user management",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "buc.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is BUC registered in Asakin Registry (and under what code)? UNKNOWN: no code or config in the repo.",
+      "Does BUC need provider endpoints (/api/integration/*) or a Registry/Tiny presence? None exist; the need is UNKNOWN.",
+      "Do directory, identity, grant and revoke calls work in production? No production call evidence.",
+      "Has Auth ever delivered a back-channel logout to production?",
+      "Is the committed Chat Center secret in .replit still valid? It should be rotated and moved to Secrets.",
+      "Is legacy login (INT-010 and password routes) to be removed or kept as rollback?",
+      "Should the one-time linking script, which holds personal UUIDs, stay in the repo?",
+      "Do ARCHITECTURE_AUDIT.md and CLAUDE.md contradict the code? Not read in this audit."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/9"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/buc.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_240cc6d7e6aa",
+    "key": "OSP",
+    "displayName": "Asakin Unified Real-Estate Opportunity Platform",
+    "agentName": "Asakin Unified Real-Estate Opportunity Platform",
+    "aliases": [
+      "OSP",
+      "{\"value\":\"AsakinOSP\",\"source\":\"published *.replit.app subdomain (platform metadata)\",\"evidence\":\"INFERRED\"}",
+      "{\"value\":\"asakin-platform\",\"source\":\"package.json name\",\"evidence\":\"CODE_OBSERVED\"}"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "OSP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "OSP",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": "Internal Arabic tool for land-and-units studies and instant plus monthly-timeline feasibility studies for Riyadh real-estate projects.",
+    "shortDescription": "Internal Arabic tool for land-and-units studies and instant plus monthly-timeline feasibility studies for Riyadh real-estate projects.",
+    "category": "Standalone internal calculation and decision-support tool",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "AsakinOSP.replit.app",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Registry application code is null: has the app been registered in Asakin Registry, and under what code? Is AsakinOSP (published subdomain) the intended code?",
+      "Is this app intended to be a Provider, a Caller or both? No integration scaffolding (Tiny, JWT verification, catalog, /api/integration/*) exists.",
+      "Which Asakin apps, if any, should consume Project, LandStudy or FeasibilityStudy data, and which canonical scopes or resources would apply? Unknown.",
+      "Which identifier would be canonical across apps: projects.id or projects.ref_no (ASAKIN-NNNN)? Not defined in code.",
+      "Is the database Replit-managed? Only the attached documents say so (DOCUMENTED_ONLY).",
+      "Does drizzle-kit push drop the foreign keys that only the boot-time DDL creates? Not verified; no commands were executed.",
+      "Why is SESSION_SECRET configured when no code reads it (leftover or planned authentication)?",
+      "Why are .claude-home credential and history files tracked by Git? They are excluded from deployments by .replitignore but not from the repository.",
+      "The land-study autosave draft key literal was not read (land-study.tsx:57 uses a variable named draftKey).",
+      "Production behavior of any route is unverified: no live requests were made, as instructed."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/21"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/osp.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_291c509c26be",
+    "key": "EXT:TAQNYAT",
+    "displayName": "Taqnyat SMS",
+    "agentName": null,
+    "aliases": [
+      "تقنيات SMS"
+    ],
+    "codes": [],
+    "description": "SMS sending and delivery receipts.",
+    "shortDescription": "SMS sending and delivery receipts.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:TAQNYAT)"
+      }
+    ]
+  },
+  {
+    "id": "sys_347e7c8c3723",
+    "key": "ASAKIN-AUTH",
+    "displayName": "Auth",
+    "agentName": null,
+    "aliases": [
+      "Auth"
+    ],
+    "codes": [
+      {
+        "namespace": "replit_project",
+        "value": "Auth",
+        "source": "project-inventory.csv slug"
+      }
+    ],
+    "description": "Asakin Auth",
+    "shortDescription": "Asakin Auth",
+    "category": "Asakin Auth",
+    "domain": "identity_platform",
+    "kind": "shared_service",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "blocked_view_only",
+    "coverageNote": "Workspace view-only for the auditing account; repository not code-audited.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": "Not audited; Replit project status does not establish deployment state.",
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/project-inventory.csv",
+        "pointer": "row 38 (slug Auth)"
+      }
+    ]
+  },
+  {
+    "id": "sys_36aee854d022",
+    "key": "IDP",
+    "displayName": "Asakin Internal Debt Platform",
+    "agentName": "Asakin Internal Debt Platform",
+    "aliases": [
+      "IDP",
+      "idp (Asakin Auth production client id)",
+      "idp (CHATCENTER_APP_ID)",
+      "idp-web-dev (Asakin Auth development client id)",
+      "rest-express (package name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "IDP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "IDP",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "IDP",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "IDP",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "IDP",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Tracks internal advances, repayments and project finances between accounts across entities and projects.",
+    "shortDescription": "Tracks internal advances, repayments and project finances between accounts across entities and projects.",
+    "category": "Internal finance / debt-tracking web application",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-03-15 10:33)",
+    "domainName": "idp.asakin.sa",
+    "registryRecordId": "reg_90540b103527",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-001\",\"topic\":\"Registry registration\",\"question\":\"Is IDP registered in the Asakin Registry with app credentials, and is it granted access to APMP? Are ASAKIN_APP_KEY and ASAKIN_APP_SECRET set in production?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-002\",\"topic\":\"APMP response schema\",\"question\":\"What does APMP /api/integration/v2/projects return beyond items[].projectId and items[].projectName, and does it paginate? Only those two fields are demonstrable from this repository.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-003\",\"topic\":\"APMP production use\",\"question\":\"Has the project lookup ever succeeded in production? 0 of 9 projects carry apmp_project_id, and there are no request logs for this route.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-004\",\"topic\":\"Auth endpoint paths\",\"question\":\"Exact token endpoint, JWKS and end-session paths come from OIDC discovery and are not in the repository. The authorize URL was observed at runtime in development only.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-005\",\"topic\":\"Back-channel logout\",\"question\":\"Has Asakin Auth ever delivered a back-channel logout token to the production URL?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-006\",\"topic\":\"Unused directory fields\",\"question\":\"userPrincipalName and accountStatus are declared on DirectoryUser but unused; the PUT /access reason is supported but never sent.\",\"status\":\"CODE_OBSERVED\"}",
+      "{\"id\":\"Q-007\",\"topic\":\"Contradictory documentation\",\"question\":\"(a) CLAUDE.md says apmpProjectId is a 'nullable UUID' while the schema declares text; (b) ARCHITECTURE_AUDIT.md lists GET /debug/tiny, which does not exist in server code; (c) replit.md and CLAUDE.md call ASAKIN_APP_KEY and ASAKIN_APP_SECRET 'reserved for future Tiny token auth' while the vendored Tiny requires them and posts them to the Registry token endpoint today; (d) replit.md says ASAKIN_AUTH_ENABLED=false means legacy login, but configuration sets it to true in both environments; (e) the agent memory note says Chat Center OTP is active while the code gate disables it; (f) CLAUDE.md and replit.md do not mention Chat Center.\",\"status\":\"CONTRADICTORY\"}",
+      "{\"id\":\"Q-008\",\"topic\":\"Unused or stale code\",\"question\":\"Root asakin_tiny/ Python package and vendor python copy appear unused; GET /api/integration/health returns the legacy field otpPhase:1; the dependencies passport, passport-local, express-session, connect-pg-simple, memorystore and ws have no server import in the files inspected.\",\"status\":\"INFERRED\"}",
+      "{\"id\":\"Q-009\",\"topic\":\"Provider role\",\"question\":\"No provider catalog, scope list, grants or inbound Registry-token verification exist, so IDP does not expose data to other Asakin apps. It is unknown whether other apps expect to read from IDP.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-010\",\"topic\":\"Legacy linking remnants\",\"question\":\"The 'needs_linking' status and its UI text remain in the Add User flow although the linking feature was removed.\",\"status\":\"CODE_OBSERVED\"}",
+      "{\"id\":\"Q-011\",\"topic\":\"Chat Center registration\",\"question\":\"The Registry app code of Chat Center, and whether its base URL is registered in Registry, is not stated; the URL is hardcoded.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-012\",\"topic\":\"Activity Log export columns\",\"question\":\"The Activity Log sheet columns were not enumerated in this audit.\",\"status\":\"UNKNOWN\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/15"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/idp.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_37b4a137fed5",
+    "key": "CONTRACT",
+    "displayName": "Asakin Contract Platform",
+    "agentName": "Asakin Contract Platform",
+    "aliases": [
+      "CONTRACT (Asakin Auth app code)",
+      "Contract",
+      "contract-web-dev (dev OIDC client id, per code comment)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "CONTRACT",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Contract",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": "Create, version, approve and sign Arabic contracts, addenda and templates from reusable clauses; export PDF/DOCX.",
+    "shortDescription": "Create, version, approve and sign Arabic contracts, addenda and templates from reusable clauses; export PDF/DOCX.",
+    "category": "internal business application / document management",
+    "domain": "internal_tools",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "contract.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is the production ASAKIN_AUTH_ENABLED true? (data suggests so, but the value was not read)",
+      "Is APPLICATION_USER_MIGRATION_TOOLS_ENABLED on in production?",
+      "Is this app registered in the Asakin Registry, and under what code? No code-side evidence either way.",
+      "Is Auth's back-channel logout URI registered and reaching /api/auth/asakin/backchannel-logout in production? (env var ASAKIN_AUTH_BACKCHANNEL_LOGOUT_URI exists in dev but is not read by the code I inspected)",
+      "Exact server-side mapping of directory fields to users.name, users.email and users.username in the add route (not fully read).",
+      "Whether other Asakin apps call this app: no inbound service-to-service endpoint was found.",
+      "Why 9 stored_files rows use the local driver in production."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/13"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/contract.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_39b5161d72c8",
+    "key": "CAL",
+    "displayName": "التقويم السنوي",
+    "agentName": "التقويم السنوي",
+    "aliases": [
+      "Calendar"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "CAL",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Calendar",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "CAL",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Arabic annual calendar where Asakin employees keep personal events and occasions, and export the year as PDF.",
+    "shortDescription": "Arabic annual calendar where Asakin employees keep personal events and occasions, and export the year as PDF.",
+    "category": "internal employee productivity tool",
+    "domain": "internal_tools",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"recordRelationships\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "calendar.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "What is this application's Registry code, and is it registered at all? (null/UNKNOWN)",
+      "Is the Auth app code 'CAL' also the intended Registry code?",
+      "What triggered the back-channel logouts of 2026-10-06 and 2026-10-07? UNKNOWN",
+      "What is the exact response contract of the real Auth identity API? Only the mock and one field are known.",
+      "Is the production client secret for client 'cal' present in the published app? Sign-ins succeeded in production on 2026-10-11, which suggests so, but the secret itself was not read.",
+      "What 'Maximum session duration' is set for CAL in Auth (30 days requested)? UNKNOWN",
+      "What is the real registered back-channel URI and post-logout URI in Auth? UNKNOWN",
+      "Should the 2 @cc.sa accounts be granted access? (open question to the user)",
+      "Is ASAKIN_AUTH_ENABLED set to 'true' in production? DOCUMENTED_ONLY; production environment values were not read in this audit.",
+      "Do other Asakin applications read Calendar data? None found in code; cannot be ruled out from this repository.",
+      "Is the working tree identical to the last commit? UNKNOWN"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/10"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/calendar.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_39b8bcdd2559",
+    "key": "PM",
+    "displayName": "Platform Management",
+    "agentName": "Platform Management",
+    "aliases": [
+      "PM",
+      "platforms",
+      "pm-web-dev",
+      "pm_session"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "PM",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "PM",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "PM",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Track company platforms, change requests, responsibilities, approvals and management reports for Asakin employees.",
+    "shortDescription": "Track company platforms, change requests, responsibilities, approvals and management reports for Asakin employees.",
+    "category": "Internal management web application (portfolio and change-request tracking)",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "platforms.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-01\",\"question\":\"Is this application registered in Asakin Registry, and under which code? No Registry/Tiny references exist in the repository.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-02\",\"question\":\"Are the back-channel logout URI and post-logout redirect URI currently registered at Auth, and can Auth reach the production endpoint?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-03\",\"question\":\"What are the Auth-side schemas for directory search, entry, identity and access responses beyond the fields this code reads, and does Auth retry a 503 from back-channel logout?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-04\",\"question\":\"Are migrations 009 (approver_id, lead_developer_id, business_owner_id, developer_id) and 010 (cancelled_*) applied in production? Earlier production reads covered migrations up to 008 only.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-05\",\"question\":\"Do production role and workflow CHECK constraints match development? Earlier read-only checks found older value sets in production than development for users.role, change_requests.execution_state and activity_log.entity_type.\",\"status\":\"known earlier; not re-verified now\"}",
+      "{\"id\":\"Q-07\",\"question\":\"Documentation conflicts: AGENTS.md says four roles while shared/roles.js defines five; older phase documents say there are no accounts or permissions; an attached guideline example uses App Code APMP while the code uses PM.\",\"status\":\"contradiction recorded\"}",
+      "{\"id\":\"Q-08\",\"question\":\"Port mappings 5055 and 24678 in .replit are not explained by application code; they are not integrations as far as the code shows.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-09\",\"question\":\"Are other Asakin applications expected to call this one? No provider routes, catalog or app-to-app endpoints exist; the /api routes are the SPA's own browser API.\",\"status\":\"no evidence of such use\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/24"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/pm.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_3c89cb877461",
+    "key": "APPS",
+    "displayName": "Asakin Apps",
+    "agentName": "Asakin Apps",
+    "aliases": [
+      "Asakin Directory Portal",
+      "Asakin-Apps",
+      "apps.asakin.sa",
+      "rest-express"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "APPS",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Asakin-Apps",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "APPS",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Internal launcher listing Asakin web apps as tiles, with role-based visibility and user management.",
+    "shortDescription": "Internal launcher listing Asakin web apps as tiles, with role-based visibility and user management.",
+    "category": "Internal portal / app directory",
+    "domain": "sales_marketing",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "apps.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-001\",\"question\":\"Is APPS registered in Asakin Registry, and is any Registry or Tiny integration planned?\",\"currentAnswer\":\"No Registry or Tiny code or configuration exists in this repository\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-002\",\"question\":\"Is the back-channel logout URL registered with Auth for client 'apps' and for 'apps-web-dev'?\",\"currentAnswer\":null,\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-003\",\"question\":\"Are CHAT_CENTER_URL and CHAT_CENTER_APP_ID set in any environment, and does Chat Center still accept this app?\",\"currentAnswer\":null,\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-004\",\"question\":\"What is the full list of apps.url destinations in the production catalog?\",\"currentAnswer\":\"Not in the repository; only 4 destinations observed in logs\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-005\",\"question\":\"Exact Auth endpoint paths for authorization, token, end-session and JWKS\",\"currentAnswer\":\"Resolved at runtime by OIDC discovery; not in repo\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-006\",\"question\":\"Do other Asakin applications call this application (inbound API consumers)?\",\"currentAnswer\":\"No inbound routes for other applications found; only session-based browser routes plus the back-channel logout route\",\"status\":\"NOT_FOUND_IN_REPO\"}",
+      "{\"id\":\"Q-007\",\"question\":\"Was scripts/prod-link-existing-users.sql executed in production?\",\"currentAnswer\":null,\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-008\",\"question\":\"Dependencies better-sqlite3, passport, passport-local, memorystore, ws and xlsx appear unused\",\"currentAnswer\":\"No import found in the server and scripts searched; the client was not exhaustively checked\",\"status\":\"INFERRED\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/6"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/asakin-apps.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_3fadba103633",
+    "key": "ABP",
+    "displayName": "Asakin Budget v1 (Budget Planner / مخطط الميزانية)",
+    "agentName": "Asakin Budget v1 (Budget Planner / مخطط الميزانية)",
+    "aliases": [
+      "ABP",
+      "Asakin Budgeting Portal",
+      "Budget Planner",
+      "rest-express"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "ABP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "ABP",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "ABP",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Plan annual OPEX budgets and track monthly actual spend with variance analysis.",
+    "shortDescription": "Plan annual OPEX budgets and track monthly actual spend with variance analysis.",
+    "category": "Internal finance / budgeting web application",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "abp.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is ABP registered in the Asakin Registry? Not configured in this repository: UNKNOWN (null).",
+      "Do PUT /access and DELETE /access calls succeed against production Auth? No production evidence: UNKNOWN.",
+      "Exact token endpoint, JWKS URI and end_session endpoint paths are resolved by discovery at runtime and are not hardcoded: UNKNOWN from the repo.",
+      "Is https://abp.asakin.sa/signed-out registered as a post-logout URI? The registered value is believed to be https://abp.asakin.sa/ (DOCUMENTED_ONLY in the handoff attachments).",
+      "Production runs the code from before the latest sign-in fix (per-attempt cookies, canonical-origin bounce): the fix is unpublished.",
+      "ASAKIN_AUTH_BACKCHANNEL_LOGOUT_URI is set in the environment but never read by code (the route path is fixed): contradictory or redundant configuration.",
+      "Secret CHATCENTER_APP_SECRET exists in the secret store but nothing references it (apparently obsolete).",
+      "replit.md states Changa is self-hosted while the auth pages also load it from Google Fonts: minor inconsistency.",
+      "Unused leftovers: packages passport, passport-local, express-session, connect-pg-simple, memorystore, jsonwebtoken, ws; audit actions password_reset, password_changed, login_failed, updated; table change_requests; roles' requiresApproval/canApprove have no approval queue code using them.",
+      "Auth-side behavior of the Asakin-Operator-User-Id header and of grants is UNKNOWN from this repository.",
+      "In-memory replay caches (consumedStates, seenJtis) are per instance: with autoscale and multiple instances, replay protection is not shared (INFERRED)."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/0"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/abp.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_46e5af94aac2",
+    "key": "PCC",
+    "displayName": "Asakin Real Estate Calculator (Property Cost Calculator, PCC)",
+    "agentName": "Asakin Real Estate Calculator (Property Cost Calculator, PCC)",
+    "aliases": [
+      "PCC"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "PCC",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "PCC",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": null,
+    "shortDescription": null,
+    "category": null,
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "pcc.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is the app registered in Asakin Registry, and what is its app code?",
+      "Does OTP verify succeed in production?",
+      "Chat Center's internal field mapping beyond the blueprint",
+      "Does Chat Center rate-limit OTP sends, and does the app need its own limiter?",
+      "Is the production users table normalized to E.164?",
+      "Should phone have a unique constraint?",
+      "Should OTP state move out of memory before scaling beyond one instance?"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/23"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/pcc.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_4d3c6e1ce42b",
+    "key": "EXT:META",
+    "displayName": "Meta (WhatsApp Cloud / Graph API)",
+    "agentName": null,
+    "aliases": [
+      "Meta (واتساب)"
+    ],
+    "codes": [],
+    "description": "WhatsApp Cloud API messaging and webhooks.",
+    "shortDescription": "WhatsApp Cloud API messaging and webhooks.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:META)"
+      }
+    ]
+  },
+  {
+    "id": "sys_4d44e3131a83",
+    "key": "MARKETERS-LEGACY",
+    "displayName": "منصة المسوقين (Marketers Platform)",
+    "agentName": "منصة المسوقين (Marketers Platform)",
+    "aliases": [
+      "@workspace/api-server",
+      "@workspace/marketers-platform",
+      "Marketers-Platform",
+      "marketers-platform"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "MARKETERS-LEGACY",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Marketers-Platform",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": "Internal Arabic RTL PWA for real-estate sales teams: customers, units, offers, deposits, purchases and marketer incentives.",
+    "shortDescription": "Internal Arabic RTL PWA for real-estate sales teams: customers, units, offers, deposits, purchases and marketer incentives.",
+    "category": "Internal business application (real-estate sales / incentives)",
+    "domain": "sales_marketing",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "AsakinMP.replit.app",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is the app registered in the Asakin Registry (app code, grants)? Nothing in the repo indicates it. UNKNOWN.",
+      "Is this app registered in Chat Center as an Embed App in production, and does the production CHATCENTER_APP_ID match? Not verifiable read-only. UNKNOWN.",
+      "Are the secrets present in the production deployment? RUNTIME/PRODUCTION verification not performed. UNKNOWN.",
+      "Is SESSION_SECRET used anywhere? It exists as a secret but no read was found. UNKNOWN.",
+      "DEFAULT_OBJECT_STORAGE_BUCKET_ID is set but not read in code. UNKNOWN whether it is needed.",
+      "replit.md describes the pre-auth architecture and contradicts the current code (cookie sessions, passwords, OTP).",
+      "The OpenAPI spec lacks the OTP routes, so the generated client does not cover them.",
+      "The contents of activity.ts and settings.ts schemas were not inspected in detail.",
+      "No rate limiting or OTP-attempt throttling was found in the files read (auth.ts, app.ts); a full middleware scan was not performed. UNKNOWN.",
+      "Whether other Asakin apps should consume this app's data (units, customers, incentives) is a product question; no provider endpoints exist today."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/17"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/marketers-platform.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_4ff61f34d080",
+    "key": "SYS-DESIGN-SYSTEM",
+    "displayName": "Asakin Design System",
+    "agentName": null,
+    "aliases": [
+      "@workspace/api-server",
+      "@workspace/asakin",
+      "@workspace/mockup-sandbox",
+      "Asakin-Design-System",
+      "workspace"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "SYS-DESIGN-SYSTEM",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Asakin-Design-System",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": null,
+    "shortDescription": null,
+    "category": "Design system (likely no runtime integrations)",
+    "domain": "internal_tools",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "asakin-design-system.replit.app",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Which Asakin application is this repository meant to be? replit.md is an unfilled placeholder and no product name exists.",
+      "Is the application registered in Asakin Registry, and under what app code? Nothing in the repository configures this (UNKNOWN).",
+      "Which Asakin applications is it intended to integrate with (IDP, APMP, PMS, INP, Chat Center, etc.)? No references found.",
+      "Do production deployments exist with traffic? The git log shows a 'Published your App' commit, but no production evidence was inspected (UNKNOWN).",
+      "Is the @replit/connectors-sdk dependency intended for future use? It is currently unused.",
+      "The DATABASE_URL variable is set in the environment, but the database schema is empty; is a database planned?",
+      "This audit covered the repository and local environment-variable names only. External Registry state was not checked."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/7"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/asakin-design-system.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_56cac354f391",
+    "key": "CFM",
+    "displayName": "Asaken Cash Flow",
+    "agentName": "Asaken Cash Flow",
+    "aliases": [
+      "@workspace/api-server",
+      "@workspace/cashflow",
+      "CFM",
+      "cfm",
+      "cfm-web-dev",
+      "cfm.asakin.sa"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "CFM",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "CFM",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "CFM",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Arabic RTL internal tool for managing bank accounts, expected and executed cash inflows and outflows, projected positions and reports.",
+    "shortDescription": "Arabic RTL internal tool for managing bank accounts, expected and executed cash inflows and outflows, projected positions and reports.",
+    "category": "Internal finance / treasury operations web application",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"recordRelationships\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "cfm.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-01\",\"question\":\"Is the Auth integration API (/integration/v1/...) part of the Asakin Registry, or a separate Auth feature? Does CFM have a Registry application code?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-02\",\"question\":\"The Auth destination application code and the full response schemas of the integration API are not in the repo; only the fields the code reads are known. Fields such as 'accountStatus' are typed but unused.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-03\",\"question\":\"Is production currently working for sign-in and directory calls? An earlier chat session reported production schema and user-link checks, but that is not reproducible from the repository, so this audit does not claim PRODUCTION_VERIFIED.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-04\",\"question\":\"replit.md and CLAUDE.md say link-legacy-users 'production still needs it'. That may be stale after the earlier production checks (contradictory or outdated documentation).\",\"status\":\"UNVERIFIED\"}",
+      "{\"id\":\"Q-05\",\"question\":\"Documentation says the API runs on port 5000, but artifact.toml sets localPort 8080 and production PORT 8080 (contradictory documentation).\",\"status\":\"CONTRADICTORY\"}",
+      "{\"id\":\"Q-06\",\"question\":\"Should CHATCENTER_APP_SECRET be removed? It has no code reader.\",\"status\":\"OPEN\"}",
+      "{\"id\":\"Q-07\",\"question\":\"Back-channel logout replay memory and consumed sign-in states are per process. With more than one instance, replay protection is not shared.\",\"status\":\"OBSERVED_LIMITATION\"}",
+      "{\"id\":\"Q-08\",\"question\":\"Naming varies between 'Asaken' (title) and 'Asakin' (company, domain). The canonical application display name for Registry purposes is unknown.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-09\",\"question\":\"No data from this application is consumed by another Asakin application in this repo. Whether other apps call it is unknown; it exposes no integration routes.\",\"status\":\"NOT_FOUND_IN_REPO\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/11"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/cfm.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_58ad036babbd",
+    "key": "PPC",
+    "displayName": "Purchase Plan Calculator",
+    "agentName": null,
+    "aliases": [],
+    "codes": [
+      {
+        "namespace": "registry",
+        "value": "PPC",
+        "source": "registry-apps.csv (UI transcript)"
+      }
+    ],
+    "description": null,
+    "shortDescription": "Registry-registered app (Purchase Plan Calculator); no audited project in this workspace.",
+    "category": null,
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "registry_only",
+    "coverageNote": "\"Purchase Plan Calculator\" (ppc.asakin.sa), created 2026-11-17; grants PPC->APMP and PPC->WEB. No project with this domain in the 45-project inventory",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-11-17 08:10)",
+    "domainName": "ppc.asakin.sa",
+    "registryRecordId": "reg_e9193fb17b5c",
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+        "pointer": "row 19 (code PPC)"
+      }
+    ]
+  },
+  {
+    "id": "sys_5a763eb212a5",
+    "key": "APMP",
+    "displayName": "APMP (Asakin Portfolio Manager Platform)",
+    "agentName": "APMP (Asakin Portfolio Manager Platform)",
+    "aliases": [
+      "APMP",
+      "IPM (appears only in log strings/route comments)",
+      "rest-express (npm package name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "APMP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "APMP",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "APMP",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "APMP",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "APMP",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Manages investors, companies, investments, projects, units and project documents for the Asakin portfolio.",
+    "shortDescription": "Manages investors, companies, investments, projects, units and project documents for the Asakin portfolio.",
+    "category": "Internal business application (portfolio/real-estate management); provider and consumer in Asakin ecosystem",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-04-13 13:35)",
+    "domainName": "apmp.asakin.sa",
+    "registryRecordId": "reg_e0bb3b1d1c0f",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q1\",\"question\":\"What is APMP's registration and which scopes has Registry granted to which caller apps?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q2\",\"question\":\"Which apps other than PPE call the provider API, and how often?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q3\",\"question\":\"Which target apps was callProvider meant to reach?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q4\",\"question\":\"What do the AsakinTiny internals do (token negotiation, retries, discovery)?\",\"value\":\"UNKNOWN; vendor source not read\"}",
+      "{\"id\":\"Q5\",\"question\":\"Do the /portal/me endpoints have any consumer? Should portal:read be published?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q6\",\"question\":\"Is the stray asakin_tiny Python package or vendor/AsakinTiny/python used by anything?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q7\",\"question\":\"Exact column types, nullability and uniqueness for several fields (project dates, counts, unitTypes, commercialRegisterNumber, identityNumber)\",\"value\":\"UNKNOWN; not re-read from shared/schema.ts\"}",
+      "{\"id\":\"Q8\",\"question\":\"Where are audit_logs written, and does the integration API write audit entries?\",\"value\":\"UNKNOWN; not inspected\"}",
+      "{\"id\":\"Q9\",\"question\":\"Is Chat Center OTP exercised in production?\",\"value\":\"UNKNOWN; unreachable while the Auth flag is on\"}",
+      "{\"id\":\"Q10\",\"question\":\"Do the generate and reset-and-regenerate unit endpoints have request body and response contracts documented anywhere?\",\"value\":\"UNKNOWN; bodies not re-read\"}",
+      "{\"id\":\"Q11\",\"question\":\"Is the back-channel logout jti replay map sufficient with multiple autoscale instances?\",\"value\":\"UNKNOWN; in-memory only\"}",
+      "{\"id\":\"Q12\",\"question\":\"Does Auth's directory contract have an external specification, and does it match the code's tolerant response parsing?\",\"value\":\"UNKNOWN\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/4"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/apmp.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_655659f0c164",
+    "key": "EXT:TIKTOK",
+    "displayName": "TikTok for Business",
+    "agentName": null,
+    "aliases": [
+      "تيك توك للأعمال"
+    ],
+    "codes": [],
+    "description": "TikTok lead webhooks.",
+    "shortDescription": "TikTok lead webhooks.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:TIKTOK)"
+      }
+    ]
+  },
+  {
+    "id": "sys_6a9ecba47b82",
+    "key": "ASAKIN-TINY",
+    "displayName": "AsakinTiny SDK (@asakin/tiny)",
+    "agentName": null,
+    "aliases": [
+      "AsakinTiny",
+      "@asakin/tiny",
+      "Tiny"
+    ],
+    "codes": [],
+    "description": "Client library vendored into caller apps for Registry discovery and token acquisition. A library, not a running service.",
+    "shortDescription": "Client library for Registry discovery and tokens; a library, not a running service.",
+    "category": "SDK / library",
+    "domain": "identity_platform",
+    "kind": "sdk_library",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "library",
+    "coverageNote": "Vendored source was not read by the auditing agents.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "mechanism text mentioning AsakinTiny"
+      }
+    ]
+  },
+  {
+    "id": "sys_6ce2bdf1055a",
+    "key": "EXT:ASANA",
+    "displayName": "Asana",
+    "agentName": null,
+    "aliases": [
+      "أسانا"
+    ],
+    "codes": [],
+    "description": "Task management API and webhooks.",
+    "shortDescription": "Task management API and webhooks.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:ASANA)"
+      }
+    ]
+  },
+  {
+    "id": "sys_770eafc97434",
+    "key": "ASSA",
+    "displayName": "Asakin Sales",
+    "agentName": "Asakin Sales",
+    "aliases": [
+      "ASSA",
+      "Asakin Sales - Real Estate Unit Management",
+      "Sales-System",
+      "rest-express (package.json name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "ASSA",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Sales-System",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "ASSA",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "ASSA",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Manage real-estate units, sale/rent deal tracks, reservations, contacts and audit history.",
+    "shortDescription": "Manage real-estate units, sale/rent deal tracks, reservations, contacts and audit history.",
+    "category": "Internal sales/inventory management web application",
+    "domain": "sales_marketing",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "inactive",
+    "deploymentStatusSource": "Registry app status INACTIVE (UI transcript, 2026-11-18 14:09)",
+    "domainName": "sales.asakin.sa",
+    "registryRecordId": "reg_adbca03a562e",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is ASSA registered in the production Registry, with the ASAKIN_APP_KEY/SECRET matching a Registry record? (UNKNOWN)",
+      "Which Asakin apps hold grants for ASSA scopes, and which scopes does ASSA hold on ASAR? (UNKNOWN)",
+      "What is the real ASAR inquiry schema, and what does Inquiry.apartment_id refer to relative to ASSA units.id? (UNKNOWN)",
+      "Has Registry fetched or synced /api/integration/catalog? (UNKNOWN)",
+      "Do the dev and production environments use the same Registry URL and credentials? (UNKNOWN; only the shared userenv value is visible)",
+      "Is the production ASSA /api/caller/* surface reachable publicly? Autoscale deployment is configured, so probably yes. (UNVERIFIED)",
+      "Do the attached V3 guideline PDFs require anything not implemented here? (not reviewed)"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/28"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/sales-system.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_7a285aafb421",
+    "key": "CHAT-CENTER",
+    "displayName": "Asakin Chat Center",
+    "agentName": "Asakin Chat Center",
+    "aliases": [
+      "CHAT",
+      "Chat",
+      "Chat Center",
+      "asakinchat"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "CHAT-CENTER",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Chat",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": "Shared WhatsApp inbox and customer-request routing for Asakin staff, with ad-lead intake and app-to-app messaging.",
+    "shortDescription": "Shared WhatsApp inbox and customer-request routing for Asakin staff, with ad-lead intake and app-to-app messaging.",
+    "category": "Customer communications platform",
+    "domain": "communications",
+    "kind": "shared_service",
+    "layer": "internal",
+    "coverage": "partial",
+    "coverageReason": "reply_truncated",
+    "coverageNote": "PARTIAL (reply cut by Replit display limit; continuation not retrievable) · part 1: truncated inside \"entities\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "chat.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/12"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/chat.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_7b130690018b",
+    "key": "FMC",
+    "displayName": "Real Estate Feasibility Calculator",
+    "agentName": "Real Estate Feasibility Calculator",
+    "aliases": [
+      "FMC",
+      "Financial Calculator",
+      "rest-express"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "FMC",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "FMC",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "auth",
+        "value": "FMC",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Feasibility and cash-flow analysis for Saudi real estate development projects, with saved projects and AI commentary.",
+    "shortDescription": "Feasibility and cash-flow analysis for Saudi real estate development projects, with saved projects and AI commentary.",
+    "category": "Internal financial analysis tool",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "fmc.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Does the production database have users.asakin_user_id, users.directory_entry_id, users.access_sync_pending, and the asakin_oidc_transactions and asakin_logout_receipts tables? Startup does not create them, and the only creator is a dev-only helper that is never called. UNKNOWN.",
+      "Is FMC registered in Asakin Registry, with a Registry app code and grants? No Registry or Tiny code exists. UNKNOWN.",
+      "Are real SSO sign-in, first-time employee linking, and back-channel delivery working in production? Documentation says not yet pilot-validated. UNKNOWN.",
+      "Should name and work email be refreshed from the directory after a user is created? No sync exists, so cached values may go stale.",
+      "Are the exact OIDC endpoint URLs (authorization, token, JWKS, end-session) and the directory response schemas beyond the fields the code parses defined by Auth? They come from discovery at runtime and are not in this repository. UNKNOWN.",
+      "ASAKIN_AUTH_BACKCHANNEL_LOGOUT_URI is configured in .replit but not read by code; the route path is hard-coded. Is this variable needed? UNKNOWN.",
+      "saved_projects has no owner column, so any authenticated user can read, edit or delete any project. Is that intended? Ownership model UNKNOWN.",
+      "passport and passport-local are listed in package.json with no usage found; dependency is apparently unused (INFERRED).",
+      "Contradiction check: replit.md still describes single-user ADMIN_USERNAME/ADMIN_PASSWORD authentication, while the code supports multiple users, OIDC and directory-managed members. Documentation is outdated (DOCUMENTED_ONLY vs CODE_OBSERVED).",
+      "The asakin_oidc_transactions and asakin_logout_receipts tables are actively used by the OIDC and back-channel logout code. A previous request to remove them is not reflected as a code change, so confirm whether the tables should remain."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/14"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/fmc.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_833bfa702c71",
+    "key": "VIEW",
+    "displayName": "API Read Only",
+    "agentName": null,
+    "aliases": [],
+    "codes": [
+      {
+        "namespace": "registry",
+        "value": "VIEW",
+        "source": "registry-apps.csv (UI transcript)"
+      }
+    ],
+    "description": null,
+    "shortDescription": "Registry-registered app (API Read Only); no audited project in this workspace.",
+    "category": null,
+    "domain": "other",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "registry_only",
+    "coverageNote": "\"API Read Only\" app with broad read grants on APMP, APMS, MARKETERS, RENT; health DOWN (DNS failure for view.asakin.sa). No matching project found",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-10-21 11:41)",
+    "domainName": "view.asakin.sa",
+    "registryRecordId": "reg_691999fad48e",
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+        "pointer": "row 2 (code VIEW)"
+      }
+    ]
+  },
+  {
+    "id": "sys_910c46c57589",
+    "key": "AOPP",
+    "displayName": "Asakin Opportunities",
+    "agentName": null,
+    "aliases": [],
+    "codes": [
+      {
+        "namespace": "registry",
+        "value": "AOPP",
+        "source": "registry-apps.csv (UI transcript)"
+      }
+    ],
+    "description": null,
+    "shortDescription": "Registry-registered app (Asakin Opportunities); no audited project in this workspace.",
+    "category": null,
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "registry_only",
+    "coverageNote": "Duplicate \"Asakin Opportunities\" record for ao.asakin.sa, INACTIVE; probably superseded by AOP",
+    "deploymentStatus": "inactive",
+    "deploymentStatusSource": "Registry app status INACTIVE (UI transcript, 2026-09-21 13:31)",
+    "domainName": "ao.asakin.sa",
+    "registryRecordId": "reg_f1841fd88f8e",
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+        "pointer": "row 7 (code AOPP)"
+      }
+    ]
+  },
+  {
+    "id": "sys_9c1ea5c91673",
+    "key": "ACC",
+    "displayName": "حاسبة تكاليف المشاريع (ACC)",
+    "agentName": "حاسبة تكاليف المشاريع (ACC)",
+    "aliases": [
+      "ACC",
+      "Asakin Cost Calculator",
+      "AsakinACC",
+      "acc-web-dev (dev auth client)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "ACC",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "ACC",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "ACC",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "ACC",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "ACC",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Calculates real-estate project costs, pricing scenarios and per-unit prices; syncs projects and units from APMP.",
+    "shortDescription": "Calculates real-estate project costs, pricing scenarios and per-unit prices; syncs projects and units from APMP.",
+    "category": "internal Asakin business application (cost and pricing)",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-07-08 11:21)",
+    "domainName": "acc.asakin.sa",
+    "registryRecordId": "reg_23bbc78cbca8",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q1\",\"question\":\"Is ACC registered and ACTIVE in the Registry, and which scopes and grants exist for it?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q2\",\"question\":\"Which apps consume the ACC provider API, and with which scopes?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q3\",\"question\":\"What is the APMP base_url returned by Registry in dev and prod?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q4\",\"question\":\"Has APMP sync actually succeeded in production?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q5\",\"question\":\"Is there a DB unique index on projects.apmp_project_id?\",\"value\":\"UNKNOWN (schema file not re-read)\"}",
+      "{\"id\":\"Q6\",\"question\":\"Do any unlisted ApmpProjectData fields (name, googleMapsUrl, estimatedEndDate, unitTypes, summary, createdAt, updatedAt) feed any stored data or UI?\",\"value\":\"UNKNOWN\"}",
+      "{\"id\":\"Q7\",\"question\":\"Should the OIDC login transaction be made single-use server-side?\",\"value\":\"open recommendation\"}",
+      "{\"id\":\"Q8\",\"question\":\"Should the seed default users be removed or disabled in production?\",\"value\":\"open recommendation\"}",
+      "{\"id\":\"Q9\",\"question\":\"Is the legacy Chat Center OTP code to be removed?\",\"value\":\"open recommendation\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/1"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/acc.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_aad0c0a85ddf",
+    "key": "PRG",
+    "displayName": "Asakin Report Builder",
+    "agentName": "Asakin Report Builder",
+    "aliases": [
+      "@workspace/api-server",
+      "@workspace/asakin-report-builder",
+      "PRG",
+      "asakin-report-builder"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "PRG",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "PRG",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "PRG",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "UNKNOWN",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Arabic RTL editor for quarterly construction-project investor reports, plus Asakin V3 provider API for reports.",
+    "shortDescription": "Arabic RTL editor for quarterly construction-project investor reports, plus Asakin V3 provider API for reports.",
+    "category": "Internal reporting tool and integration provider, with caller readiness",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"auditMetadata\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-09-29 15:17)",
+    "domainName": "prg.asakin.sa",
+    "registryRecordId": "reg_15b3fb758992",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"UQ-01\",\"question\":\"Is the app registered in Registry, with the right base URL, and has catalog sync succeeded?\",\"status\":\"UNKNOWN\",\"reason\":\"Registry-side state is not visible from the repo.\"}",
+      "{\"id\":\"UQ-03\",\"question\":\"Which Asakin apps are the intended callers or consumers, and which grants exist?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"UQ-04\",\"question\":\"What are the destination-side field names in any consuming app?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"UQ-05\",\"question\":\"Is there any production evidence of integration traffic?\",\"status\":\"UNKNOWN\",\"reason\":\"No production logs inspected, and I made no live calls. Nothing here is PRODUCTION_VERIFIED.\"}",
+      "{\"id\":\"UQ-06\",\"question\":\"replit.md says an integration_reports table (lib/db/src/schema/integrationReports.ts) holds exposed reports and the editor is not wired to it. The code uses the single shared reports table, that schema file does not exist, and replit.md also describes the shared table.\",\"status\":\"CONTRADICTORY_DOCUMENTATION\"}",
+      "{\"id\":\"UQ-07\",\"question\":\"Stale comments: the reports.ts schema header says photos are stored as bytea, and the report_photos comment shows object_path as /<id>. The real path is .../report-photos/<id>/<uuid> in App Storage.\",\"status\":\"CONTRADICTORY_DOCUMENTATION\"}",
+      "{\"id\":\"UQ-08\",\"question\":\"The editor accepts documents the integration contract would reject: bars >= 1, loose date strings, milestones unvalidated. The integration read path does not re-validate, so an editor-saved odd document is projected as-is. Also, integration-created docs have no photos key, and the editor handles that through normalizeReport (INFERRED).\",\"status\":\"CONTRACT_GAP\"}",
+      "{\"id\":\"UQ-09\",\"question\":\"Is ASAKIN_APP_CODE uppercase and 3-40 chars? Tiny rejects other codes, which would show as tiny_usable=false in health.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"UQ-10\",\"question\":\"Caller side is incomplete: no peer app, route or call site uses Tiny.\",\"status\":\"INCOMPLETE\"}",
+      "{\"id\":\"UQ-11\",\"question\":\"created_by_app and updated_by_app are not cleared or updated by editor writes, so provenance can be stale after an editor edit.\",\"status\":\"OBSERVATION\"}",
+      "{\"id\":\"UQ-12\",\"question\":\"Unused code and dependencies: ObjectStorageService/ACL/presign scaffold, SESSION_SECRET, cookie-parser, google-auth-library, vendored Python Tiny, scaffold OpenAPI/api-client packages (only /healthz).\",\"status\":\"APPARENTLY_UNUSED\"}",
+      "{\"id\":\"UQ-13\",\"question\":\"A known open race exists in reference counting between concurrent duplicate/save and orphan cleanup (see project memory).\",\"status\":\"KNOWN_ISSUE\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/26"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/prg.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_b3a76c990572",
+    "key": "EXT:TELEGRAM",
+    "displayName": "Telegram Bot API",
+    "agentName": null,
+    "aliases": [
+      "تيليجرام"
+    ],
+    "codes": [],
+    "description": "Bot notifications API.",
+    "shortDescription": "Bot notifications API.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:TELEGRAM)"
+      }
+    ]
+  },
+  {
+    "id": "sys_b938b42dda85",
+    "key": "OPT",
+    "displayName": "Asakin Off-Plan Tracker",
+    "agentName": "Asakin Off-Plan Tracker",
+    "aliases": [
+      "Off-Plan Contract Tracker",
+      "OffPlanTracker",
+      "rest-express",
+      "أساكِن — تتبّع عقود البيع على الخارطة"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "OPT",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "OffPlanTracker",
+        "source": "consolidated-systems.json replitProject"
+      }
+    ],
+    "description": "Manages off-plan real estate contracts, installments, payments, and construction-progress-triggered payment schedules.",
+    "shortDescription": "Manages off-plan real estate contracts, installments, payments, and construction-progress-triggered payment schedules.",
+    "category": "internal business web application (sales/finance operations)",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "opt.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is this application registered in Asakin Registry, and under what app code? The repo has no evidence either way (UNKNOWN).",
+      "Which database URL does production use: DATABASE_URL or the NEON_DATABASE_URL secret? Only the latter appears in the secrets listing (UNKNOWN).",
+      "Is APMS (design reference) intended to be a data integration target? Only design tokens are shared; no data link exists (UNKNOWN).",
+      "What does contracts.buyer_id represent (national ID, CRM id, other)? The schema does not say, and there is no cross-application buyer identifier (UNKNOWN).",
+      "What is the canonical project identifier across Asakin apps? Only a free-text project_name exists (UNKNOWN).",
+      "Is the deployed production build running the same code as this repo head? (UNKNOWN)",
+      "Were the e2e tests from commit 31a82c6 stored elsewhere or discarded? None are present in the repo."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/20"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/offplantracker.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_bcce0887b171",
+    "key": "ASAKIN-REGISTRY",
+    "displayName": "Asakin Registry",
+    "agentName": null,
+    "aliases": [
+      "Asakin Registry",
+      "Asakin-Registry"
+    ],
+    "codes": [
+      {
+        "namespace": "replit_project",
+        "value": "Asakin-Registry",
+        "source": "project-inventory.csv slug"
+      }
+    ],
+    "description": "Registry/Tiny",
+    "shortDescription": "Registry/Tiny",
+    "category": "Registry/Tiny",
+    "domain": "identity_platform",
+    "kind": "shared_service",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "blocked_view_only",
+    "coverageNote": "Workspace view-only for the auditing account; repository not code-audited.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": "Not audited; Replit project status does not establish deployment state.",
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/project-inventory.csv",
+        "pointer": "row 41 (slug Asakin-Registry)"
+      }
+    ]
+  },
+  {
+    "id": "sys_c11b58836f50",
+    "key": "EXT:OPENAI",
+    "displayName": "OpenAI",
+    "agentName": null,
+    "aliases": [
+      "OpenAI"
+    ],
+    "codes": [],
+    "description": "LLM chat completions API.",
+    "shortDescription": "LLM chat completions API.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:OPENAI)"
+      }
+    ]
+  },
+  {
+    "id": "sys_cb117452740c",
+    "key": "AOP",
+    "displayName": "فرص أساكن (Asakin Opportunities)",
+    "agentName": "فرص أساكن (Asakin Opportunities)",
+    "aliases": [
+      "AO",
+      "AsakinAo",
+      "ao.asakin.sa",
+      "rest-express"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "AOP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "AO",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "AOP",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "AO",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "AOP",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Publishes investment opportunities, collects investor requests, and lets staff review, approve and track transfers.",
+    "shortDescription": "Publishes investment opportunities, collects investor requests, and lets staff review, approve and track transfers.",
+    "category": "Investment opportunity and request management",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-05-21 10:35)",
+    "domainName": "ao.asakin.sa",
+    "registryRecordId": "reg_8488015b4992",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "APMP provider-side contract and field ownership: UNKNOWN",
+      "Consumers of the AO v2 provider API: UNKNOWN",
+      "Whether AOP is registered in the Registry and which grants exist: UNKNOWN",
+      "Whether Chat Center templates ao_status_approved, ao_status_accepted, ao_status_rejected, ao_notes and ao_new_request exist and are approved: UNKNOWN",
+      "Template body content for each template: UNKNOWN",
+      "Production runtime behavior of every integration: UNKNOWN (no runtime or production logs read)",
+      "Whether production still has embed_apps and embed_filters tables: UNKNOWN",
+      "Whether /api/uploads/request-url is authenticated elsewhere: UNKNOWN",
+      "Behavior of storage.createOpportunity and updateOpportunity when called with an arbitrary req.body: UNKNOWN",
+      "Behavior of scripts matchOpportunitiesToApmp, linkOpportunitiesToApmp, auditUnlinkedOpportunities, backfillIsPublished, restore-prod-data: UNKNOWN (not read)"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/2"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/ao.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_d749abcbfeda",
+    "key": "MARKETERS",
+    "displayName": "منصة المسوقين (Asakin Marketers Platform)",
+    "agentName": "منصة المسوقين (Asakin Marketers Platform)",
+    "aliases": [
+      "MARKETERS",
+      "Marketers",
+      "marketers-platform"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "MARKETERS",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Marketers",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "MARKETERS",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "MARKETERS",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "MARKETERS",
+        "source": "agent: application.registryCode"
+      },
+      {
+        "namespace": "chat_center",
+        "value": "marketeres",
+        "source": "registry-application-mapping.csv notes"
+      }
+    ],
+    "description": "Sales-lead pool for property marketers: customers, units, holds, deposits, purchases and incentives.",
+    "shortDescription": "Sales-lead pool for property marketers: customers, units, holds, deposits, purchases and incentives.",
+    "category": "Internal sales / CRM",
+    "domain": "sales_marketing",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-09-10 18:11)",
+    "domainName": "marketers.asakin.sa",
+    "registryRecordId": "reg_39d37f94267b",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Which Registry apps hold grants on MARKETERS scopes, and does any app actually call /api/integration/v2/*? No inbound call was observed (UNKNOWN).",
+      "Is the provider catalog (catalog_version 2026-08-03.1) registered in the Registry for MARKETERS? Not directly verified.",
+      "Exact response shape of GET /api/integration/v2/customers: serializeCustomer is inferred; it may expose stage, assignment and other internal fields to peers. Customer name and mobile (PII) are exposed to any customers:read grant holder.",
+      "Why about half of rental sync runs FAIL in production (390 FAILED vs 338 SUCCESS in 7 days); timeouts observed earlier, root cause not confirmed.",
+      "28 unit_sync_runs and 16 unit_rental_sync_runs rows are stuck RUNNING (last 2026-11-16); cause not investigated.",
+      "Unit availability: local hold state overwrites source_availability_status without advancing the hash, so the fast path may not repair it (per memory); runtime impact not measured.",
+      "39 unmatched canonical ids in a dev rental run; the production unmatched count was not read.",
+      "CHATCENTER_APP_ID value 'marketeres' differs from app code MARKETERS; assumed intentional on the Chat Center side.",
+      "Whether OTP routes (/auth/request-otp, /auth/verify-otp) are still used in production; no evidence either way.",
+      "Storage of Chat Center payload fields contract_version, customer_source, created_at, created_by, lead_source is UNKNOWN (not re-read).",
+      "Which directory fields (displayName, workEmail, UPN, accountStatus) are persisted locally is UNKNOWN.",
+      "Whether PKCE is enforced on the OIDC authorization request was not separately confirmed (library behaviour assumed).",
+      "The catalogSync comment says WEB's `units` contract while the provider catalog_version is dated 2026-08-03; the relationship between contract versions is unclear.",
+      "Production Asana webhook shows 1 ACTIVE and 1 PENDING_HANDSHAKE row; whether the pending row is a leftover was not investigated."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/18"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/marketers.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_d8953034c957",
+    "key": "INP",
+    "displayName": "Asakin Investor Portal",
+    "agentName": "Asakin Investor Portal",
+    "aliases": [
+      "Investor Portal",
+      "Investor-Portal"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "INP",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Investor-Portal",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "INP",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "INP",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Arabic investor portal showing holdings, project progress and updates, with an admin CMS and OTP/password authentication.",
+    "shortDescription": "Arabic investor portal showing holdings, project progress and updates, with an admin CMS and OTP/password authentication.",
+    "category": "Investor-facing portal with CMS and backend-for-frontend",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-04-13 13:44)",
+    "domainName": "ip.asakin.sa",
+    "registryRecordId": "reg_4a9dba6147f9",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is INP registered in the Asakin Registry, and which grants and scopes does it hold for APMP, PPE and as a provider?",
+      "Which Asakin apps call the provider API (/api/integration/v2/*)? None found in this repo.",
+      "Which PPE endpoint actually serves progress? The code probes several guessed paths, and the strategy that succeeds in production is unknown.",
+      "What is the real contactNumber format in APMP? Phone matching uses two different normalizers.",
+      "Are PPE actual values fractional? Snapshot columns are integer, and rounding before insert was not verified (ppe-service.ts lines 126-161).",
+      "What is the AsakinTiny default timeout and cache TTL? config.ts was not read.",
+      "Who owns Chat Center, and does the 4-digit OTP change also apply to the template and embed endpoints?",
+      "What does the code comment 'Matches AO behavior' (investor-provider.ts line 218) refer to? AO is an unknown application.",
+      "Is the production database schema in sync with lib/db? The project uses db push on post-merge; migration state is unverifiable.",
+      "How is the Chat Center visitorId (browser-generated) tied to an investor, if at all?",
+      "Do investor project and company detail routes enforce that the requested id belongs to the investor? No ownership check was observed (INFERRED, not confirmed).",
+      "Is SESSION_SECRET used by the code? It was not confirmed."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/16"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/investor-portal.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_da050cc3fbe6",
+    "key": "OWNER",
+    "displayName": "OwnerPortal",
+    "agentName": null,
+    "aliases": [
+      "OwnerPortal"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "OWNER",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "OwnerPortal",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "OWNER",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      }
+    ],
+    "description": null,
+    "shortDescription": null,
+    "category": "Owner portal",
+    "domain": "property_management",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-08-23 07:26)",
+    "domainName": "op.asakin.sa",
+    "registryRecordId": "reg_c6482c9d91c2",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Actual value of ASAKIN_APP_CODE (secret not read); 'OWNER' is documentation-only.",
+      "Whether Registry has synced catalog 2026-08-23.1 and whether any grants exist for contract_requests, bank_accounts, withdrawal_requests, banners; who calls /api/integration/health every ~3 min.",
+      "Whether any caller app uses the 4 provider resources in production (no v2 traffic confirmed).",
+      "Whether production sets APMS_SERVICE_JWT to a valid token (file downloads); dev has none and docs say an earlier static token went stale.",
+      "Chat Center: peer-side contract, field usage, and production usage (no hits in sampled window).",
+      "Whether APMS owners.id and legacy /api/owners/{id} id are always identical (documented as open).",
+      "Production REDIS_URL presence (dev env has none, so caching is likely disabled in dev).",
+      "Whether APMS wallet balance is net of pending withdrawal requests (no debit written on request creation, so multiple requests can each pass the balance check).",
+      "Whether provider routes are intended to be restricted per owner: PATCH routes on contract-requests and withdrawal-requests do not check ownerId, and POST/PATCH bank-accounts trust the ownerId parameter."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/22"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/ownerportal.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_dfcff6c92779",
+    "key": "MEDIA",
+    "displayName": "Asakin Project Media",
+    "agentName": "Asakin Project Media",
+    "aliases": [
+      "MEDIA",
+      "Media",
+      "asakin-project-media",
+      "media-web",
+      "media-web-dev"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "MEDIA",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Media",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "MEDIA",
+        "source": "registry-application-mapping.csv (POSSIBLE_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "MEDIA",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Arabic-first RTL project photo library: upload, categorize, archive, hero image, API for other Asakin apps.",
+    "shortDescription": "Arabic-first RTL project photo library: upload, categorize, archive, hero image, API for other Asakin apps.",
+    "category": "Asakin business app: project media / document-asset library",
+    "domain": "projects",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-10-19 07:47)",
+    "domainName": "media.asakin.sa",
+    "registryRecordId": "reg_8541b8a25730",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "UNKNOWN: the actual value of ASAKIN_APP_CODE (secret not inspected). Docs say MEDIA.",
+      "UNKNOWN: current production state (published build, custom domain media.asakin.sa DNS, production Registry grants). Docs OPEN_BLOCKERS may be stale.",
+      "UNKNOWN: whether any Asakin app actually calls MEDIA v2. Grants live in Registry, not in this repo. PPE -> MEDIA grant is documented as still needed.",
+      "UNKNOWN: APMP hero write contract (path, body, scope). APMP_HERO_SYNC_PATH is unset.",
+      "UNKNOWN: the full APMP projects response schema. Only 4 fields are mapped, and the other fields are ignored.",
+      "UNKNOWN: whether PPE exists as a Registry app with a MEDIA grant. PPE_APP_CODE is unset.",
+      "CONTRADICTION: docs/INTEGRATIONS.md says v2 returns '403 for ... a locally revoked caller', but the same file and the code say there is no local caller list or kill switch.",
+      "CONTRADICTION (DOCUMENTED_ONLY): artifacts/project-media artifact.toml description still mentions 'API consumers' and 'website, investor portal'. The consumers feature was removed.",
+      "CONTRADICTION: the delivery.ts comment says 'API consumers (e.g. a website backend)'. No such consumer is configured or documented as granted.",
+      "UNKNOWN: whether the logout-token jti is checked for replay. No replay store was found.",
+      "Stale code/tests: app_sessions.idTokenHint is unused. sourceApplication allows APMP_LEGACY but nothing sets it. A source value DEMO is purged at startup. tests/api.test.mjs was built on demo projects and needs rework (earlier decision).",
+      "UNKNOWN: Registry app-lookup and token endpoint behavior, beyond what AsakinTiny calls (GET /api/registry/apps/{code}, POST /api/auth/token). Not verified live."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/19"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/media.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_e30a602002dd",
+    "key": "TENANT",
+    "displayName": "Asakin Tenant Portal",
+    "agentName": "Asakin Tenant Portal",
+    "aliases": [
+      "TP",
+      "asakin-tenant-portal (ARCHITECTURE_AUDIT.md tree label)",
+      "rest-express (package.json name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "TENANT",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "TP",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "TENANT",
+        "source": "registry-application-mapping.csv (ALIAS_MATCH)"
+      }
+    ],
+    "description": "Bilingual portal where tenants view tenancy data and submit requests, and staff manage requests, accounts and announcements.",
+    "shortDescription": "Bilingual portal where tenants view tenancy data and submit requests, and staff manage requests, accounts and announcements.",
+    "category": "Customer self-service portal plus back-office admin console (real-estate property management); Asakin V3 provider and caller",
+    "domain": "property_management",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-08-23 07:27)",
+    "domainName": "tp.asakin.sa",
+    "registryRecordId": "reg_4ba4f15fe333",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-001\",\"question\":\"What is the Registry app code (value of ASAKIN_APP_CODE)? The value was intentionally not read.\",\"value\":null,\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-002\",\"question\":\"Is this app registered, ACTIVE, catalog-synced and published in the Registry, and which grants exist in each direction?\",\"status\":\"UNKNOWN; memory notes claim registration and an APMS grant set (DOCUMENTED_ONLY)\"}",
+      "{\"id\":\"Q-003\",\"question\":\"Which applications call the provider API, if any? No caller was identified, so the destination mapping of every INT-002 field is UNKNOWN.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-004\",\"question\":\"What JWT claim shape does the Registry use for scopes and caller identity? A wrong assumption would give 403 on all scoped routes.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-005\",\"question\":\"Is any integration production verified? No production logs, traffic or runtime checks were examined.\",\"status\":\"UNVERIFIABLE FROM REPO\"}",
+      "{\"id\":\"Q-006\",\"question\":\"Are the Asana connector and the hardcoded project, section and custom-field GIDs valid in production?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-007\",\"question\":\"Are JWT_ACCESS_SECRET and JWT_REFRESH_SECRET set in production? The code falls back to hardcoded placeholders when missing.\",\"status\":\"UNKNOWN for production\"}",
+      "{\"id\":\"Q-008\",\"question\":\"Is APMS tenant.nationalId guaranteed unique? The portal takes the first match.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-009\",\"question\":\"Documentation conflicts: ARCHITECTURE_AUDIT.md describes a removed server/apms-client.ts and an Asana outage failing the PATCH (code swallows it), and uses outdated model, enum and step counts. replit.md mentions 'APMS credentials' although the direct APMS token was removed. catalog.ts:91 cites an 'OTP' flow that set-password does not implement.\",\"status\":\"CONFLICT between DOCUMENTED_ONLY and CODE_OBSERVED; code treated as authoritative\"}",
+      "{\"id\":\"Q-010\",\"question\":\"Are the progress workflow tables still intended? The UI was removed but approve and admin routes still write to them; WorkflowTemplate tables appear unused.\",\"status\":\"UNKNOWN (business intent)\"}",
+      "{\"id\":\"Q-011\",\"question\":\"Do APMS 'documents' and 'photos' routes exist? Memory notes say they 404.\",\"status\":\"DOCUMENTED_ONLY\"}",
+      "{\"id\":\"Q-012\",\"question\":\"Unused code: getTenantById, getAllTransactions, getTenantTransactions, createAsakinProxyRoute, getAsanaTaskUrl, legacy Prisma models.\",\"status\":\"CODE_OBSERVED unused; INFERRED safe to treat as dead\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/29"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/tp.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_e66caad5064f",
+    "key": "EXT:GOOGLE-MAPS",
+    "displayName": "Google Maps",
+    "agentName": null,
+    "aliases": [
+      "خرائط Google"
+    ],
+    "codes": [],
+    "description": "Map links and short-link resolution.",
+    "shortDescription": "Map links and short-link resolution.",
+    "category": "External provider",
+    "domain": "external",
+    "kind": "external_service",
+    "layer": "external",
+    "coverage": "not_audited",
+    "coverageReason": "external_provider",
+    "coverageNote": "Third-party service; outside the audit scope.",
+    "deploymentStatus": "unknown",
+    "deploymentStatusSource": null,
+    "domainName": null,
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-integrations.json",
+        "pointer": "provider named by claims (EXT:GOOGLE-MAPS)"
+      }
+    ]
+  },
+  {
+    "id": "sys_e81fdaaf5e4c",
+    "key": "PPE",
+    "displayName": "Project Progress (PPE) — أساكن منصة تتبع الإنجاز",
+    "agentName": "Project Progress (PPE) — أساكن منصة تتبع الإنجاز",
+    "aliases": [
+      "PPE",
+      "Project Progress",
+      "asakin-tracker (session cookie name asakin_tracker_session)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "PPE",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "PPE",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "PPE",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "PPE",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": null,
+    "shortDescription": null,
+    "category": "Asakin business application (provider and caller)",
+    "domain": "projects",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-06-02 14:32)",
+    "domainName": "ppe.asakin.sa",
+    "registryRecordId": "reg_23f594392a35",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Is PPE registered and ACTIVE in the Registry, and which scopes have been granted to which callers? Not verifiable from this repo.",
+      "Which apps call PPE's provider endpoints? Production logs showed 200s on /api/integration/v2/projects, but the caller identity was not recorded in what I read.",
+      "Is PPE's grant to call APMP (including project_document_types:read and the document upload) active? The static fallback list may be masking a missing grant for document types.",
+      "Has the APMP upload ever succeeded in production? I did not query production data.",
+      "Is Asakin Auth configured to call POST /api/auth/asakin/backchannel-logout for client ppe in production?",
+      "Value of ASAKIN_APMP_BASE_URL and ASAKIN_MIGRATION_TOOLS (isMigrationToolsEnabled): not read, so whether /users/:id/link is live is UNKNOWN.",
+      "Whether production is running commit e040125 or the earlier commit I verified against the live build.",
+      "Chat Center and APMP destination schemas: only PPE-side shapes are known."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/25"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/ppe.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_eb59dd209ce3",
+    "key": "PAYMENTS",
+    "displayName": "Payments",
+    "agentName": null,
+    "aliases": [
+      "Payments"
+    ],
+    "codes": [
+      {
+        "namespace": "replit_project",
+        "value": "Payments",
+        "source": "project-inventory.csv slug"
+      }
+    ],
+    "description": "Payments platform",
+    "shortDescription": "Payments platform",
+    "category": "Payments platform",
+    "domain": "finance",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "blocked_agent_busy",
+    "coverageNote": "Audit prompt not sent: project agent busy on owner work; repository not code-audited.",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Replit publish status: Published (project inventory; not a runtime check)",
+    "domainName": "payments.asakin.sa",
+    "registryRecordId": null,
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/project-inventory.csv",
+        "pointer": "row 2 (slug Payments)"
+      }
+    ]
+  },
+  {
+    "id": "sys_eee8d6e14f32",
+    "key": "APMS",
+    "displayName": "APMS (Asakin Property Management System)",
+    "agentName": "APMS (Asakin Property Management System)",
+    "aliases": [
+      "APMS-v15"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "APMS",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "APMS-v15",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "APMS",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "APMS",
+        "source": "registry-application-mapping.csv auth_app_code"
+      }
+    ],
+    "description": "Internal Arabic RTL staff system for owners, units, tenants, rental contracts, invoices, payments/wallets, ownership transfers, documents/photos, WhatsApp notifications. Currency SAR.",
+    "shortDescription": "Internal Arabic RTL staff system for owners, units, tenants, rental contracts, invoices, payments/wallets, ownership transfers, documents/photos, WhatsApp notifications. Currency SAR.",
+    "category": "APMS",
+    "domain": "communications",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"evidence\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-08-24 14:35)",
+    "domainName": "apms.asakin.sa",
+    "registryRecordId": "reg_e5d631f99849",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q1\",\"question\":\"Is APMS registered in the production Registry, and which scopes are granted to which peer apps (as provider)? Is APMS granted units:read and projects:read on APMP (as caller)?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q2\",\"question\":\"Does any peer app actually call /api/integration/v2/* on APMS in production? No caller logs or Registry data were available.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q3\",\"question\":\"Is ASAKIN_AUTH_ENABLED true in the published deployment? .replit says 'true'; memory notes say dev overrides it to false. Production Auth OIDC use is INFERRED only from earlier evidence of scanners hitting login.\",\"status\":\"INFERRED\"}",
+      "{\"id\":\"Q4\",\"question\":\"Which environment section of .replit holds ASAKIN_APP_CODE='APMS' and the other config values (dev, shared or deployment)?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q5\",\"question\":\"Are the WhatsApp templates apms_*_v1 approved, and is notification_settings.notificationsEnabled on in production?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q6\",\"question\":\"Notification scheduler cadence, and whether a Chat Center 429 is ever handled (earlier open question B4). notification-scheduler.ts and notifications.service.ts could not be re-read in this pass.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q7\",\"question\":\"Does the production Scheduled Deployment for AUTO_RENEWAL_JOB_TOKEN exist, and is AUTO_RENEWAL_ENABLED set?\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q8\",\"question\":\"Per-resource DTO field lists of the v2 provider endpoints; fields of invoice_allocations, wallets, activity_log, unit_ownership_* tables.\",\"status\":\"UNKNOWN\"}",
+      "{\"id\":\"Q9\",\"question\":\"scripts/_tmp-apmp-audit.ts and scripts/_tmp-list-projects.ts are tracked in git. They hard-code 9 live APMP project UUIDs and call the live APMP through apmpService. Intent and whether they should remain: unclear.\",\"status\":\"FLAG_FOR_REVIEW\"}",
+      "{\"id\":\"Q10\",\"question\":\"Foreign keys of notification tables, renewedFromContractId, reversesTransactionId were not verified.\",\"status\":\"UNKNOWN\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/5"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/apms-v15.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_efbface5fc7b",
+    "key": "WEB",
+    "displayName": "الموقع العام",
+    "agentName": "Asakin Real Estate (public website + admin + API server)",
+    "aliases": [
+      "Asakin Real Estate (public website + admin + API server)",
+      "Asakin-Website-1",
+      "WEB",
+      "asakin-website",
+      "asakin.sa",
+      "web.asakin.sa",
+      "www.asakin.sa"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "WEB",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Asakin-Website-1",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "WEB",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "UNKNOWN",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "UNKNOWN",
+        "source": "agent: application.registryCode"
+      }
+    ],
+    "description": "Public real-estate marketing site with units catalogue and admin; serves units to other Asakin apps via Registry.",
+    "shortDescription": "Public real-estate marketing site with units catalogue and admin; serves units to other Asakin apps via Registry.",
+    "category": "Public website with admin CMS, and a provider of units data for other Asakin apps",
+    "domain": "sales_marketing",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 3 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-11-04 08:05)",
+    "domainName": "web.asakin.sa",
+    "registryRecordId": "reg_08c23be07647",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "{\"id\":\"Q-01\",\"question\":\"What are the actual values of ASAKIN_APP_CODE and ASAKIN_AUTH_APP_CODE, and are they equal?\",\"why\":\"Values are secrets and were not read.\",\"level\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-02\",\"question\":\"Is the Registry catalog for WEB synced at catalog_version 2026-11-04.2, and are orphaned ASAR grants revoked?\",\"level\":\"UNKNOWN\",\"note\":\"Documented as a user-side Registry step.\"}",
+      "{\"id\":\"Q-03\",\"question\":\"Is there an active MARKETERS to WEB units:read grant, and does any other app hold one?\",\"level\":\"UNKNOWN\",\"note\":\"Only a MARKETERS call has been seen in a production log line.\"}",
+      "{\"id\":\"Q-04\",\"question\":\"Are grants for APMP, PPE, AOP and APMS active for WEB as caller (APMS and PPE in particular)?\",\"level\":\"UNKNOWN\",\"note\":\"No production log of successful peer reads was examined. Dev logs showed APMP unreachable at times.\"}",
+      "{\"id\":\"Q-05\",\"question\":\"Is ASAKIN_AUTH_ENABLED true in production?\",\"level\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-06\",\"question\":\"How are partners stored (routes/partners.ts), and is a table or content key involved?\",\"level\":\"UNKNOWN\",\"note\":\"File not read in detail.\"}",
+      "{\"id\":\"Q-07\",\"question\":\"Exact content of MAPS_HOSTS, the AOP image URL shapes, and the Chat Center response schemas.\",\"level\":\"UNKNOWN\"}",
+      "{\"id\":\"Q-08\",\"question\":\"Does Tiny send data directly to peers after the Registry resolve, or via a Registry relay?\",\"level\":\"INFERRED\",\"note\":\"Comments say Tiny resolves, attaches the token and calls. The HTTP internals were not read.\"}",
+      "{\"id\":\"Q-09\",\"question\":\"Is the opportunity/AOP read still wanted given the page is unlinked and OPEN_OPPORTUNITIES is a single hard-coded id?\",\"level\":\"INFERRED\"}",
+      "{\"id\":\"Q-10\",\"question\":\"What does Chat Center retain from lead submissions (names, phones, free-text notes)?\",\"level\":\"UNKNOWN\"}"
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/8"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/asakin-website-1.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_f4a9c580e222",
+    "key": "ASAR",
+    "displayName": "Asakin Market",
+    "agentName": "Asakin Market",
+    "aliases": [
+      "AR",
+      "ASAR",
+      "ApartReq",
+      "OIDC client ar-web-dev (dev)",
+      "OIDC client asar (prod)",
+      "ar.asakin.sa",
+      "rest-express (package name)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "ASAR",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "ApartReq",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "ASAR",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "AR",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "ASAR",
+        "source": "agent: application.registryCode"
+      },
+      {
+        "namespace": "chat_center",
+        "value": "asakin_ar",
+        "source": "registry-application-mapping.csv notes"
+      }
+    ],
+    "description": "Public marketplace and admin console for listing Asakin sale and rent units, with embeds, inquiries, and portfolio-system synchronization.",
+    "shortDescription": "Public marketplace and admin console for listing Asakin sale and rent units, with embeds, inquiries, and portfolio-system synchronization.",
+    "category": "Customer-facing real-estate listing web application with admin back office",
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "inactive",
+    "deploymentStatusSource": "Registry app status INACTIVE (UI transcript, 2026-11-18 14:27)",
+    "domainName": "ar.asakin.sa",
+    "registryRecordId": "reg_0b289ec8a418",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Which Registry applications call the provider API, and which scopes are granted to each? The repository has no caller list.",
+      "Is ASAR registered in the Registry with the expected base_url and ACTIVE status, and are the four scopes granted? Not verifiable here.",
+      "Which APMP scopes does ASAR hold, and is APMP sync succeeding in production? Last-sync health is UNKNOWN.",
+      "Is Chat Center receiving form submissions? Local inquiry rows are not reconciled to Chat Center, and failures are silent.",
+      "Does the Chat Center form schema match {visitorId, body}? The destination contract is not in this repository.",
+      "Which websites embed /api/embed and /embed pages, and is allowed_urls expected to be enforced?",
+      "Does any consumer rely on the broken inquiry fields (name, email, phone, message, type)?",
+      "Which object-storage bucket does the deployed app use, and who references /objects URLs externally?",
+      "Is FIXED_OTP_CODE set in any environment?",
+      "Exact formula of calculateTotalArea (shared/area-utils.ts) was not re-inspected in this pass.",
+      "Defaults for the SDK timeout and cache TTL were not recorded.",
+      "Does the production Auth tenant list client 'asar' with the three registered URIs? Cannot be verified from the repository; the screenshot supplied earlier in the conversation is not repository evidence."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/3"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/apartreq.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  },
+  {
+    "id": "sys_fdabc73484c3",
+    "key": "INVP",
+    "displayName": "Old Investor Portal",
+    "agentName": null,
+    "aliases": [],
+    "codes": [
+      {
+        "namespace": "registry",
+        "value": "INVP",
+        "source": "registry-apps.csv (UI transcript)"
+      }
+    ],
+    "description": null,
+    "shortDescription": "Registry-registered app (Old Investor Portal); no audited project in this workspace.",
+    "category": null,
+    "domain": "investment",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "not_audited",
+    "coverageReason": "registry_only",
+    "coverageNote": "\"Old Investor Portal\" (invp.replit.app); grants on APMP and ASSA still ACTIVE; health DOWN (404). Superseded by INP",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-05-21 10:36)",
+    "domainName": "invp.replit.app",
+    "registryRecordId": "reg_b997d23df9c3",
+    "lastAudit": null,
+    "openQuestions": [],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+        "pointer": "row 15 (code INVP)"
+      }
+    ]
+  },
+  {
+    "id": "sys_fe02ea4f9991",
+    "key": "RENT",
+    "displayName": "Renting Platform (منصة الإيجار)",
+    "agentName": "Renting Platform (منصة الإيجار)",
+    "aliases": [
+      "@workspace/api-server",
+      "@workspace/marketers-platform",
+      "Marketers Platform (legacy name)",
+      "Renting",
+      "marketers-platform",
+      "rent",
+      "rent-web-dev (development OIDC client id)"
+    ],
+    "codes": [
+      {
+        "namespace": "audit",
+        "value": "RENT",
+        "source": "consolidated-systems.json systemId"
+      },
+      {
+        "namespace": "replit_project",
+        "value": "Renting",
+        "source": "consolidated-systems.json replitProject"
+      },
+      {
+        "namespace": "registry",
+        "value": "RENT",
+        "source": "registry-application-mapping.csv (EXACT_MATCH)"
+      },
+      {
+        "namespace": "auth",
+        "value": "RENT",
+        "source": "registry-application-mapping.csv auth_app_code"
+      },
+      {
+        "namespace": "claimed_in_code",
+        "value": "RENT",
+        "source": "agent: application.registryCode"
+      },
+      {
+        "namespace": "chat_center",
+        "value": "rent",
+        "source": "registry-application-mapping.csv notes"
+      }
+    ],
+    "description": "Manages rental leads, assigns them to leasing agents, syncs available units from APMS, and routes contract orders for approval.",
+    "shortDescription": "Manages rental leads, assigns them to leasing agents, syncs available units from APMS, and routes contract orders for approval.",
+    "category": "Internal sales and leasing CRM with unit-inventory approval workflow",
+    "domain": "property_management",
+    "kind": "business_app",
+    "layer": "internal",
+    "coverage": "complete",
+    "coverageReason": "audited",
+    "coverageNote": "COMPLETE (assembled from 2 parts) · part 1: truncated inside \"fieldMappings\" (complete items kept)",
+    "deploymentStatus": "active",
+    "deploymentStatusSource": "Registry app status ACTIVE (UI transcript, 2026-07-02 15:14)",
+    "domainName": "rent.asakin.sa",
+    "registryRecordId": "reg_18c1b9a8edb4",
+    "lastAudit": "2026-11-22",
+    "openQuestions": [
+      "Which Registry apps hold grants to call RENT's /api/integration/v2/* scopes? No v2 call appears in the retained log window.",
+      "Is RENT registered in Registry with exactly the code RENT, and does the Registry catalog match CATALOG version 2026-08-03.1? Registration status is UNKNOWN.",
+      "Which APMS fields do /api/integration/v2/units, /contracts and /activity-log return in full? Only eight unit fields, four contract fields and six activity fields are used here.",
+      "How do contract-order data (tenant name, ID number, mobile, rent, installments, fees) reach APMS, given there is no outbound call or provider endpoint?",
+      "Is Chat Center a Registry app, and why do the OTP client (https://chat.asakin.sa) and the requests/status client (CHAT_CENTER_BASE_URL = https://asakinchat.replit.app in production) use different base URLs?",
+      "Contradictory documentation: asanaWebhook.ts and asanaImport.ts headers say 'no polling / no periodic reconciliation' while index.ts runs runAsanaReconciliation every 30 minutes in production and asanaReconcile.ts has a 72-hour lookback.",
+      "Production sync runs left in RUNNING (6 in 7 days, 27 in 30 days) never completed; the cause (process restart or timeout) is not established.",
+      "Does the Registry still carry stale ASAR (legacy Market) grants for RENT?",
+      "Do back-channel logout, push and directory calls have production traffic? Only indirect data evidence was checked.",
+      "How were source_unit_id and apmp_unit_id populated historically? Only the current count of 3 non-null apmp_unit_id was seen."
+    ],
+    "provenance": [
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/consolidated-systems.json",
+        "pointer": "/systems/27"
+      },
+      {
+        "member": "ASAKIN-INTEGRATION-AUDIT/individual-audits/renting.integration-audit.json",
+        "pointer": "/application"
+      }
+    ]
+  }
+]

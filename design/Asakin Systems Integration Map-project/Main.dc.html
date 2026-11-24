@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>خريطة تكاملات أساكن</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div dir="rtl" lang="ar" style="position: relative; width: 100%; height: 100vh; min-height: 760px; display: flex; flex-direction: column; overflow: hidden; background: #F4F6F9; color: #0E1420; font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif">
+
+<header style="position: relative; z-index: 45; flex: none; height: 64px; box-sizing: border-box; display: flex; align-items: center; gap: 24px; padding: 0 24px; background: #FFFFFF; border-bottom: 1px solid #E3E7EE">
+<button onClick="{{goAtlas}}" aria-label="خريطة تكاملات أساكن — العودة إلى الأطلس" style="flex: none; display: flex; align-items: center; gap: 12px; padding: 0; border: 0; background: none; color: #0E1420; font-family: inherit; text-align: right; cursor: pointer">
+<svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0E1420"></rect><path d="M12.6 11.4 C 17.5 11.4, 14.5 20.6, 19.4 20.6" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"></path><circle cx="10" cy="11.4" r="3" fill="#FFFFFF"></circle><circle cx="22" cy="20.6" r="3" fill="#8193F2"></circle></svg>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 700; line-height: 1.2">خريطة تكاملات أساكن</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.2; color: #566070; text-align: right">Systems Integration Map</span>
+</span>
+</button>
+
+<div style="position: relative; flex: 1; max-width: 520px; margin: 0 auto">
+<label for="atlas-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">ابحث في الخريطة</label>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#566070" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 14px; top: 11px; pointer-events: none"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input id="atlas-search" value="{{q}}" onChange="{{onQ}}" autocomplete="off" placeholder="ابحث عن نظام أو تكامل أو حقل — مثل: ضامن، رقم الهوية، national_id" style="width: 100%; height: 40px; box-sizing: border-box; padding: 0 42px 0 48px; border: 1px solid #E1E5EC; border-radius: 12px; background: #F4F6F9; color: #0E1420; font-family: inherit; font-size: 14px; outline-color: #2B44D6">
+<sc-if value="{{hasQ}}" hint-placeholder-val="{{ false }}">
+<div>
+<button aria-label="مسح البحث" onClick="{{clearQ}}" style="position: absolute; left: 4px; top: 4px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: #566070; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div style="position: absolute; top: 48px; right: 0; left: 0; display: flex; flex-direction: column; gap: 2px; padding: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E3E7EE; box-shadow: 0 24px 48px -20px rgba(14, 20, 32, 0.35)">
+<sc-if value="{{noResults}}" hint-placeholder-val="{{ false }}"><div style="padding: 14px; font-size: 13px; color: #566070">لا توجد نتائج مطابقة.</div></sc-if>
+<sc-for list="{{results}}" as="r" hint-placeholder-count="3">
+<button onClick="{{r.go}}" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 8px 12px; border: 0; border-radius: 10px; background: transparent; color: #0E1420; font-family: inherit; text-align: right; cursor: pointer">
+<span style="flex: none; width: 76px; font-size: 11px; font-weight: 600; color: #566070">{{r.kind}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span dir="auto" style="font-size: 14px; font-weight: 600; text-align: right">{{r.title}}</span>
+<span style="font-size: 12px; color: #566070">{{r.sub}}</span>
+</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</div>
+
+<div style="flex: none; display: flex; align-items: center; gap: 10px">
+<button aria-pressed="{{motionPressed}}" aria-label="{{motionLabel}}" title="{{motionLabel}}" onClick="{{toggleMotion}}" style="display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border: 1px solid #E1E5EC; border-radius: 999px; background: #FFFFFF; color: #3A4352; font-family: inherit; font-size: 13px; cursor: pointer">
+<sc-if value="{{motion}}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg></sc-if>
+<sc-if value="{{noMotion}}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"></path></svg></sc-if>
+<span>حركة البيانات</span>
+</button>
+</div>
+</header>
+
+<div style="flex: none; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; padding: 20px 32px 16px">
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<nav aria-label="مسار التصفح" style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 12px; color: #566070">
+<sc-for list="{{crumbs}}" as="c" hint-placeholder-count="2">
+<span style="display: flex; align-items: center; gap: 6px">
+<sc-if value="{{c.sep}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="color: #A3ABB8">/</span></sc-if>
+<sc-if value="{{c.link}}" hint-placeholder-val="{{ true }}"><button onClick="{{c.go}}" style="padding: 2px 0; border: 0; background: none; color: #2336B0; font-family: inherit; font-size: 12px; cursor: pointer">{{c.label}}</button></sc-if>
+<sc-if value="{{c.plain}}" hint-placeholder-val="{{ false }}"><span style="color: #0E1420; font-weight: 500">{{c.label}}</span></sc-if>
+</span>
+</sc-for>
+</nav>
+<div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px">
+<h1 style="margin: 0; font-size: 22px; font-weight: 700; line-height: 1.35">{{title}}</h1>
+<span style="font-size: 13px; color: #566070">{{subtitle}}</span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px">
+<sc-if value="{{showLegend}}" hint-placeholder-val="{{ true }}">
+<div role="group" aria-label="تصفية الروابط حسب حالة التحقق" style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{legend}}" as="l" hint-placeholder-count="3">
+<button aria-pressed="{{l.pressed}}" onClick="{{l.toggle}}" style="display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid {{l.bd}}; background: {{l.bg}}; color: {{l.fg}}; font-family: inherit; font-size: 13px; cursor: pointer; transition: background-color 0.2s ease, color 0.2s ease">
+<svg width="24" height="6" viewBox="0 0 24 6" aria-hidden="true" style="opacity: {{l.op}}"><line x1="2" y1="3" x2="22" y2="3" stroke="{{l.color}}" stroke-width="2" stroke-dasharray="{{l.dash}}" stroke-linecap="round"></line></svg>
+<span>{{l.ar}}</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{l.cfg}}">{{l.n}}</span>
+</button>
+</sc-for>
+<sc-if value="{{filtered}}" hint-placeholder-val="{{ false }}"><button onClick="{{resetFilt}}" style="height: 36px; padding: 0 8px; border: 0; background: none; color: #2336B0; font-family: inherit; font-size: 13px; cursor: pointer">إظهار الكل</button></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{isAtlas}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 1px; height: 24px; background: #DDE1E8"></span>
+<span style="font-size: 12px; color: #566070">الخيوط</span>
+<div role="group" aria-label="متى تظهر خيوط الربط" style="display: flex; padding: 3px; border-radius: 999px; background: #E8EBF1">
+<sc-for list="{{modes}}" as="m" hint-placeholder-count="2">
+<button aria-pressed="{{m.pressed}}" onClick="{{m.pick}}" style="height: 30px; padding: 0 14px; border: 0; border-radius: 999px; background: {{m.bg}}; color: {{m.fg}}; box-shadow: {{m.sh}}; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer">{{m.ar}}</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{isImpact}}" hint-placeholder-val="{{ false }}">
+<div role="group" aria-label="نوع التغيير" style="display: flex; padding: 3px; border-radius: 999px; background: #E8EBF1">
+<sc-for list="{{changes}}" as="m" hint-placeholder-count="3">
+<button aria-pressed="{{m.pressed}}" onClick="{{m.pick}}" style="height: 32px; padding: 0 16px; border: 0; border-radius: 999px; background: {{m.bg}}; color: {{m.fg}}; box-shadow: {{m.sh}}; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer">{{m.ar}}</button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</div>
+
+<main style="position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column">
+
+<sc-if value="{{isAtlas}}" hint-placeholder-val="{{ true }}">
+<div style="position: relative; flex: 1; min-height: 0; margin: 0 32px 24px; border: 1px solid #E3E7EE; border-radius: 20px; background-color: #FAFBFC; background-image: radial-gradient(#D9DEE7 1px, transparent 1.4px); background-size: 22px 22px; overflow: auto">
+<div style="position: relative; min-width: 1120px; height: 100%; min-height: 600px">
+<sc-for list="{{cols}}" as="c" hint-placeholder-count="5">
+<div>
+<div aria-hidden="true" style="position: absolute; top: 14px; bottom: 14px; left: calc({{c.x}}% - 108px); width: 216px; border-radius: 16px; background: rgba(14, 20, 32, 0.025)"></div>
+<div style="position: absolute; top: 28px; left: {{c.x}}%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 4px; white-space: nowrap">
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #566070">{{c.idx}} · {{c.en}}</span>
+<span style="font-size: 14px; font-weight: 600">{{c.ar}}</span>
+</div>
+</div>
+</sc-for>
+<div style="position: absolute; top: 88px; bottom: 76px; left: 0; right: 0">
+<sc-for list="{{edges}}" as="e" hint-placeholder-count="0">
+<svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; opacity: {{e.op}}; transition: opacity 0.25s ease"><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.w}}" stroke-dasharray="{{e.dash}}" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.bw}}" stroke-dasharray="0.5 34" stroke-linecap="round" stroke-opacity="{{e.bo}}" vector-effect="non-scaling-stroke"><animate attributeName="stroke-dashoffset" values="34.5;0" dur="1.4s" repeatCount="indefinite"></animate></path><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.rbw}}" stroke-dasharray="0.5 34" stroke-linecap="round" stroke-opacity="{{e.rbo}}" vector-effect="non-scaling-stroke"><animate attributeName="stroke-dashoffset" values="17;51.5" dur="1.4s" repeatCount="indefinite"></animate></path><path d="{{e.d}}" fill="none" stroke="#0E1420" stroke-opacity="0" stroke-width="16" vector-effect="non-scaling-stroke" onClick="{{e.open}}" onMouseEnter="{{e.enter}}" onMouseLeave="{{e.out}}" style="pointer-events: stroke; cursor: pointer"></path></svg>
+</sc-for>
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="20">
+<button onMouseEnter="{{t.enter}}" onMouseLeave="{{leave}}" onFocus="{{t.enter}}" onBlur="{{leave}}" onClick="{{t.open}}" style="position: absolute; left: {{t.x}}%; top: {{t.y}}%; z-index: {{t.z}}; transform: translate(-50%, -50%); width: 200px; height: 56px; box-sizing: border-box; display: flex; align-items: center; gap: 10px; padding: 0 10px; border-radius: 14px; border: 1px solid {{t.bd}}; background: {{t.bg}}; color: {{t.fg}}; box-shadow: {{t.sh}}; font-family: inherit; text-align: right; cursor: pointer; transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease">
+<span style="flex: none; width: 34px; height: 34px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 9px; background: {{t.mbg}}; color: {{t.mfg}}; border: 1.5px {{t.mst}} {{t.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.03em">{{t.code}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="font-size: 13.5px; font-weight: 600; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.ar}}</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; line-height: 1.3; color: {{t.sub}}; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.en}}</span>
+</span>
+<span style="flex: none; display: flex; align-items: center; gap: 6px">
+<sc-if value="{{t.hasQ}}" hint-placeholder-val="{{ false }}"><span title="يتضمن روابط تحتاج تحقق" style="width: 7px; height: 7px; border-radius: 50%; background: #C24E0A"></span></sc-if>
+<span style="min-width: 24px; height: 22px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; padding: 0 6px; border-radius: 999px; background: {{t.cbg}}; color: {{t.cfg}}; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">{{t.deg}}</span>
+</span>
+</button>
+</sc-for>
+<sc-if value="{{ec.has}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: {{ec.x}}%; top: {{ec.y}}%; z-index: 8; transform: translate(-50%, {{ec.ty}}); width: 300px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE2EA; box-shadow: 0 18px 40px -18px rgba(14, 20, 32, 0.45); pointer-events: none; text-align: right">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<span style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 11px; color: #566070"><span>{{ec.from}}</span><span aria-hidden="true">{{ec.arrow}}</span><span>{{ec.to}}</span><span aria-hidden="true">·</span><span dir="ltr" style="font-family: 'IBM Plex Mono', monospace">{{ec.m}}</span></span>
+<span style="font-size: 14px; font-weight: 700; color: #0E1420">{{ec.t}}</span>
+</div>
+<sc-if value="{{ec.hasSent}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<span style="font-size: 11px; font-weight: 600; color: #566070">يُرسَل</span>
+<sc-for list="{{ec.sent}}" as="fd" hint-placeholder-count="3">
+<span style="display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px"><span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; color: #0E1420; overflow-wrap: anywhere">{{fd.src}} → {{fd.dst}}</span><sc-if value="{{fd.pii}}" hint-placeholder-val="{{ false }}"><span style="flex: none; padding: 0 6px; border-radius: 5px; background: #FDF0E7; color: #8F3705; font-size: 10px; line-height: 16px">حساس</span></sc-if></span>
+</sc-for>
+<sc-if value="{{ec.hasMore}}" hint-placeholder-val="{{ false }}"><span style="font-size: 11px; color: #566070">{{ec.more}}</span></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ec.hasRet}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<span style="font-size: 11px; font-weight: 600; color: #566070">يعود في الاستجابة</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0E1420; text-align: right; overflow-wrap: anywhere">{{ec.ret}}</span>
+</div>
+</sc-if>
+<sc-if value="{{ec.none}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #953A05">لم تُوثّق الحقول المتبادلة بعد</span></sc-if>
+<span style="padding-top: 8px; border-top: 1px solid #EEF0F4; font-size: 11px; font-weight: 500; color: #2336B0">انقر على الخط لعرض كل البيانات وتتبّعها</span>
+</div>
+</sc-if>
+</div>
+<div style="position: absolute; left: 20px; bottom: 16px; z-index: 5; display: flex; flex-direction: column; gap: 6px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.92); border: 1px solid #E3E7EE; font-size: 12px; color: #3A4352">
+<span style="display: flex; align-items: center; gap: 10px"><svg width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="#2B44D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 7H3M8 2 3 7l5 5"></path></svg>اتجاه واحد</span>
+<span style="display: flex; align-items: center; gap: 10px"><svg width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="#2B44D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 3.5H3M6 1 3 3.5 6 6M2 10.5h29M28 8l3 2.5L28 13"></path></svg>ثنائي الاتجاه — مساران متوازيان أو بيانات عائدة</span>
+</div>
+<div style="position: absolute; bottom: 20px; left: 50%; z-index: 5; transform: translateX(-50%); display: flex; align-items: center; padding: 10px 18px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3E7EE; box-shadow: 0 12px 30px -18px rgba(14, 20, 32, 0.4); font-size: 13px; color: #3A4352; white-space: nowrap">
+<sc-if value="{{peek.has}}" hint-placeholder-val="{{ false }}">
+<span style="display: flex; align-items: center; gap: 10px">
+<span style="font-weight: 700; color: #0E1420">{{peek.name}}</span>
+<span>{{peek.text}}</span>
+<span aria-hidden="true" style="width: 1px; height: 14px; background: #DDE1E8"></span>
+<span style="font-weight: 500; color: #2336B0">انقر للتركيز ←</span>
+</span>
+</sc-if>
+<sc-if value="{{peek.none}}" hint-placeholder-val="{{ true }}">
+<span style="display: flex; align-items: center; gap: 10px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#566070" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M19 3 5 10l6 2 2 6z"></path></svg>
+<span>{{peek.hint}}</span>
+</span>
+</sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isLens}}" hint-placeholder-val="{{ false }}">
+<div style="flex: 1; min-height: 0; overflow: auto; padding: 4px 48px 32px">
+<div style="min-width: 1060px; min-height: 100%; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) 380px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 72px; row-gap: 20px">
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700">الوارد <span style="padding: 1px 8px; border-radius: 999px; background: #E8EBF1; color: #3A4352; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">{{lens.inN}}</span></span>
+<span style="font-size: 13px; color: #566070">{{lens.inDesc}}</span>
+</div>
+<div></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700">الصادر <span style="padding: 1px 8px; border-radius: 999px; background: #E8EBF1; color: #3A4352; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500">{{lens.outN}}</span></span>
+<span style="font-size: 13px; color: #566070">{{lens.outDesc}}</span>
+</div>
+
+<div style="align-self: center; position: relative; display: flex; flex-direction: column; gap: 12px">
+<sc-if value="{{lens.hasIn}}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; pointer-events: none">
+<span style="position: absolute; left: -37px; top: 36px; bottom: 36px; border-left: 2px solid #C5CCD8"></span>
+<svg width="28" height="8" viewBox="0 0 28 8" style="position: absolute; left: -64px; top: calc(50% - 3px); overflow: visible"><path d="M 28 4 L 0 4" fill="none" stroke="#C5CCD8" stroke-width="2"></path><path d="M 28 4 L 0 4" fill="none" stroke="#7D879A" stroke-width="4.5" stroke-dasharray="0.5 13.5" stroke-linecap="round" stroke-opacity="{{beadOp}}"><animate attributeName="stroke-dashoffset" values="14;0" dur="0.57s" repeatCount="indefinite"></animate></path></svg>
+<span style="position: absolute; left: -72px; top: calc(50% - 5px); width: 0; height: 0; border-right: 9px solid #7D879A; border-top: 6px solid transparent; border-bottom: 6px solid transparent"></span>
+</div>
+</sc-if>
+<sc-for list="{{lens.inRows}}" as="r" hint-placeholder-count="3">
+<div style="position: relative; height: 72px; display: flex; align-items: center; gap: 8px">
+<svg aria-hidden="true" width="36" height="8" viewBox="0 0 36 8" style="position: absolute; left: -36px; top: 32px; overflow: visible; pointer-events: none"><path d="M 36 4 L 0 4" fill="none" stroke="{{r.color}}" stroke-width="2" stroke-dasharray="{{r.dash}}" stroke-linecap="round"></path><path d="M 36 4 L 0 4" fill="none" stroke="{{r.color}}" stroke-width="4.5" stroke-dasharray="0.5 17.5" stroke-linecap="round" stroke-opacity="{{r.bo}}"><animate attributeName="stroke-dashoffset" values="18;0" dur="0.73s" repeatCount="indefinite"></animate></path><path d="M 0 4 L 36 4" fill="none" stroke="{{r.color}}" stroke-width="3" stroke-dasharray="0.5 17.5" stroke-linecap="round" stroke-opacity="{{r.rbo}}"><animate attributeName="stroke-dashoffset" values="27;9" dur="0.73s" repeatCount="indefinite"></animate></path></svg>
+<button aria-label="{{r.refLabel}}" title="{{r.refLabel}}" onClick="{{r.refocus}}" style="flex: none; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #566070; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2.5"></circle></svg></button>
+<button onClick="{{r.open}}" style="flex: 1; min-width: 0; height: 72px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; padding: 0 14px; border-radius: 14px; border: 1px solid {{r.bd}}; background: #FFFFFF; box-shadow: {{r.sh}}; color: #0E1420; font-family: inherit; text-align: right; cursor: pointer">
+<span style="flex: none; width: 36px; height: 36px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: {{r.mbg}}; color: {{r.mfg}}; border: 1.5px {{r.mst}} {{r.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600">{{r.code}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; color: #566070; white-space: nowrap"><span style="overflow: hidden; text-overflow: ellipsis">{{r.sys}}</span><span aria-hidden="true">·</span><span dir="ltr" style="flex: none; font-family: 'IBM Plex Mono', monospace; font-size: 11px">{{r.m}}</span></span>
+<span style="font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.t}}</span>
+</span>
+<sc-if value="{{r.two}}" hint-placeholder-val="{{ false }}"><span role="img" aria-label="{{r.twoLabel}}" title="{{r.twoLabel}}" style="flex: none; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: #EEF1FD; color: #2336B0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 8H5M9 4 5 8l4 4M4 16h15M15 12l4 4-4 4"></path></svg></span></sc-if>
+<span style="flex: none; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px">
+<svg width="28" height="6" viewBox="0 0 28 6" aria-hidden="true"><line x1="2" y1="3" x2="26" y2="3" stroke="{{r.color}}" stroke-width="2" stroke-dasharray="{{r.dash}}" stroke-linecap="round"></line></svg>
+<span style="font-size: 11px; color: {{r.cfg}}">{{r.cl}}</span>
+</span>
+</button>
+</div>
+</sc-for>
+<sc-if value="{{lens.noIn}}" hint-placeholder-val="{{ false }}"><div style="padding: 20px; border: 1.5px dashed #D5DAE3; border-radius: 14px; font-size: 13px; color: #566070; text-align: center">{{lens.emptyIn}}</div></sc-if>
+</div>
+
+<div style="align-self: center; display: flex; flex-direction: column; gap: 20px; padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3E7EE; box-shadow: 0 1px 2px rgba(14, 20, 32, 0.05), 0 28px 56px -32px rgba(14, 20, 32, 0.32)">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="width: 52px; height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 14px; background: {{fc.mbg}}; color: {{fc.mfg}}; border: 1.5px {{fc.mst}} {{fc.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">{{fc.code}}</span>
+<span style="padding: 4px 12px; border-radius: 999px; background: {{fc.kbg}}; color: {{fc.kfg}}; font-size: 12px; font-weight: 600">{{fc.kind}}</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h2 style="margin: 0; font-size: 26px; font-weight: 700; line-height: 1.3">{{fc.ar}}</h2>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #566070; text-align: right">{{fc.en}}</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.75; color: #3A4352">{{fc.about}}</p>
+<sc-if value="{{fc.unknown}}" hint-placeholder-val="{{ false }}"><div style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #FFF5EE; border: 1px solid #F5D7C3; color: #7A3205; font-size: 13px; line-height: 1.7"><span aria-hidden="true" style="flex: none; margin-top: 8px; width: 7px; height: 7px; border-radius: 50%; background: #C24E0A"></span><span>دور هذا النظام وحدوده غير موثّقين بعد — كل روابطه بحاجة إلى تحقق.</span></div></sc-if>
+<dl style="margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 20px; font-size: 13px">
+<dt style="color: #566070">الاستضافة</dt><dd style="margin: 0; font-weight: 500">{{fc.host}}</dd>
+<dt style="color: #566070">المسؤول</dt><dd style="margin: 0; font-weight: 500">{{fc.owner}}</dd>
+<dt style="color: #566070">التكاملات</dt><dd style="margin: 0; font-weight: 500">{{fc.inN}} وارد · {{fc.outN}} صادر</dd>
+</dl>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: #566070"><span>حالة التوثيق</span><span style="font-family: 'IBM Plex Mono', monospace">{{fc.pct}}% مؤكد</span></div>
+<div aria-hidden="true" style="display: flex; gap: 3px; height: 8px; border-radius: 999px; overflow: hidden; background: #EEF0F4">
+<span style="flex: none; width: {{fc.wOk}}%; background: #2B44D6"></span>
+<span style="flex: none; width: {{fc.wPart}}%; background: repeating-linear-gradient(90deg, #5B70E0 0 6px, transparent 6px 9px)"></span>
+<span style="flex: none; width: {{fc.wQ}}%; background: repeating-linear-gradient(90deg, #C24E0A 0 3px, transparent 3px 6px)"></span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: #3A4352"><span>{{fc.nOk}} مؤكد</span><span>{{fc.nPart}} جزئي</span><span style="color: #953A05">{{fc.nQ}} يحتاج تحقق</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button onClick="{{goImpact}}" style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #0E1420; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"></path></svg>محاكاة أثر التغيير</button>
+<button onClick="{{showInAtlas}}" style="height: 44px; padding: 0 16px; border: 1px solid #E1E5EC; border-radius: 12px; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">موقعه في الأطلس</button>
+</div>
+</div>
+
+<div style="align-self: center; position: relative; display: flex; flex-direction: column; gap: 12px">
+<sc-if value="{{lens.hasOut}}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; pointer-events: none">
+<span style="position: absolute; right: -37px; top: 36px; bottom: 36px; border-right: 2px solid #C5CCD8"></span>
+<svg width="36" height="8" viewBox="0 0 36 8" style="position: absolute; right: -72px; top: calc(50% - 3px); overflow: visible"><path d="M 36 4 L 0 4" fill="none" stroke="#C5CCD8" stroke-width="2"></path><path d="M 36 4 L 0 4" fill="none" stroke="#7D879A" stroke-width="4.5" stroke-dasharray="0.5 17.5" stroke-linecap="round" stroke-opacity="{{beadOp}}"><animate attributeName="stroke-dashoffset" values="18;0" dur="0.73s" repeatCount="indefinite"></animate></path></svg>
+</div>
+</sc-if>
+<sc-for list="{{lens.outRows}}" as="r" hint-placeholder-count="3">
+<div style="position: relative; height: 72px; display: flex; align-items: center; gap: 8px">
+<svg aria-hidden="true" width="27" height="8" viewBox="0 0 27 8" style="position: absolute; right: -36px; top: 32px; overflow: visible; pointer-events: none"><path d="M 27 4 L 0 4" fill="none" stroke="{{r.color}}" stroke-width="2" stroke-dasharray="{{r.dash}}" stroke-linecap="round"></path><path d="M 27 4 L 0 4" fill="none" stroke="{{r.color}}" stroke-width="4.5" stroke-dasharray="0.5 13" stroke-linecap="round" stroke-opacity="{{r.bo}}"><animate attributeName="stroke-dashoffset" values="13.5;0" dur="0.55s" repeatCount="indefinite"></animate></path><path d="M 0 4 L 27 4" fill="none" stroke="{{r.color}}" stroke-width="3" stroke-dasharray="0.5 13" stroke-linecap="round" stroke-opacity="{{r.rbo}}"><animate attributeName="stroke-dashoffset" values="20.25;6.75" dur="0.55s" repeatCount="indefinite"></animate></path></svg>
+<span aria-hidden="true" style="position: absolute; right: -9px; top: 30px; width: 0; height: 0; border-right: 9px solid {{r.color}}; border-top: 6px solid transparent; border-bottom: 6px solid transparent"></span>
+<button onClick="{{r.open}}" style="flex: 1; min-width: 0; height: 72px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; padding: 0 14px; border-radius: 14px; border: 1px solid {{r.bd}}; background: #FFFFFF; box-shadow: {{r.sh}}; color: #0E1420; font-family: inherit; text-align: right; cursor: pointer">
+<span style="flex: none; width: 36px; height: 36px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: {{r.mbg}}; color: {{r.mfg}}; border: 1.5px {{r.mst}} {{r.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600">{{r.code}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 12px; color: #566070; white-space: nowrap"><span style="overflow: hidden; text-overflow: ellipsis">{{r.sys}}</span><span aria-hidden="true">·</span><span dir="ltr" style="flex: none; font-family: 'IBM Plex Mono', monospace; font-size: 11px">{{r.m}}</span></span>
+<span style="font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.t}}</span>
+</span>
+<sc-if value="{{r.two}}" hint-placeholder-val="{{ false }}"><span role="img" aria-label="{{r.twoLabel}}" title="{{r.twoLabel}}" style="flex: none; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: #EEF1FD; color: #2336B0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 8H5M9 4 5 8l4 4M4 16h15M15 12l4 4-4 4"></path></svg></span></sc-if>
+<span style="flex: none; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px">
+<svg width="28" height="6" viewBox="0 0 28 6" aria-hidden="true"><line x1="2" y1="3" x2="26" y2="3" stroke="{{r.color}}" stroke-width="2" stroke-dasharray="{{r.dash}}" stroke-linecap="round"></line></svg>
+<span style="font-size: 11px; color: {{r.cfg}}">{{r.cl}}</span>
+</span>
+</button>
+<button aria-label="{{r.refLabel}}" title="{{r.refLabel}}" onClick="{{r.refocus}}" style="flex: none; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #566070; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2.5"></circle></svg></button>
+</div>
+</sc-for>
+<sc-if value="{{lens.noOut}}" hint-placeholder-val="{{ false }}"><div style="padding: 20px; border: 1.5px dashed #D5DAE3; border-radius: 14px; font-size: 13px; color: #566070; text-align: center">{{lens.emptyOut}}</div></sc-if>
+</div>
+
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isImpact}}" hint-placeholder-val="{{ false }}">
+<div style="flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 24px; padding: 0 32px 24px">
+<aside aria-label="ملخص الأثر" style="flex: 1 1 340px; max-width: 380px; min-height: 0; box-sizing: border-box; overflow: auto; display: flex; flex-direction: column; gap: 20px; padding: 24px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E3E7EE">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 600; color: #566070">نطاق الأثر · {{im.chAr}}</span>
+<p style="margin: 0; font-size: 14px; line-height: 1.75; color: #3A4352">{{im.desc}}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 12px; background: #F4F6F9"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; line-height: 1.2">{{im.n1}}</span><span style="font-size: 12px; color: #566070">تأثر مباشر</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 12px; background: #F4F6F9"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; line-height: 1.2">{{im.n2}}</span><span style="font-size: 12px; color: #566070">غير مباشر</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 12px; background: #FDF1E8"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; line-height: 1.2; color: #953A05">{{im.nq}}</span><span style="font-size: 12px; color: #7A3205">رابط غير مؤكد</span></div>
+</div>
+<sc-if value="{{im.hasQ}}" hint-placeholder-val="{{ true }}"><div style="display: flex; gap: 10px; padding: 14px; border-radius: 14px; background: #FFF5EE; border: 1px solid #F5D7C3; color: #7A3205; font-size: 13px; line-height: 1.75"><span aria-hidden="true" style="flex: none; margin-top: 8px; width: 7px; height: 7px; border-radius: 50%; background: #C24E0A"></span><span>{{im.qText}}</span></div></sc-if>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700">التكاملات المتأثرة مباشرة</span>
+<sc-for list="{{im.list}}" as="a" hint-placeholder-count="4">
+<button onClick="{{a.open}}" style="display: flex; align-items: center; gap: 10px; min-height: 56px; padding: 8px 12px; border-radius: 12px; border: 1px solid #E8EBF0; background: #FFFFFF; color: #0E1420; font-family: inherit; text-align: right; cursor: pointer">
+<span style="flex: none; width: 30px; height: 30px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: {{a.mbg}}; color: {{a.mfg}}; border: 1.5px {{a.mst}} {{a.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600">{{a.code}}</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="font-size: 12px; color: #566070">{{a.sys}} · {{a.rel}}</span>
+<span style="font-size: 13px; font-weight: 600">{{a.t}}</span>
+</span>
+<svg width="24" height="6" viewBox="0 0 24 6" aria-hidden="true" style="flex: none"><line x1="2" y1="3" x2="22" y2="3" stroke="{{a.color}}" stroke-width="2" stroke-dasharray="{{a.dash}}" stroke-linecap="round"></line></svg>
+</button>
+</sc-for>
+<sc-if value="{{im.empty}}" hint-placeholder-val="{{ false }}"><div style="padding: 16px; border: 1.5px dashed #D5DAE3; border-radius: 12px; font-size: 13px; color: #566070">لا توجد أنظمة متأثرة بهذا النوع من التغيير وفق البيانات الحالية.</div></sc-if>
+</div>
+<sc-if value="{{im.has2}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700">ويمتد الأثر إلى</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{im.second}}" as="b" hint-placeholder-count="4"><button onClick="{{b.go}}" style="height: 34px; padding: 0 12px; border-radius: 999px; border: 1px dashed #B9C1CE; background: #F7F8FA; color: #3A4352; font-family: inherit; font-size: 12px; cursor: pointer">{{b.ar}}</button></sc-for>
+</div>
+</div>
+</sc-if>
+<button onClick="{{backToLens}}" style="margin-top: auto; height: 44px; padding: 0 16px; border: 1px solid #E1E5EC; border-radius: 12px; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">العودة إلى روابط {{fc.ar}}</button>
+</aside>
+
+<div style="position: relative; flex: 999 1 560px; min-width: 0; min-height: 520px; overflow: hidden; border-radius: 20px; border: 1px solid #E3E7EE; background-color: #FAFBFC; background-image: radial-gradient(#D9DEE7 1px, transparent 1.4px); background-size: 22px 22px">
+<svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"><ellipse cx="50" cy="50" rx="40" ry="42" fill="none" stroke="#CDD3DC" stroke-width="1" stroke-dasharray="3 7" vector-effect="non-scaling-stroke"></ellipse><ellipse cx="50" cy="50" rx="24" ry="27" fill="#2B44D6" fill-opacity="0.04" stroke="#B4C0F0" stroke-width="1" stroke-dasharray="3 7" vector-effect="non-scaling-stroke"></ellipse><ellipse cx="50" cy="50" rx="10" ry="11" fill="#2B44D6" fill-opacity="0.06" stroke="none"></ellipse></svg>
+<sc-for list="{{im.edges}}" as="e" hint-placeholder-count="0">
+<svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; opacity: {{e.op}}"><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.w}}" stroke-dasharray="{{e.dash}}" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.bw}}" stroke-dasharray="0.5 34" stroke-linecap="round" stroke-opacity="{{e.bo}}" vector-effect="non-scaling-stroke"><animate attributeName="stroke-dashoffset" values="34.5;0" dur="1.4s" repeatCount="indefinite"></animate></path><path d="{{e.d}}" fill="none" stroke="{{e.color}}" stroke-width="{{e.rbw}}" stroke-dasharray="0.5 34" stroke-linecap="round" stroke-opacity="{{e.rbo}}" vector-effect="non-scaling-stroke"><animate attributeName="stroke-dashoffset" values="17;51.5" dur="1.4s" repeatCount="indefinite"></animate></path><path d="{{e.d}}" fill="none" stroke="#0E1420" stroke-opacity="0" stroke-width="16" vector-effect="non-scaling-stroke" onClick="{{e.open}}" onMouseEnter="{{e.enter}}" onMouseLeave="{{e.out}}" style="pointer-events: stroke; cursor: pointer"></path></svg>
+</sc-for>
+<div style="position: absolute; left: 50%; top: 50%; z-index: 3; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 8px">
+<span style="display: flex; align-items: center; gap: 10px; padding: 8px 18px 8px 8px; border-radius: 999px; background: #0E1420; color: #FFFFFF; box-shadow: 0 0 0 8px rgba(43, 68, 214, 0.1), 0 18px 40px -16px rgba(14, 20, 32, 0.6); font-size: 15px; font-weight: 700; white-space: nowrap">
+<span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #FFFFFF; color: #0E1420; font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600">{{fc.code}}</span>{{fc.ar}}</span>
+<span style="padding: 2px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3E7EE; font-size: 12px; color: #3A4352; white-space: nowrap">نقطة التغيير</span>
+</div>
+<sc-for list="{{im.nodes}}" as="n" hint-placeholder-count="6">
+<button onClick="{{n.go}}" title="{{n.tip}}" style="position: absolute; left: {{n.x}}%; top: {{n.y}}%; z-index: 2; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 8px; height: 44px; box-sizing: border-box; padding: 0 6px 0 14px; border-radius: 999px; border: 1.5px {{n.bst}} {{n.bd}}; background: {{n.bg}}; color: {{n.fg}}; box-shadow: {{n.sh}}; font-family: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer">
+<span style="width: 30px; height: 30px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: {{n.mbg}}; color: {{n.mfg}}; border: 1.5px {{n.mst}} {{n.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600">{{n.code}}</span>{{n.ar}}</button>
+</sc-for>
+<sc-if value="{{ec.has}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: {{ec.x}}%; top: {{ec.y}}%; z-index: 8; transform: translate(-50%, {{ec.ty}}); width: 300px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid #DDE2EA; box-shadow: 0 18px 40px -18px rgba(14, 20, 32, 0.45); pointer-events: none; text-align: right">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<span style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 11px; color: #566070"><span>{{ec.from}}</span><span aria-hidden="true">{{ec.arrow}}</span><span>{{ec.to}}</span><span aria-hidden="true">·</span><span dir="ltr" style="font-family: 'IBM Plex Mono', monospace">{{ec.m}}</span></span>
+<span style="font-size: 14px; font-weight: 700; color: #0E1420">{{ec.t}}</span>
+</div>
+<sc-if value="{{ec.hasSent}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<span style="font-size: 11px; font-weight: 600; color: #566070">يُرسَل</span>
+<sc-for list="{{ec.sent}}" as="fd" hint-placeholder-count="3">
+<span style="display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px"><span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; color: #0E1420; overflow-wrap: anywhere">{{fd.src}} → {{fd.dst}}</span><sc-if value="{{fd.pii}}" hint-placeholder-val="{{ false }}"><span style="flex: none; padding: 0 6px; border-radius: 5px; background: #FDF0E7; color: #8F3705; font-size: 10px; line-height: 16px">حساس</span></sc-if></span>
+</sc-for>
+<sc-if value="{{ec.hasMore}}" hint-placeholder-val="{{ false }}"><span style="font-size: 11px; color: #566070">{{ec.more}}</span></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ec.hasRet}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<span style="font-size: 11px; font-weight: 600; color: #566070">يعود في الاستجابة</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0E1420; text-align: right; overflow-wrap: anywhere">{{ec.ret}}</span>
+</div>
+</sc-if>
+<sc-if value="{{ec.none}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #953A05">لم تُوثّق الحقول المتبادلة بعد</span></sc-if>
+<span style="padding-top: 8px; border-top: 1px solid #EEF0F4; font-size: 11px; font-weight: 500; color: #2336B0">انقر على الخط لعرض كل البيانات وتتبّعها</span>
+</div>
+</sc-if>
+<div style="position: absolute; right: 16px; bottom: 16px; z-index: 4; display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 8px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.92); border: 1px solid #E3E7EE; font-size: 12px; color: #3A4352">
+<span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 12px; height: 12px; box-sizing: border-box; border-radius: 50%; background: #FFFFFF; border: 1.5px solid #9AA3B2"></span>الدائرة الأولى: تأثر مباشر</span>
+<span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 12px; height: 12px; box-sizing: border-box; border-radius: 50%; background: #F4F6F9; border: 1.5px dashed #9AA3B2"></span>الدائرة الثانية: تأثر غير مباشر</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+</main>
+
+<sc-if value="{{hasThread}}" hint-placeholder-val="{{ false }}">
+<div>
+<button aria-label="إغلاق تفاصيل التكامل" onClick="{{closeThread}}" style="position: absolute; z-index: 35; top: 64px; left: 0; right: 0; bottom: 0; margin: 0; padding: 0; border: 0; background: rgba(14, 20, 32, 0.22); cursor: default"></button>
+<aside aria-label="تفاصيل التكامل" style="position: absolute; z-index: 40; top: 64px; bottom: 0; left: 0; width: 700px; max-width: 100%; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; border-right: 1px solid #E3E7EE; box-shadow: 30px 0 60px -36px rgba(14, 20, 32, 0.45)">
+
+<div style="flex: none; display: flex; flex-direction: column; gap: 18px; padding: 22px 32px 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span dir="ltr" style="padding: 3px 8px; border-radius: 6px; background: #F1F3F7; color: #3A4352; font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{th.code}}</span>
+<span style="display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px; border-radius: 999px; background: {{th.cbg}}; color: {{th.cfg}}; font-size: 12px; font-weight: 600"><svg width="20" height="6" viewBox="0 0 20 6" aria-hidden="true"><line x1="2" y1="3" x2="18" y2="3" stroke="{{th.color}}" stroke-width="2" stroke-dasharray="{{th.dash}}" stroke-linecap="round"></line></svg>{{th.cl}}</span>
+</div>
+<button aria-label="إغلاق" onClick="{{closeThread}}" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #3A4352; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px">
+<button onClick="{{th.goFrom}}" style="flex: none; display: flex; align-items: center; gap: 8px; height: 44px; box-sizing: border-box; padding: 0 6px 0 14px; border-radius: 12px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 30px; height: 30px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: {{th.a.mbg}}; color: {{th.a.mfg}}; border: 1.5px {{th.a.mst}} {{th.a.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600">{{th.aCode}}</span>{{th.aAr}}</button>
+<div style="flex: 1; min-width: 80px; display: flex; flex-direction: column; gap: 6px">
+<div aria-hidden="true" style="position: relative; height: 28px; display: flex; align-items: center; justify-content: center">
+<svg style="position: absolute; right: 0; top: 10px; width: calc(100% - 8px); height: 8px; overflow: visible"><line x1="100%" y1="4" x2="0" y2="4" stroke="{{th.color}}" stroke-width="2" stroke-dasharray="{{th.dash}}" stroke-linecap="round"></line><line x1="100%" y1="4" x2="0" y2="4" stroke="{{th.color}}" stroke-width="4.5" stroke-dasharray="0.5 21.5" stroke-linecap="round" stroke-opacity="{{th.bo}}"><animate attributeName="stroke-dashoffset" values="22;0" dur="0.9s" repeatCount="indefinite"></animate></line></svg>
+<span style="position: absolute; left: 0; top: 8px; width: 0; height: 0; border-right: 9px solid {{th.color}}; border-top: 6px solid transparent; border-bottom: 6px solid transparent"></span>
+<span dir="ltr" style="position: relative; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E1E5EC; color: #3A4352; font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{th.m}}</span>
+</div>
+<sc-if value="{{th.two}}" hint-placeholder-val="{{ false }}">
+<div style="position: relative; height: 28px; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" style="position: absolute; left: 0; top: 10px; width: calc(100% - 8px); height: 8px; overflow: visible"><line x1="0" y1="4" x2="100%" y2="4" stroke="{{th.rcolor}}" stroke-width="2" stroke-dasharray="{{th.rdash}}" stroke-linecap="round"></line><line x1="0" y1="4" x2="100%" y2="4" stroke="{{th.rcolor}}" stroke-width="4.5" stroke-dasharray="0.5 21.5" stroke-linecap="round" stroke-opacity="{{th.rbo}}"><animate attributeName="stroke-dashoffset" values="33;11" dur="0.9s" repeatCount="indefinite"></animate></line></svg>
+<span aria-hidden="true" style="position: absolute; right: 0; top: 8px; width: 0; height: 0; border-left: 9px solid {{th.rcolor}}; border-top: 6px solid transparent; border-bottom: 6px solid transparent"></span>
+<sc-if value="{{th.isRecip}}" hint-placeholder-val="{{ false }}"><button onClick="{{th.openRev}}" style="position: relative; height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid #C9D2F5; background: #FFFFFF; color: #2336B0; font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer">{{th.revLabel}}</button></sc-if>
+<sc-if value="{{th.isResp}}" hint-placeholder-val="{{ false }}"><span style="position: relative; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E1E5EC; color: #3A4352; font-size: 12px">{{th.respLabel}}</span></sc-if>
+</div>
+</sc-if>
+</div>
+<button onClick="{{th.goTo}}" style="flex: none; display: flex; align-items: center; gap: 8px; height: 44px; box-sizing: border-box; padding: 0 6px 0 14px; border-radius: 12px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 30px; height: 30px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: {{th.b.mbg}}; color: {{th.b.mfg}}; border: 1.5px {{th.b.mst}} {{th.b.mbd}}; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600">{{th.bCode}}</span>{{th.bAr}}</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 0; font-size: 22px; font-weight: 700; line-height: 1.35">{{th.t}}</h2>
+<sc-if value="{{th.hasWhy}}" hint-placeholder-val="{{ true }}"><p style="margin: 0; font-size: 14px; line-height: 1.75; color: #3A4352">{{th.why}}</p></sc-if>
+</div>
+
+<div role="tablist" aria-label="أقسام التكامل" style="display: flex; gap: 24px; border-bottom: 1px solid #E3E7EE">
+<sc-for list="{{th.tabs}}" as="tb" hint-placeholder-count="3">
+<button role="tab" aria-selected="{{tb.sel}}" onClick="{{tb.pick}}" style="display: flex; align-items: center; gap: 6px; height: 44px; margin-bottom: -1px; padding: 0; border: 0; border-bottom: 2px solid {{tb.bd}}; background: none; color: {{tb.fg}}; font-family: inherit; font-size: 14px; font-weight: {{tb.fw}}; cursor: pointer">{{tb.ar}}<sc-if value="{{tb.hasN}}" hint-placeholder-val="{{ false }}"><span style="padding: 0 7px; border-radius: 999px; background: {{tb.nbg}}; color: {{tb.nfg}}; font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 18px">{{tb.n}}</span></sc-if></button>
+</sc-for>
+</div>
+</div>
+
+<div style="flex: 1; min-height: 0; overflow: auto; padding: 0 32px 28px">
+
+<sc-if value="{{th.isFields}}" hint-placeholder-val="{{ true }}">
+<div>
+<sc-if value="{{lin.has}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px; padding: 18px; border-radius: 16px; background: #F4F6FE; border: 1px solid #DCE2FA">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<span style="font-size: 14px; font-weight: 700">مسار «{{lin.ar}}» عبر الأنظمة</span>
+<span style="font-size: 12px; line-height: 1.6; color: #3A4352">{{lin.note}}</span>
+</div>
+<button aria-label="إغلاق المسار" onClick="{{lin.close}}" style="flex: none; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: #3A4352; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 0">
+<sc-for list="{{lin.hops}}" as="h" hint-placeholder-count="5">
+<span style="display: flex; align-items: center">
+<sc-if value="{{h.notFirst}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: relative; flex: none; display: block; width: 26px; height: 12px"><span style="position: absolute; left: 6px; right: 2px; top: 5px; border-top: 2px {{h.css}} {{h.color}}"></span><span style="position: absolute; left: 0; top: 0; width: 0; height: 0; border-right: 7px solid {{h.color}}; border-top: 6px solid transparent; border-bottom: 6px solid transparent"></span></span></sc-if>
+<button onClick="{{h.open}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 8px 10px; border-radius: 10px; border: 1px solid {{h.bd}}; background: {{h.bg}}; color: {{h.fg}}; font-family: inherit; text-align: right; cursor: pointer">
+<span style="font-size: 12px; font-weight: 600">{{h.ar}}</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: {{h.sub}}">{{h.field}}</span>
+</button>
+</span>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-for list="{{th.sections}}" as="sec" hint-placeholder-count="2">
+<div style="display: flex; flex-direction: column; margin-top: 22px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 8px">
+<span style="font-size: 14px; font-weight: 700">{{sec.ar}}</span>
+<span style="font-size: 12px; color: #566070">{{sec.nLabel}}</span>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr) 72px 148px; align-items: center; gap: 10px; padding: 6px 10px; font-size: 11px; font-weight: 600; color: #566070">
+<span>{{sec.c1}}</span><span></span><span>{{sec.c2}}</span><span>النوع</span><span>الوسوم</span>
+</div>
+<sc-for list="{{sec.rows}}" as="f" hint-placeholder-count="4">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr) 72px 148px; align-items: center; gap: 10px; min-height: 48px; padding: 6px 10px; border-top: 1px solid #EEF0F4; border-radius: 8px; background: {{f.bg}}">
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; text-align: right; overflow-wrap: anywhere">{{f.src}}</span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A93A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; text-align: right; overflow-wrap: anywhere">{{f.dst}}</span>
+<span dir="ltr" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #566070; text-align: right">{{f.type}}</span>
+<span style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+<sc-for list="{{f.tags}}" as="tg" hint-placeholder-count="1"><span style="padding: 1px 7px; border-radius: 6px; background: {{tg.bg}}; color: {{tg.fg}}; font-size: 11px; line-height: 18px">{{tg.ar}}</span></sc-for>
+<sc-if value="{{f.hasTrace}}" hint-placeholder-val="{{ false }}"><button onClick="{{f.onTrace}}" style="height: 26px; padding: 0 8px; border-radius: 6px; border: 1px solid #C9D2F5; background: {{f.tbg}}; color: {{f.tfg}}; font-family: inherit; font-size: 11px; font-weight: 600; cursor: pointer">{{f.traceLabel}}</button></sc-if>
+</span>
+</div>
+</sc-for>
+</div>
+</sc-for>
+
+<sc-if value="{{th.noFields}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 22px; padding: 22px; border-radius: 16px; border: 1.5px dashed #D5DAE3">
+<span style="font-size: 14px; font-weight: 600">لم تُوثّق الحقول المتبادلة في هذا التكامل بعد.</span>
+<span style="font-size: 13px; line-height: 1.7; color: #566070">ابدأ بالحقول التي تعرفها، وستبقى الحالة «يحتاج تحقق» حتى يُرفق دليل.</span>
+<button style="height: 40px; padding: 0 16px; border: 0; border-radius: 10px; background: #0E1420; color: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">ابدأ توثيق الحقول</button>
+</div>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{th.isHow}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 22px">
+<sc-for list="{{th.facts}}" as="fa" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 12px; background: #F6F7F9">
+<span style="font-size: 12px; color: #566070">{{fa.k}}</span>
+<span dir="auto" style="font-family: {{fa.ff}}; font-size: 14px; font-weight: 500; text-align: right; overflow-wrap: anywhere">{{fa.v}}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{th.isEvidence}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 22px; margin-top: 22px">
+<div style="display: flex; align-items: flex-start; gap: 14px; padding: 18px; border-radius: 16px; background: {{th.cbg}}">
+<svg width="32" height="8" viewBox="0 0 32 8" aria-hidden="true" style="flex: none; margin-top: 8px"><line x1="2" y1="4" x2="30" y2="4" stroke="{{th.color}}" stroke-width="2.5" stroke-dasharray="{{th.dash}}" stroke-linecap="round"></line></svg>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 700; color: {{th.cfg}}">{{th.cl}}</span>
+<span style="font-size: 13px; line-height: 1.7; color: #3A4352">{{th.basis}}</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700">ما تم التحقق منه</span>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{th.checks}}" as="k" hint-placeholder-count="3">
+<li style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: {{k.fg}}"><span aria-hidden="true" style="flex: none; width: 20px; height: 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: {{k.bg}}; border: 1.5px solid {{k.bd}}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="{{k.ic}}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>{{k.t}}</span><span style="font-size: 12px; color: #566070">{{k.state}}</span></li>
+</sc-for>
+</ul>
+</div>
+<sc-if value="{{th.hasQs}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700">أسئلة مفتوحة</span>
+<sc-for list="{{th.qs}}" as="qq" hint-placeholder-count="2">
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid #F1DCCD; background: #FFFAF6">
+<span aria-hidden="true" style="flex: none; width: 7px; height: 7px; border-radius: 50%; background: #C24E0A"></span>
+<span style="flex: 1; font-size: 14px; line-height: 1.6">{{qq.t}}</span>
+<button style="flex: none; height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid #E1E5EC; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer">إضافة إجابة</button>
+</div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</sc-if>
+
+</div>
+
+<div style="flex: none; display: flex; align-items: center; gap: 8px; padding: 14px 32px; border-top: 1px solid #EEF0F4">
+<button style="height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #0E1420; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">إضافة دليل أو ملاحظة</button>
+<button style="height: 44px; padding: 0 16px; border: 1px solid #E1E5EC; border-radius: 12px; background: #FFFFFF; color: #0E1420; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">تعديل حالة التحقق</button>
+</div>
+</aside>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true,"section":"Prototype"},"startView":{"editor":"enum","options":["atlas","lens","impact"],"default":"atlas","section":"Prototype"},"startFocus":{"editor":"enum","options":["payments","auth","registry","contracts","chat","odoo","tiny"],"default":"payments","section":"Prototype"},"startThread":{"editor":null,"default":null},"startTrace":{"editor":null,"default":null},"startHover":{"editor":null,"default":null},"startChange":{"editor":null,"default":null},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  componentWillUnmount() {
+    if (this._lt) clearTimeout(this._lt);
+  }
+
+  data() {
+    if (this._d) return this._d;
+    const SYS = [
+      { id: 'app', code: 'APP', ar: 'تطبيق أساكن', en: 'Asakin App · iOS', col: 0, kind: 'int', host: 'App Store', owner: 'فريق التطوير', about: 'تطبيق المستأجرين والعملاء على iOS: الدخول، والعقود، وطلبات الصيانة.' },
+      { id: 'tenant', code: 'TNT', ar: 'بوابة المستأجرين', en: 'Tenant Portal', col: 0, kind: 'int', host: 'Replit', owner: 'فريق التطوير', about: 'بوابة الويب للمستأجرين لعرض العقود وسداد الدفعات وفتح طلبات الصيانة.' },
+      { id: 'web', code: 'WEB', ar: 'موقع أساكن', en: 'Sales Website', col: 0, kind: 'int', host: 'Replit', owner: 'التسويق', about: 'الموقع العام لعرض المشاريع والوحدات المتاحة واستقبال طلبات الاهتمام.' },
+      { id: 'contracts', code: 'CON', ar: 'إدارة العقود', en: 'Leasing & Contracts', col: 1, kind: 'int', host: 'Replit', owner: 'فريق التطوير', about: 'دورة حياة عقود الإيجار وجداول الدفعات المستحقة.' },
+      { id: 'maint', code: 'MNT', ar: 'طلبات الصيانة', en: 'Maintenance', col: 1, kind: 'int', host: 'Replit', owner: 'فريق التطوير', about: 'استقبال طلبات الصيانة وتوزيعها ومتابعة حالتها حتى الإغلاق.' },
+      { id: 'chat', code: 'CHT', ar: 'مركز محادثات أساكن', en: 'Asakin Chat Center', col: 1, kind: 'int', host: 'Replit', owner: 'فريق التطوير', about: 'خدمة العملاء التشغيلية مع المستأجرين والملاك عبر واتساب.' },
+      { id: 'units', code: 'UNT', ar: 'مخزون الوحدات', en: 'Units Inventory', col: 1, kind: 'int', host: 'Replit', owner: 'فريق التطوير', about: 'المرجع التشغيلي للوحدات وحالاتها ومساحاتها وأسعارها.' },
+      { id: 'crm', code: 'CRM', ar: 'العملاء المحتملون', en: 'Leads CRM', col: 1, kind: 'int', host: 'Replit', owner: 'المبيعات', about: 'متابعة العملاء المهتمين والحجوزات المبدئية للوحدات.' },
+      { id: 'auth', code: 'AUT', ar: 'خدمة المصادقة', en: 'Asakin Auth', col: 2, kind: 'core', host: 'Replit', owner: 'فريق التطوير', about: 'تسجيل الدخول الموحّد ودليل المستخدمين الذي تبني عليه التطبيقات الداخلية.' },
+      { id: 'registry', code: 'REG', ar: 'سجل أساكن', en: 'Asakin Registry', col: 2, kind: 'core', host: 'Replit', owner: 'فريق التطوير', about: 'المصدر المرجعي المشترك لبيانات المستأجرين والوحدات.' },
+      { id: 'tiny', code: 'TNY', ar: 'Tiny', en: 'Tiny · role undocumented', col: 2, kind: 'core', host: 'غير موثّقة', owner: 'غير محدد', about: 'خدمة مشتركة تمر عبرها بعض التكاملات.', unknown: true },
+      { id: 'notify', code: 'NTF', ar: 'خدمة الإشعارات', en: 'Notifications Hub', col: 2, kind: 'core', host: 'Replit', owner: 'فريق التطوير', about: 'نقطة موحّدة لإرسال الإشعارات التشغيلية عبر القنوات المختلفة.' },
+      { id: 'payments', code: 'PAY', ar: 'أساكن للمدفوعات', en: 'Asakin Payments', col: 3, kind: 'int', host: 'Replit · payments.asakin.sa', owner: 'فريق التطوير', about: 'تحصيل دفعات الإيجار والمبيعات عبر بوابات الدفع، وترحيلها إلى المحاسبة.' },
+      { id: 'odoo', code: 'ODO', ar: 'Odoo المحاسبة', en: 'Odoo ERP', col: 3, kind: 'int', host: 'Odoo SaaS', owner: 'المالية', about: 'المحاسبة لشركات المجموعة الثلاث: أساكن، ومحكم، ونقدية.' },
+      { id: 'dhamen', code: 'DHM', ar: 'ضامن', en: 'Dhamen · Elm', col: 4, kind: 'ext', host: 'مزود خارجي', owner: 'Elm', about: 'بوابة دفع خارجية — الربط حالياً في بيئة الاختبار.' },
+      { id: 'applepay', code: 'APL', ar: 'Apple Pay', en: 'Apple Pay', col: 4, kind: 'ext', host: 'مزود خارجي', owner: 'Apple', about: 'الدفع عبر Apple Pay داخل صفحة السداد.' },
+      { id: 'whatsapp', code: 'WAP', ar: 'واتساب للأعمال', en: 'WhatsApp Cloud API', col: 4, kind: 'ext', host: 'Meta', owner: 'Meta', about: 'القناة الرسمية للمراسلة التشغيلية مع المستأجرين والعملاء.' },
+      { id: 'sms', code: 'SMS', ar: 'مزود الرسائل النصية', en: 'SMS / OTP · TBD', col: 4, kind: 'ext', host: 'قيد الاختيار', owner: '—', about: 'الرسائل النصية ورموز التحقق — المزود قيد المفاضلة.' },
+      { id: 'nafath', code: 'NFT', ar: 'نفاذ', en: 'Nafath', col: 4, kind: 'ext', host: 'مزود خارجي', owner: '—', about: 'التحقق من الهوية الوطنية — وجود الربط نفسه غير مؤكد.' },
+      { id: 'ejar', code: 'EJR', ar: 'منصة إيجار', en: 'Ejar', col: 4, kind: 'ext', host: 'مزود خارجي', owner: '—', about: 'توثيق عقود الإيجار — آلية الربط غير مؤكدة.' }
+    ];
+    const I = (id, from, to, t, m, c, o) => Object.assign({ id: id, from: from, to: to, t: t, m: m, c: c, trig: '—', freq: '—', ep: '—', au: '—', route: 'مباشر', f: [], r: [], qs: [], w: '' }, o || {});
+    const INT = [
+      I('I1', 'app', 'auth', 'تسجيل الدخول وإصدار الرمز', 'OAuth 2.0', 'ok', { trig: 'عند تسجيل دخول المستخدم', freq: 'لحظي', ep: 'POST /oauth/token', au: 'PKCE', w: 'يحصل التطبيق على رمز دخول بعد التحقق من رقم الجوال.', f: [['mobile', 'username', 'string', 'req pii', 'mobile'], ['otp_code', 'otp', 'string', 'req'], ['device_id', 'client.device', 'string', '']], r: [['access_token', 'session.token', 'JWT', 'id'], ['user.id', 'profile.user_id', 'uuid', 'id']] }),
+      I('I2', 'tenant', 'auth', 'تسجيل الدخول الموحّد', 'OIDC', 'ok', { trig: 'عند فتح البوابة', freq: 'لحظي', ep: 'GET /authorize', au: 'OIDC', f: [['client_id', 'client_id', 'string', 'req'], ['redirect_uri', 'redirect_uri', 'url', 'req']], r: [['id_token', 'session.id_token', 'JWT', 'id'], ['email', 'user.email', 'string', 'pii']] }),
+      I('I3', 'web', 'crm', 'إرسال عميل محتمل', 'Webhook', 'ok', { trig: 'عند تعبئة نموذج الاهتمام', freq: 'لحظي', ep: 'POST /hooks/leads', au: 'Shared secret', f: [['full_name', 'lead.name', 'string', 'req pii'], ['mobile', 'lead.mobile', 'string', 'req pii'], ['unit_code', 'lead.interest_unit', 'string', ''], ['utm_source', 'lead.source', 'string', '']] }),
+      I('I4', 'auth', 'registry', 'مزامنة دليل المستخدمين', 'Scheduled', 'part', { trig: 'مهمة مجدولة', freq: 'كل ساعة (غير مؤكد)', ep: 'PUT /people/{id}', au: 'Service token', w: 'ينسخ بيانات المستخدمين الأساسية إلى السجل المرجعي.', f: [['user.id', 'person.auth_id', 'uuid', 'req id'], ['user.national_id', 'tenant.id_number', 'string', 'pii', 'nid'], ['user.mobile', 'person.mobile', 'string', 'pii'], ['user.status', 'person.status', 'enum', '']], qs: ['هل المزامنة كل ساعة أم عند كل تعديل؟', 'هل يُزامَن الموظفون أيضاً أم المستأجرون فقط؟'] }),
+      I('I5', 'auth', 'sms', 'إرسال رمز التحقق', 'REST', 'q', { trig: 'عند طلب الدخول', freq: 'لحظي', f: [['username', 'to', 'string', 'req pii', 'mobile'], ['otp_message', 'body', 'string', 'req']], qs: ['المزود لم يُختر بعد — مسار الإرسال الحالي غير موثّق.', 'هل سيُعاد استخدام اسم المرسل (Sender ID) الحالي؟'] }),
+      I('I6', 'auth', 'nafath', 'التحقق من الهوية الوطنية', 'REST', 'q', { qs: ['هل يوجد ربط فعلي مع نفاذ أم يتم التحقق يدوياً؟'] }),
+      I('I7', 'tenant', 'contracts', 'عرض العقود والدفعات', 'REST', 'ok', { trig: 'عند فتح صفحة العقود', freq: 'لحظي', ep: 'GET /contracts?tenant=', au: 'Bearer token', f: [['session.user_id', 'tenant.auth_id', 'uuid', 'req id']], r: [['contracts[]', 'contracts[]', 'array', ''], ['schedule[]', 'installments[]', 'array', '']] }),
+      I('I8', 'tenant', 'maint', 'فتح طلب صيانة', 'REST', 'ok', { trig: 'عند إرسال الطلب', freq: 'لحظي', ep: 'POST /requests', au: 'Bearer token', f: [['unit_code', 'request.unit', 'string', 'req'], ['category', 'request.category', 'enum', 'req'], ['description', 'request.notes', 'text', ''], ['photos[]', 'request.attachments', 'file[]', '']] }),
+      I('I9', 'app', 'maint', 'طلب صيانة من التطبيق', 'REST', 'part', { trig: 'عند إرسال الطلب', freq: 'لحظي', ep: 'POST /requests', au: 'Bearer token', f: [['unit_code', 'request.unit', 'string', 'req'], ['category', 'request.category', 'enum', 'req']], qs: ['هل يستخدم التطبيق نقطة الاتصال نفسها الخاصة بالبوابة؟'] }),
+      I('I10', 'contracts', 'payments', 'إنشاء طلب سداد', 'REST', 'ok', { trig: 'عند استحقاق دفعة أو طلب المستأجر', freq: 'لحظي', ep: 'POST /api/payment-requests', au: 'API key', w: 'يحوّل الدفعة المستحقة في العقد إلى طلب سداد قابل للدفع.', f: [['installment.ref', 'payment_ref', 'string', 'req id', 'payref'], ['amount_due', 'amount', 'decimal', 'req'], ['due_date', 'due_at', 'date', ''], ['tenant.id_no', 'customer.id_no', 'string', 'pii', 'nid'], ['company', 'company_id', 'enum', 'req']], r: [['checkout_url', 'payment_url', 'url', ''], ['payment_request_id', 'request_id', 'uuid', 'id']] }),
+      I('I11', 'payments', 'dhamen', 'تنفيذ الدفع عبر ضامن', 'REST', 'ok', { trig: 'عند بدء المستأجر عملية الدفع', freq: 'لحظي', ep: 'POST /v1/payments', au: 'API key + IP', route: 'مباشر · بيئة الاختبار', w: 'ينشئ عملية دفع لدى ضامن ويعيد رابط إتمام الدفع للمستأجر.', f: [['payment_ref', 'merchantReference', 'string', 'req id', 'payref'], ['amount', 'amount', 'decimal', 'req'], ['currency', 'currency', '"SAR"', 'req'], ['customer.id_no', 'customer.idNumber', 'string', 'pii', 'nid'], ['customer.mobile', 'customer.mobile', 'string', 'pii'], ['callback_url', 'callbackUrl', 'url', 'req']], r: [['transactionId', 'dhamen_txn_id', 'string', 'id'], ['status', 'status', 'enum', ''], ['redirectUrl', 'checkout_url', 'url', '']] }),
+      I('I12', 'dhamen', 'payments', 'إشعار نتيجة الدفع', 'Webhook', 'part', { trig: 'بعد اكتمال الدفع أو فشله', freq: 'لحظي', ep: 'POST /callbacks/dhamen', au: 'توقيع HMAC (غير مؤكد)', w: 'يُبلغ ضامن المنصة بنتيجة العملية لتحديث حالة الدفعة.', f: [['merchantReference', 'payment_ref', 'string', 'req id', 'payref'], ['transactionId', 'dhamen_txn_id', 'string', 'id'], ['status', 'status', 'enum', 'req'], ['paidAt', 'paid_at', 'datetime', ''], ['signature', '—', 'string', '']], qs: ['هل يُتحقق من التوقيع قبل اعتماد حالة الدفع؟', 'عنوان الإشعار في بيئة الإنتاج لم يُضبط بعد.'] }),
+      I('I13', 'payments', 'applepay', 'الدفع عبر Apple Pay', 'SDK', 'ok', { trig: 'عند اختيار Apple Pay', freq: 'لحظي', ep: 'Apple Pay JS', au: 'Merchant ID', f: [['amount', 'total.amount', 'decimal', 'req'], ['merchant_id', 'merchantIdentifier', 'string', 'req']], r: [['paymentToken', 'apple_pay_token', 'string', 'pii']] }),
+      I('I14', 'payments', 'odoo', 'ترحيل قيود التحصيل', 'JSON-RPC', 'part', { trig: 'بعد نجاح الدفع', freq: 'دفعات كل 15 دقيقة', ep: 'account.move · create', au: 'API key', route: 'عبر Tiny؟ (غير مؤكد)', w: 'يسجّل المبالغ المحصّلة قيوداً في محاسبة الشركة المعنية.', f: [['payment_ref', 'move.ref', 'string', 'req', 'payref'], ['company_id', 'company_id', 'enum', 'req'], ['amount', 'line.credit', 'decimal', 'req'], ['tenant.code', 'partner_ref', 'string', 'id']], qs: ['هل يمر الترحيل عبر Tiny أم مباشرة إلى Odoo؟', 'أي حساب يُستخدم لكل شركة من الشركات الثلاث؟'] }),
+      I('I15', 'payments', 'contracts', 'تحديث حالة الدفعة', 'Webhook', 'ok', { trig: 'بعد تأكيد الدفع', freq: 'لحظي', ep: 'POST /hooks/payment-status', au: 'Shared secret', f: [['payment_ref', 'installment.paid_ref', 'string', 'req'], ['status', 'installment.status', 'enum', 'req'], ['paid_at', 'installment.paid_at', 'datetime', '']] }),
+      I('I16', 'payments', 'notify', 'إرسال إيصال السداد', 'Event', 'part', { trig: 'بعد تأكيد الدفع', freq: 'لحظي', ep: 'payment.succeeded', f: [['receipt_no', 'vars.receipt', 'string', ''], ['customer.mobile', 'recipient', 'string', 'pii']], qs: ['هل يُرسل الإيصال عبر واتساب أم الرسائل النصية أم كليهما؟'] }),
+      I('I17', 'contracts', 'odoo', 'مزامنة الفواتير', 'Scheduled', 'q', { route: 'غير معروف', qs: ['هل تُنشأ الفواتير في Odoo من العقود آلياً أم يدوياً؟'] }),
+      I('I18', 'contracts', 'ejar', 'توثيق العقد في إيجار', '—', 'q', { qs: ['هل التوثيق آلي أم يتم يدوياً عبر وسيط عقاري؟'] }),
+      I('I19', 'registry', 'contracts', 'جلب بيانات المستأجر والوحدة', 'REST', 'ok', { trig: 'عند إنشاء عقد', freq: 'لحظي', ep: 'GET /tenants/{id}', au: 'Service token', f: [['tenant.id_number', 'tenant.id_no', 'string', 'pii', 'nid'], ['tenant.name', 'tenant.name', 'string', 'pii'], ['unit.code', 'unit_code', 'string', 'req id'], ['unit.rent', 'base_rent', 'decimal', '']] }),
+      I('I20', 'units', 'registry', 'نشر بيانات الوحدات', 'REST', 'ok', { trig: 'عند تعديل وحدة', freq: 'لحظي', ep: 'PUT /units/{code}', au: 'Service token', f: [['unit_code', 'unit.code', 'string', 'req id'], ['status', 'unit.status', 'enum', 'req'], ['area_m2', 'unit.area', 'number', ''], ['project', 'unit.project', 'string', '']] }),
+      I('I21', 'registry', 'web', 'عرض الوحدات المتاحة', 'REST', 'ok', { trig: 'عند تصفح الموقع', freq: 'لحظي مع تخزين مؤقت', ep: 'GET /units?status=available', au: 'Public key', f: [['unit.code', 'code', 'string', 'id'], ['unit.status', 'availability', 'enum', ''], ['unit.price', 'price', 'decimal', '']] }),
+      I('I22', 'crm', 'units', 'حجز مبدئي لوحدة', 'REST', 'part', { trig: 'عند تأكيد اهتمام العميل', freq: 'لحظي', ep: 'POST /holds', au: 'Service token', f: [['lead.id', 'hold.lead_ref', 'uuid', 'id'], ['unit_code', 'hold.unit', 'string', 'req'], ['hold_until', 'hold.expires_at', 'datetime', '']], qs: ['هل يُلغى الحجز تلقائياً عند انتهاء المدة؟'] }),
+      I('I23', 'chat', 'whatsapp', 'إرسال الرسائل', 'Cloud API', 'ok', { trig: 'عند رد الموظف أو إرسال قالب', freq: 'لحظي', ep: 'POST /{phone-id}/messages', au: 'System user token', w: 'يرسل الردود والقوالب إلى المستأجرين والملاك، ويستلم معرّف الرسالة وحالة التسليم.', f: [['to', 'to', 'phone', 'req pii'], ['template', 'template.name', 'string', ''], ['body', 'text.body', 'text', '']], r: [['messages[0].id', 'wamid', 'string', 'id'], ['status', 'delivery_status', 'enum', '']] }),
+      I('I24', 'chat', 'registry', 'التعرف على العميل برقم الجوال', 'REST', 'ok', { trig: 'عند وصول رسالة جديدة', freq: 'لحظي', ep: 'GET /people?mobile=', au: 'Service token', f: [['from_number', 'lookup.mobile', 'phone', 'req pii']], r: [['person.id', 'customer_ref', 'uuid', 'id'], ['contracts[]', 'context.contracts', 'array', '']] }),
+      I('I25', 'maint', 'chat', 'إشعار المستأجر بحالة الطلب', 'Event', 'part', { trig: 'عند تغيّر حالة الطلب', freq: 'لحظي', ep: 'request.status_changed', f: [['request.id', 'ticket_ref', 'string', 'id'], ['status', 'vars.status', 'enum', '']], qs: ['هل يمر الإشعار عبر خدمة الإشعارات أم مباشرة إلى مركز المحادثات؟'] }),
+      I('I26', 'notify', 'whatsapp', 'إرسال قوالب الإشعارات', 'Cloud API', 'part', { trig: 'عند طلب إشعار', freq: 'لحظي', ep: 'POST /{phone-id}/messages', au: 'System user token', f: [['recipient', 'to', 'phone', 'req pii'], ['template', 'template.name', 'string', 'req']], qs: ['هل يستخدم رقم مركز المحادثات نفسه؟'] }),
+      I('I27', 'notify', 'sms', 'رسائل نصية تشغيلية', 'REST', 'q', { qs: ['لا يوجد مزود معتمد بعد — هل تُرسل أي رسائل حالياً؟'] }),
+      I('I28', 'chat', 'auth', 'دخول الموظفين', 'OIDC', 'ok', { trig: 'عند دخول الموظف', freq: 'لحظي', ep: 'GET /authorize', au: 'OIDC', f: [['employee.email', 'username', 'string', 'req pii']], r: [['id_token', 'session', 'JWT', '']] }),
+      I('I29', 'tiny', 'odoo', 'مسار غير موثّق', '—', 'q', { qs: ['ما البيانات التي ترسلها Tiny إلى Odoo إن وُجدت؟'] }),
+      I('I30', 'registry', 'tiny', 'مزامنة غير معروفة', '—', 'q', { qs: ['هل تقرأ Tiny من السجل؟ وما الغرض؟'] }),
+      I('I31', 'whatsapp', 'chat', 'استقبال الرسائل الواردة', 'Webhook', 'ok', { trig: 'عند وصول رسالة من عميل', freq: 'لحظي', ep: 'POST /webhooks/whatsapp', au: 'Verify token + توقيع', w: 'يوصل رسائل المستأجرين والملاك الواردة إلى مركز المحادثات.', f: [['contacts[0].wa_id', 'customer.mobile', 'phone', 'req pii'], ['messages[0].id', 'wamid', 'string', 'id'], ['messages[0].text.body', 'message.text', 'text', ''], ['messages[0].timestamp', 'received_at', 'datetime', '']] })
+    ];
+    const TR = {
+      nid: { ar: 'رقم الهوية', note: 'بيان شخصي حساس يمرّ عبر خمسة أنظمة، آخرها مزود خارجي.', hops: [{ s: 'auth', f: 'user.national_id' }, { s: 'registry', f: 'tenant.id_number', i: 'I4' }, { s: 'contracts', f: 'tenant.id_no', i: 'I19' }, { s: 'payments', f: 'customer.id_no', i: 'I10' }, { s: 'dhamen', f: 'customer.idNumber', i: 'I11' }] },
+      payref: { ar: 'مرجع الدفع', note: 'المفتاح الذي يربط الدفعة بين العقد وبوابة الدفع والمحاسبة.', hops: [{ s: 'contracts', f: 'installment.ref' }, { s: 'payments', f: 'payment_ref', i: 'I10' }, { s: 'dhamen', f: 'merchantReference', i: 'I11' }, { s: 'payments', f: 'payment_ref', i: 'I12' }, { s: 'odoo', f: 'move.ref', i: 'I14' }] },
+      mobile: { ar: 'رقم الجوال', note: 'يُستخدم لتسجيل الدخول ثم لإرسال رمز التحقق.', hops: [{ s: 'app', f: 'mobile' }, { s: 'auth', f: 'username', i: 'I1' }, { s: 'sms', f: 'to', i: 'I5' }] }
+    };
+    const S = {};
+    SYS.forEach((x) => { S[x.id] = x; });
+    const IM = {};
+    INT.forEach((x) => { IM[x.id] = x; });
+    INT.forEach((x) => {
+      x.resp = x.r.length > 0;
+      const rv = INT.filter((o) => o.from === x.to && o.to === x.from)[0];
+      x.rev = rv ? rv.id : null;
+      x.two = x.resp || !!x.rev;
+    });
+    this._d = { SYS: SYS, INT: INT, TR: TR, S: S, IM: IM };
+    return this._d;
+  }
+
+  renderVals() {
+    const D = this.data();
+    const SYS = D.SYS, INT = D.INT, TR = D.TR, S = D.S, IM = D.IM;
+    const p = this.props || {};
+    const st = this.state || {};
+    const g = (k, d) => (st[k] !== undefined ? st[k] : d);
+    const set = (o) => this.setState(o);
+
+    const view = g('view', p.startView || 'atlas');
+    const focus = g('focus', p.startFocus || 'payments');
+    const thread = g('thread', p.startThread || null);
+    const trace = g('trace', p.startTrace || null);
+    const hover = g('hover', p.startHover || null);
+    const change = g('change', p.startChange || 'outage');
+    const tab = g('tab', 'fields');
+    const mode = g('mode', 'hover');
+    const filt = g('filt', { ok: true, part: true, q: true });
+    const q = g('q', '');
+    const motion = g('motion', p.motion === undefined || p.motion === null ? true : !!p.motion);
+    const beadOp = motion ? 1 : 0;
+
+    const CONF = {
+      ok: { ar: 'مؤكد', color: '#2B44D6', tfg: '#2336B0', dash: '', css: 'solid', bg: '#EEF1FD', basis: 'مُتحقق منه: نقطة الاتصال موجودة في الكود، والحقول مطابقة لطلبات فعلية.' },
+      part: { ar: 'جزئي', color: '#5B70E0', tfg: '#2E43C2', dash: '7 5', css: 'dashed', bg: '#F1F3FC', basis: 'موثّق جزئياً: الربط موجود، لكن بعض تفاصيله لم تُحسم بعد.' },
+      q: { ar: 'يحتاج تحقق', color: '#C24E0A', tfg: '#953A05', dash: '1 6', css: 'dotted', bg: '#FDF1E8', basis: 'ربط مُفترض: لم يُعثر بعد على دليل يؤكده أو ينفيه.' }
+    };
+    const KIND = {
+      int: { ar: 'تطبيق داخلي', bg: '#F1F3F7', fg: '#3A4352' },
+      core: { ar: 'خدمة مشتركة', bg: '#EEF1FD', fg: '#2336B0' },
+      ext: { ar: 'مزود خارجي', bg: '#F6F2EC', fg: '#5C4A33' }
+    };
+    const COLS = [
+      { ar: 'القنوات', en: 'CHANNELS', idx: '01', x: 90 },
+      { ar: 'تطبيقات الأعمال', en: 'BUSINESS APPS', idx: '02', x: 70 },
+      { ar: 'الخدمات المشتركة', en: 'SHARED CORE', idx: '03', x: 50 },
+      { ar: 'المالية', en: 'FINANCE', idx: '04', x: 30 },
+      { ar: 'مزودون خارجيون', en: 'EXTERNAL', idx: '05', x: 10 }
+    ];
+    const mono = (k, how) => {
+      if (how === 'inv') return { mbg: '#FFFFFF', mfg: '#0E1420', mbd: '#FFFFFF', mst: 'solid' };
+      if (how === 'dim') {
+        if (k === 'ext') return { mbg: '#FFFFFF', mfg: '#8E97A5', mbd: '#CDD3DC', mst: 'dashed' };
+        const c = k === 'core' ? '#B9C3F1' : '#C3C9D3';
+        return { mbg: c, mfg: '#FFFFFF', mbd: c, mst: 'solid' };
+      }
+      if (k === 'core') return { mbg: '#2B44D6', mfg: '#FFFFFF', mbd: '#2B44D6', mst: 'solid' };
+      if (k === 'ext') return { mbg: '#FFFFFF', mfg: '#0E1420', mbd: '#8A93A3', mst: 'dashed' };
+      return { mbg: '#0E1420', mfg: '#FFFFFF', mbd: '#0E1420', mst: 'solid' };
+    };
+    const touching = (id) => INT.filter((e) => e.from === id || e.to === id);
+
+    const goAtlas = () => set({ view: 'atlas', thread: null, trace: null, hover: null, edgeHover: null });
+    /* small grace period so the pointer can travel from a system onto one of its lines */
+    const clearT = () => { if (this._lt) { clearTimeout(this._lt); this._lt = null; } };
+    const leave = () => { clearT(); this._lt = setTimeout(() => { this._lt = null; if (!this._onEdge) this.setState({ hover: null }); }, 260); };
+    const edgeHover = g('edgeHover', null);
+    const edgeH = (id) => ({
+      enter: () => { clearT(); this._onEdge = true; set({ edgeHover: id }); },
+      out: () => { this._onEdge = false; set({ edgeHover: null }); leave(); },
+      open: () => { this._onEdge = false; clearT(); set({ thread: id, tab: 'fields', trace: null, edgeHover: null }); }
+    });
+    const mids = {};
+
+    /* ---------- Atlas ---------- */
+    const pos = {};
+    COLS.forEach((c, ci) => {
+      const list = SYS.filter((x) => x.col === ci);
+      const n = list.length;
+      const step = Math.min(15, 84 / n);
+      const start = 50 - (step * (n - 1)) / 2;
+      list.forEach((x, i) => { pos[x.id] = { x: c.x, y: Math.round((start + step * i) * 100) / 100 }; });
+    });
+    /* lane: +1 / -1 splits a two-way pair into parallel lanes, 0 = single lane */
+    const lane = (e) => (e.rev ? (e.from < e.to ? 1 : -1) : 0);
+    const pathD = (a, b, ln) => {
+      const P = { x: pos[a].x, y: pos[a].y }, Q = { x: pos[b].x, y: pos[b].y };
+      if (P.x === Q.x) {
+        const bx = P.x - 9 - (ln || 0) * 1.2;
+        P.x -= (ln || 0) * 0.6; Q.x -= (ln || 0) * 0.6;
+        return 'M ' + P.x + ' ' + P.y + ' C ' + bx + ' ' + P.y + ', ' + bx + ' ' + Q.y + ', ' + Q.x + ' ' + Q.y;
+      }
+      P.y += (ln || 0) * 1.1; Q.y += (ln || 0) * 1.1;
+      const mx = (P.x + Q.x) / 2;
+      return 'M ' + P.x + ' ' + P.y + ' C ' + mx + ' ' + P.y + ', ' + mx + ' ' + Q.y + ', ' + Q.x + ' ' + Q.y;
+    };
+    const act = view === 'atlas' ? hover : null;
+    const visible = INT.filter((e) => filt[e.c]);
+    const nb = {};
+    if (act) visible.forEach((e) => { if (e.from === act) nb[e.to] = true; if (e.to === act) nb[e.from] = true; });
+    const edges = visible.map((e) => {
+      const touch = !!act && (e.from === act || e.to === act);
+      if (!(mode === 'all' || touch)) return null;
+      const P = pos[e.from], Q = pos[e.to], ln = lane(e);
+      mids[e.id] = P.x === Q.x ? { x: (2 * P.x + 6 * (P.x - 9 - ln * 1.2)) / 8, y: (P.y + Q.y) / 2 } : { x: (P.x + Q.x) / 2, y: (P.y + Q.y) / 2 + ln * 1.1 };
+      const hot = edgeHover === e.id;
+      return Object.assign({ d: pathD(e.from, e.to, ln), color: CONF[e.c].color, dash: CONF[e.c].dash, w: hot ? 3.5 : (touch ? 2.25 : 1.25), bw: touch ? 5 : 3.5, bo: beadOp, rbw: touch ? 3.5 : 2.5, rbo: e.resp && motion ? 0.55 : 0, op: hot || touch ? 1 : (act ? 0.1 : 0.55), z: hot ? 2 : (touch ? 1 : 0) }, edgeH(e.id));
+    }).filter(Boolean).sort((a, b) => a.z - b.z);
+    const tiles = SYS.map((x) => {
+      const isA = act === x.id, isN = !!nb[x.id], dim = !!act && !isA && !isN;
+      const all = touching(x.id);
+      return Object.assign({
+        code: x.code, ar: x.ar, en: x.en, x: pos[x.id].x, y: pos[x.id].y, deg: all.length,
+        hasQ: all.some((e) => e.c === 'q'),
+        bg: isA ? '#0E1420' : (dim ? '#F6F7F9' : '#FFFFFF'),
+        fg: isA ? '#FFFFFF' : (dim ? '#7A8494' : '#0E1420'),
+        sub: isA ? '#B7C0CE' : (dim ? '#8E97A5' : '#566070'),
+        bd: isA ? '#0E1420' : (isN ? '#2B44D6' : (dim ? '#ECEEF2' : '#E1E5EC')),
+        sh: isA ? '0 14px 32px -14px rgba(14,20,32,0.55)' : (isN ? '0 0 0 3px rgba(43,68,214,0.14), 0 6px 16px -10px rgba(43,68,214,0.5)' : '0 1px 2px rgba(14,20,32,0.05)'),
+        cbg: isA ? 'rgba(255,255,255,0.14)' : '#F1F3F7',
+        cfg: isA ? '#FFFFFF' : (dim ? '#8E97A5' : '#3A4352'),
+        z: isA ? 3 : (isN ? 2 : 1),
+        enter: () => { clearT(); set({ hover: x.id }); },
+        open: () => set({ view: 'lens', focus: x.id, hover: null, thread: null, trace: null })
+      }, mono(x.kind, isA ? 'inv' : (dim ? 'dim' : '')));
+    });
+    const onlyQ = !filt.ok && !filt.part && filt.q;
+    let peek = { has: false, none: true, name: '', text: '', hint: mode === 'all' ? 'كل الخيوط ظاهرة — مرّر على نظام لعزل روابطه.' : 'مرّر على نظام لتظهر روابطه، ثم على أي خط لترى البيانات التي يحملها.' };
+    if (onlyQ && !act) peek.hint = 'تُعرض الروابط التي تحتاج تحققاً فقط — ابدأ من أي نظام عليه نقطة برتقالية.';
+    if (act) {
+      const ins = INT.filter((e) => e.to === act).length;
+      const outs = INT.filter((e) => e.from === act).length;
+      const qs = touching(act).filter((e) => e.c === 'q').length;
+      const pairs = {};
+      touching(act).forEach((e) => { if (e.two) pairs[e.from === act ? e.to : e.from] = true; });
+      const nTwo = Object.keys(pairs).length;
+      peek = { has: true, none: false, name: S[act].ar, text: ins + ' وارد · ' + outs + ' صادر' + (nTwo ? ' · تبادل ثنائي مع ' + nTwo : '') + (qs ? ' · ' + qs + ' يحتاج تحقق' : ''), hint: '' };
+    }
+
+    /* ---------- Legend & modes ---------- */
+    const counts = { ok: 0, part: 0, q: 0 };
+    INT.forEach((e) => { counts[e.c] += 1; });
+    const legend = ['ok', 'part', 'q'].map((k) => {
+      const on = !!filt[k];
+      return {
+        ar: CONF[k].ar, n: counts[k], color: CONF[k].color, dash: CONF[k].dash,
+        pressed: on ? 'true' : 'false',
+        bg: on ? '#FFFFFF' : 'transparent', bd: on ? '#D5DAE3' : '#E1E5EC',
+        fg: on ? '#0E1420' : '#6B7483', cfg: on ? CONF[k].tfg : '#6B7483', op: on ? 1 : 0.35,
+        toggle: () => {
+          const nf = { ok: filt.ok, part: filt.part, q: filt.q };
+          nf[k] = !on;
+          if (!nf.ok && !nf.part && !nf.q) return;
+          set({ filt: nf });
+        }
+      };
+    });
+    const seg = (cur, id) => ({ pressed: cur === id ? 'true' : 'false', bg: cur === id ? '#FFFFFF' : 'transparent', fg: cur === id ? '#0E1420' : '#566070', sh: cur === id ? '0 1px 3px rgba(14,20,32,0.14)' : 'none' });
+    const modes = [{ id: 'hover', ar: 'عند التمرير' }, { id: 'all', ar: 'كلها' }].map((m) => Object.assign({ ar: m.ar, pick: () => set({ mode: m.id }) }, seg(mode, m.id)));
+    const CH = [
+      { id: 'outage', ar: 'توقف النظام', desc: 'كل نظام يستدعيه أو يستقبل بياناته، ثم من يعتمد على هؤلاء.' },
+      { id: 'data', ar: 'تغيير بيانات يرسلها', desc: 'الأنظمة التي تستقبل بياناته مباشرة، ثم ما يليها في السلسلة.' },
+      { id: 'api', ar: 'تغيير واجهته البرمجية', desc: 'الأنظمة التي تستدعي واجهته، ثم ما يليها في السلسلة.' }
+    ];
+    const changes = CH.map((m) => Object.assign({ ar: m.ar, pick: () => set({ change: m.id }) }, seg(change, m.id)));
+
+    /* ---------- Lens ---------- */
+    const F = S[focus] || S.payments;
+    const inE = INT.filter((e) => e.to === F.id && filt[e.c]);
+    const outE = INT.filter((e) => e.from === F.id && filt[e.c]);
+    const mkRow = (e, other) => {
+      const o = S[other];
+      const isA = thread === e.id;
+      return Object.assign({
+        code: o.code, sys: o.ar, t: e.t, m: e.m,
+        color: CONF[e.c].color, css: CONF[e.c].css, dash: CONF[e.c].dash, cl: CONF[e.c].ar, cfg: CONF[e.c].tfg,
+        bd: isA ? '#0E1420' : '#E1E5EC',
+        sh: isA ? '0 0 0 3px rgba(14,20,32,0.10), 0 10px 24px -16px rgba(14,20,32,0.5)' : '0 1px 2px rgba(14,20,32,0.04)',
+        refLabel: 'ركّز على ' + o.ar, bo: beadOp, rbo: e.resp && motion ? 0.55 : 0,
+        two: e.two, twoLabel: e.rev ? 'تبادل ثنائي: يوجد تكامل معاكس من ' + (e.from === F.id ? o.ar : F.ar) : 'ثنائي الاتجاه: طلب وتعود معه بيانات',
+        open: () => set({ thread: e.id, tab: 'fields', trace: null }),
+        refocus: () => set({ focus: other, thread: null, trace: null })
+      }, mono(o.kind));
+    };
+    const allF = touching(F.id);
+    const nOk = allF.filter((e) => e.c === 'ok').length;
+    const nPart = allF.filter((e) => e.c === 'part').length;
+    const nQ = allF.filter((e) => e.c === 'q').length;
+    const tot = allF.length || 1;
+    const lens = {
+      inRows: inE.map((e) => mkRow(e, e.from)),
+      outRows: outE.map((e) => mkRow(e, e.to)),
+      inN: inE.length, outN: outE.length,
+      hasIn: inE.length > 0, noIn: inE.length === 0,
+      hasOut: outE.length > 0, noOut: outE.length === 0,
+      inDesc: 'أنظمة ترسل بيانات إلى ' + F.ar,
+      outDesc: 'أنظمة يرسل إليها ' + F.ar + ' بيانات',
+      emptyIn: 'لا توجد روابط واردة ' + (visible.length < INT.length ? 'ضمن التصفية الحالية' : 'موثّقة'),
+      emptyOut: 'لا توجد روابط صادرة ' + (visible.length < INT.length ? 'ضمن التصفية الحالية' : 'موثّقة')
+    };
+    const fc = Object.assign({
+      code: F.code, ar: F.ar, en: F.en, about: F.about, host: F.host, owner: F.owner,
+      kind: KIND[F.kind].ar, kbg: KIND[F.kind].bg, kfg: KIND[F.kind].fg,
+      inN: INT.filter((e) => e.to === F.id).length, outN: INT.filter((e) => e.from === F.id).length,
+      nOk: nOk, nPart: nPart, nQ: nQ,
+      wOk: Math.round((nOk / tot) * 100), wPart: Math.round((nPart / tot) * 100), wQ: Math.round((nQ / tot) * 100),
+      pct: Math.round((nOk / tot) * 100), unknown: !!F.unknown
+    }, mono(F.kind));
+
+    /* ---------- Impact ---------- */
+    const X = F.id;
+    const d1E = INT.filter((e) => (change === 'data' ? e.from === X : (change === 'api' ? e.to === X : (e.from === X || e.to === X))));
+    const d1 = [];
+    d1E.forEach((e) => { const o = e.from === X ? e.to : e.from; if (d1.indexOf(o) < 0) d1.push(o); });
+    let d2E = [];
+    const d2all = [];
+    d1.forEach((s1) => {
+      if (S[s1].kind === 'ext') return;
+      INT.filter((e) => e.from === s1 && e.to !== X && d1.indexOf(e.to) < 0).forEach((e) => { d2E.push(e); if (d2all.indexOf(e.to) < 0) d2all.push(e.to); });
+    });
+    const d2 = d2all.slice(0, 8);
+    d2E = d2E.filter((e) => d2.indexOf(e.to) >= 0);
+    const ip = {};
+    ip[X] = { x: 50, y: 50 };
+    d1.forEach((id, i) => { const a = -Math.PI / 2 + (2 * Math.PI * i) / d1.length; ip[id] = { x: 50 + 24 * Math.cos(a), y: 50 + 27 * Math.sin(a) }; });
+    d2.forEach((id, i) => { const a = -Math.PI / 2 + Math.PI / Math.max(d2.length, 1) + (2 * Math.PI * i) / d2.length; ip[id] = { x: 50 + 40 * Math.cos(a), y: 50 + 42 * Math.sin(a) }; });
+    const r2 = (v) => Math.round(v * 100) / 100;
+    /* straight segment in data direction; two-way pairs split into parallel lanes */
+    const seg2 = (e) => {
+      const a = e.from < e.to ? e.from : e.to, b = e.from < e.to ? e.to : e.from;
+      const P = ip[a], Q = ip[b];
+      const dx = Q.x - P.x, dy = Q.y - P.y, ln = Math.sqrt(dx * dx + dy * dy) || 1;
+      const k = e.rev ? (e.from === a ? 0.9 : -0.9) : 0;
+      const ox = (-dy / ln) * k, oy = (dx / ln) * k;
+      const S1 = ip[e.from], S2 = ip[e.to];
+      if (view === 'impact') mids[e.id] = { x: (S1.x + S2.x) / 2 + ox, y: (S1.y + S2.y) / 2 + oy };
+      return 'M ' + r2(S1.x + ox) + ' ' + r2(S1.y + oy) + ' L ' + r2(S2.x + ox) + ' ' + r2(S2.y + oy);
+    };
+    const imEdges = d1E.map((e) => {
+      const o = e.from === X ? e.to : e.from;
+      return Object.assign({ d: seg2(e), color: CONF[e.c].color, dash: CONF[e.c].dash, w: edgeHover === e.id ? 3.25 : 1.75, bw: 4.5, bo: beadOp, rbw: 3, rbo: e.resp && motion ? 0.55 : 0, op: 1 }, edgeH(e.id));
+    }).concat(d2E.map((e) => Object.assign({ d: seg2(e), color: CONF[e.c].color, dash: CONF[e.c].dash, w: edgeHover === e.id ? 3 : 1.25, bw: 3.5, bo: beadOp, rbw: 2.5, rbo: e.resp && motion ? 0.55 : 0, op: edgeHover === e.id ? 1 : 0.7 }, edgeH(e.id))));
+    const node = (id, ring) => Object.assign({
+      code: S[id].code, ar: S[id].ar, x: r2(ip[id].x), y: r2(ip[id].y),
+      tip: (ring === 1 ? 'تأثر مباشر — ' : 'تأثر غير مباشر — ') + 'انقر لعرض روابط ' + S[id].ar,
+      bg: ring === 1 ? '#FFFFFF' : '#F4F6F9', bd: ring === 1 ? '#BAC2CF' : '#B9C1CE', bst: ring === 1 ? 'solid' : 'dashed',
+      fg: ring === 1 ? '#0E1420' : '#3A4352',
+      sh: ring === 1 ? '0 8px 20px -14px rgba(14,20,32,0.5)' : 'none',
+      go: () => set({ view: 'lens', focus: id, thread: null, trace: null })
+    }, mono(S[id].kind));
+    const nq = d1E.concat(d2E).filter((e) => e.c === 'q').length;
+    const chObj = CH.filter((c) => c.id === change)[0] || CH[0];
+    const im = {
+      chAr: chObj.ar, desc: chObj.desc,
+      n1: d1.length, n2: d2.length, nq: nq, hasQ: nq > 0,
+      qText: 'قد يكون الأثر أوسع مما يظهر: ' + nq + (nq === 1 ? ' رابط' : ' روابط') + ' ضمن هذا النطاق لم يُتحقق منها بعد.',
+      edges: imEdges,
+      nodes: d1.map((id) => node(id, 1)).concat(d2.map((id) => node(id, 2))),
+      list: d1E.map((e) => {
+        const o = e.from === X ? e.to : e.from;
+        return Object.assign({ code: S[o].code, sys: S[o].ar, rel: (e.from === X ? 'يستقبل منه' : 'يستدعيه') + (e.two ? ' · ثنائي' : ''), t: e.t, color: CONF[e.c].color, dash: CONF[e.c].dash, open: () => set({ thread: e.id, tab: 'fields', trace: null }) }, mono(S[o].kind));
+      }),
+      empty: d1E.length === 0,
+      has2: d2.length > 0,
+      second: d2.map((id) => ({ ar: S[id].ar, go: () => set({ view: 'lens', focus: id, thread: null, trace: null }) }))
+    };
+
+    /* ---------- Line hover card ---------- */
+    let ec = { has: false, x: 50, y: 50, ty: '0', from: '', to: '', arrow: '←', m: '', t: '', sent: [], hasSent: false, more: '', hasMore: false, ret: '', hasRet: false, none: false };
+    const EH = edgeHover && IM[edgeHover] && mids[edgeHover] ? IM[edgeHover] : null;
+    if (EH) {
+      const M = mids[EH.id];
+      ec = {
+        has: true, x: Math.round(Math.min(86, Math.max(14, M.x)) * 100) / 100, y: Math.round(M.y * 100) / 100,
+        ty: M.y < 34 ? '16px' : 'calc(-100% - 16px)',
+        from: S[EH.from].ar, to: S[EH.to].ar, arrow: '←', m: EH.m, t: EH.t,
+        sent: EH.f.slice(0, 4).map((a) => ({ src: a[0], dst: a[1], pii: (a[3] || '').indexOf('pii') >= 0 })),
+        hasSent: EH.f.length > 0,
+        more: EH.f.length > 4 ? '+ ' + (EH.f.length - 4) + ' حقول أخرى' : '', hasMore: EH.f.length > 4,
+        ret: EH.r.map((a) => a[1]).join(' · '), hasRet: EH.r.length > 0,
+        none: EH.f.length === 0 && EH.r.length === 0
+      };
+    }
+
+    /* ---------- Thread drawer ---------- */
+    const tid = thread && IM[thread] ? thread : 'I11';
+    const E = IM[tid];
+    const A = S[E.from], B = S[E.to];
+    const TAG = {
+      req: { ar: 'مطلوب', bg: '#F1F3F7', fg: '#3A4352' },
+      pii: { ar: 'حساس', bg: '#FDF0E7', fg: '#8F3705' },
+      id: { ar: 'معرّف', bg: '#EEF1FD', fg: '#2336B0' }
+    };
+    const fr = (a) => {
+      const tr = a[4] || null;
+      const on = !!tr && trace === tr;
+      return {
+        src: a[0], dst: a[1], type: a[2],
+        tags: (a[3] || '').split(' ').filter(Boolean).map((k) => TAG[k]),
+        hasTrace: !!tr, traceLabel: on ? 'إخفاء المسار' : 'تتبّع المسار',
+        onTrace: () => set({ trace: on ? null : tr }),
+        bg: on ? '#F1F4FE' : 'transparent', tbg: on ? '#2B44D6' : '#FFFFFF', tfg: on ? '#FFFFFF' : '#2336B0'
+      };
+    };
+    const nLabel = (n) => (n === 1 ? 'حقل واحد' : (n === 2 ? 'حقلان' : n + ' حقول'));
+    const sections = [];
+    if (E.f.length) sections.push({ ar: 'يُرسَل — الطلب', c1: 'في ' + A.ar, c2: 'في ' + B.ar, nLabel: nLabel(E.f.length), rows: E.f.map(fr) });
+    if (E.r.length) sections.push({ ar: 'يعود — الاستجابة', c1: 'في ' + B.ar, c2: 'في ' + A.ar, nLabel: nLabel(E.r.length), rows: E.r.map(fr) });
+    const MONO = "'IBM Plex Mono', monospace";
+    const RV = E.rev ? IM[E.rev] : null;
+    const dirText = RV && E.resp ? 'ثنائي: يعيد ' + B.ar + ' بيانات في الاستجابة، وله تكامل معاكس مستقل' : (RV ? 'ثنائي عبر تكاملين: هذا، وتكامل معاكس مستقل من ' + B.ar : (E.resp ? 'ثنائي: طلب من ' + A.ar + ' تعود معه بيانات من ' + B.ar : 'اتجاه واحد: من ' + A.ar + ' إلى ' + B.ar));
+    const facts = [
+      { k: 'المحفّز', v: E.trig, ff: 'inherit' },
+      { k: 'التكرار', v: E.freq, ff: 'inherit' },
+      { k: 'البروتوكول', v: E.m, ff: MONO },
+      { k: 'نقطة الاتصال', v: E.ep, ff: MONO },
+      { k: 'المصادقة', v: E.au, ff: 'inherit' },
+      { k: 'المسار', v: E.route, ff: 'inherit' },
+      { k: 'اتجاه التبادل', v: dirText, ff: 'inherit' }
+    ];
+    const checks = [
+      { t: 'نقطة الاتصال موجودة في الكود المصدري', done: E.c !== 'q' },
+      { t: 'الحقول مطابقة لحمولة فعلية', done: E.c === 'ok' },
+      { t: 'شوهدت طلبات حقيقية في السجلات', done: E.c === 'ok' }
+    ].map((k) => ({ t: k.t, state: k.done ? '' : '— لم يُتحقق', bg: k.done ? '#2B44D6' : '#FFFFFF', bd: k.done ? '#2B44D6' : '#C5CCD8', ic: k.done ? '#FFFFFF' : 'none', fg: k.done ? '#0E1420' : '#566070' }));
+    const nFields = E.f.length + E.r.length;
+    const tabs = [
+      { id: 'fields', ar: 'البيانات المتبادلة', n: nFields, nbg: '#F1F3F7', nfg: '#3A4352' },
+      { id: 'how', ar: 'طريقة العمل', n: 0, nbg: '#F1F3F7', nfg: '#3A4352' },
+      { id: 'evidence', ar: 'التحقق والأدلة', n: E.qs.length, nbg: '#FDF1E8', nfg: '#953A05' }
+    ].map((t) => ({ ar: t.ar, n: t.n, hasN: t.n > 0, nbg: t.nbg, nfg: t.nfg, sel: tab === t.id ? 'true' : 'false', bd: tab === t.id ? '#0E1420' : 'transparent', fg: tab === t.id ? '#0E1420' : '#566070', fw: tab === t.id ? 700 : 500, pick: () => set({ tab: t.id }) }));
+    const th = {
+      code: 'INT-' + ('00' + E.id.slice(1)).slice(-3), bo: beadOp, t: E.t,
+      two: E.two, isRecip: !!RV, isResp: E.resp && !RV,
+      rcolor: RV ? CONF[RV.c].color : CONF[E.c].color, rdash: RV ? CONF[RV.c].dash : CONF[E.c].dash, rbo: beadOp,
+      revLabel: RV ? 'المعاكس: ' + RV.t : '', respLabel: 'استجابة · ' + nLabel(E.r.length),
+      openRev: () => (RV ? set(view === 'lens' ? { thread: RV.id, focus: RV.from, tab: 'fields', trace: null } : { thread: RV.id, tab: 'fields', trace: null }) : null), why: E.w, hasWhy: !!E.w, m: E.m,
+      color: CONF[E.c].color, css: CONF[E.c].css, dash: CONF[E.c].dash, cl: CONF[E.c].ar, cbg: CONF[E.c].bg, cfg: CONF[E.c].tfg, basis: CONF[E.c].basis,
+      aAr: A.ar, aCode: A.code, bAr: B.ar, bCode: B.code, a: mono(A.kind), b: mono(B.kind),
+      goFrom: () => set({ view: 'lens', focus: A.id, thread: null, trace: null }),
+      goTo: () => set({ view: 'lens', focus: B.id, thread: null, trace: null }),
+      sections: sections, hasFields: sections.length > 0, noFields: sections.length === 0,
+      facts: facts, checks: checks, qs: E.qs.map((t) => ({ t: t })), hasQs: E.qs.length > 0,
+      isFields: tab === 'fields', isHow: tab === 'how', isEvidence: tab === 'evidence', tabs: tabs
+    };
+    let lin = { has: false, ar: '', note: '', hops: [], close: () => set({ trace: null }) };
+    if (thread && trace && TR[trace]) {
+      const T = TR[trace];
+      lin = {
+        has: true, ar: T.ar, note: T.note, close: () => set({ trace: null }),
+        hops: T.hops.map((h, i) => {
+          const nxt = T.hops[i + 1];
+          const isCur = h.i === E.id || (!!nxt && nxt.i === E.id);
+          const ie = h.i ? IM[h.i] : null;
+          const c = ie ? CONF[ie.c] : CONF.ok;
+          return {
+            ar: S[h.s].ar, field: h.f, notFirst: i > 0, color: c.color, css: c.css,
+            bd: isCur ? '#0E1420' : '#D3DAF5', bg: isCur ? '#0E1420' : '#FFFFFF', fg: isCur ? '#FFFFFF' : '#0E1420', sub: isCur ? '#B7C0CE' : '#3A4352',
+            open: h.i
+              ? () => set(view === 'lens' ? { thread: h.i, focus: IM[h.i].from, tab: 'fields' } : { thread: h.i, tab: 'fields' })
+              : () => set({ view: 'lens', focus: h.s, thread: null, trace: null })
+          };
+        })
+      };
+    }
+
+    /* ---------- Search ---------- */
+    let results = [];
+    const qt = q.trim();
+    const ql = qt.toLowerCase();
+    if (ql) {
+      SYS.forEach((x) => { if ((x.ar + ' ' + x.en + ' ' + x.code).toLowerCase().indexOf(ql) >= 0) results.push({ kind: 'نظام', title: x.ar, sub: x.en, go: () => set({ view: 'lens', focus: x.id, thread: null, trace: null, q: '', hover: null }) }); });
+      Object.keys(TR).forEach((k) => {
+        const T = TR[k];
+        if (T.ar.indexOf(qt) >= 0 || T.hops.some((h) => h.f.toLowerCase().indexOf(ql) >= 0)) {
+          const first = T.hops.filter((h) => h.i)[0];
+          results.push({ kind: 'مسار بيانات', title: '«' + T.ar + '» عبر ' + T.hops.length + ' أنظمة', sub: T.hops.map((h) => S[h.s].ar).join(' ← '), go: () => set({ view: 'lens', focus: IM[first.i].from, thread: first.i, tab: 'fields', trace: k, q: '' }) });
+        }
+      });
+      INT.forEach((e) => { if ((e.t + ' ' + e.m + ' ' + e.ep).toLowerCase().indexOf(ql) >= 0) results.push({ kind: 'تكامل', title: e.t, sub: S[e.from].ar + ' ← ' + S[e.to].ar, go: () => set({ view: 'lens', focus: e.from, thread: e.id, tab: 'fields', trace: null, q: '' }) }); });
+      INT.forEach((e) => {
+        e.f.concat(e.r).forEach((a) => {
+          if ((a[0] + ' ' + a[1]).toLowerCase().indexOf(ql) >= 0) results.push({ kind: 'حقل', title: a[0] + ' → ' + a[1], sub: e.t + ' · ' + S[e.from].ar + ' ← ' + S[e.to].ar, go: () => set({ view: 'lens', focus: e.from, thread: e.id, tab: 'fields', trace: a[4] || null, q: '' }) });
+        });
+      });
+      results = results.slice(0, 8);
+    }
+
+    /* ---------- Header ---------- */
+    const crumbs = [];
+    const cr = (label, go) => { crumbs.push({ label: label, go: go || null, link: !!go, plain: !go, sep: crumbs.length > 0 }); };
+    let title = 'أطلس الأنظمة';
+    let subtitle = SYS.length + ' نظاماً · ' + INT.length + ' تكاملاً — مرتّبة من القنوات إلى المزودين الخارجيين';
+    if (view === 'atlas') {
+      cr('الأطلس');
+    } else if (view === 'lens') {
+      cr('الأطلس', goAtlas); cr(F.ar);
+      title = F.ar;
+      subtitle = 'يصل الوارد من اليمين، ويخرج الصادر إلى اليسار — انقر أي رابط لفحصه.';
+    } else {
+      cr('الأطلس', goAtlas); cr(F.ar, () => set({ view: 'lens', thread: null })); cr('محاكاة الأثر');
+      title = 'ماذا لو تغيّر ' + F.ar + '؟';
+      subtitle = 'تُرسم الأنظمة المتأثرة في دوائر حسب بُعدها عن نقطة التغيير.';
+    }
+
+    return {
+      q: q, hasQ: qt.length > 0, results: results, noResults: ql.length > 0 && results.length === 0,
+      onQ: (ev) => set({ q: ev.target.value }),
+      clearQ: () => set({ q: '' }),
+      goAtlas: goAtlas, leave: leave, ec: ec,
+      motion: motion, noMotion: !motion, beadOp: beadOp, motionPressed: motion ? 'true' : 'false',
+      motionLabel: motion ? 'إيقاف حركة البيانات' : 'تشغيل حركة البيانات',
+      toggleMotion: () => set({ motion: !motion }),
+      crumbs: crumbs, title: title, subtitle: subtitle,
+      isAtlas: view === 'atlas', isLens: view === 'lens', isImpact: view === 'impact',
+      showLegend: view !== 'impact',
+      legend: legend, filtered: !(filt.ok && filt.part && filt.q),
+      resetFilt: () => set({ filt: { ok: true, part: true, q: true } }),
+      modes: modes, changes: changes,
+      cols: COLS, edges: edges, tiles: tiles, peek: peek,
+      lens: lens, fc: fc,
+      goImpact: () => set({ view: 'impact', thread: null, trace: null }),
+      showInAtlas: () => set({ view: 'atlas', hover: F.id, thread: null, trace: null }),
+      backToLens: () => set({ view: 'lens', thread: null }),
+      im: im,
+      hasThread: !!(thread && IM[thread]), th: th, lin: lin,
+      closeThread: () => set({ thread: null, trace: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

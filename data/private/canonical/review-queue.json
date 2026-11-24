@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "rev_003091c44db4",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_5f878efd62eb",
+    "relatedIds": [],
+    "note": "target unresolved (indirect_dependency, rule N-R-INDIRECT); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_00dbd3d17e9f",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_431d47f57cb7",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: APMS / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-UNRECOGNIZED)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_02c2b4fa6613",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_f186c7046c83",
+    "relatedIds": [],
+    "note": "target unresolved (navigation_link, rule R-UNKNOWN+NAV); raw: UNKNOWN (per catalog row)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_035406aa944a",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_22aedc612a51",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / MARKETERS; this importer: CHAT-CENTER / MARKETERS-LEGACY (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_0460835843c3",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_48eb9d9d83ba",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: ASAR / WEB (rules N-R-SYSTEM, R-REPORTER-IMPLIED)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_064662d5d32e",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_f6979a93438e",
+    "relatedIds": [],
+    "note": "target unresolved (end_user, rule R-ENDUSER); raw: end user (file download)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_095acb37e00f",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_f251bbda7508",
+    "relatedIds": [],
+    "note": "source unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (consumers not found in repo)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_0b46830bc847",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_66067d79456f",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "source unresolved (unknown, rule R-OR); raw: Registry (sync) or any reader",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_0e91df7bcc61",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_b73e63cf0650",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / CHAT-CENTER; this importer: CHAT-CENTER / WEB (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_0f2d08ba02eb",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_977b41c895df",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"Pct\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_1373c0b37928",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_b525e34db27d",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"sourceEntityType\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_15dbd7475796",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_e9c8946ed47a",
+    "relatedIds": [],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (no call sites)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_1736c806aed9",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_ded65fa27306",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: ASAR / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-UNRECOGNIZED)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_17b009d91e0b",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_5a330b156b87",
+    "relatedIds": [],
+    "note": "source unresolved (scheduler, rule R-SCHEDULER); raw: External scheduler (Replit Scheduled Deployment running scripts/trigger-auto-renewal-sweep.mjs)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_18569c8d8cce",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_cd36eac23f8f",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / ASAR; this importer: ASAR / UNRESOLVED (rules R-OR, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_1cb9387df496",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_9e73777ee9e8",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:META (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_1ead5e1a39cc",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_14ca22ec5823",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / MARKETERS; this importer: CHAT-CENTER / MARKETERS-LEGACY (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2017691c1bc8",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_0652f8ee74b5",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:SNAPCHAT (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_21a99feed3c9",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_0c868a1b0b02",
+    "relatedIds": [],
+    "note": "source unresolved (operator, rule R-OPERATOR); raw: operator session (not part of the app runtime)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2424b26dc9a1",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_0d6ae82d34ff",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:TAQNYAT (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_26a90638ad84",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_aab75eb97222",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"actual\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2966d0eaaa27",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_80aa27265891",
+    "relatedIds": [],
+    "note": "consolidator: APMP / WEB; this importer: UNRESOLVED / WEB (rules R-SELF, R-MULTI)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_29bd9e853fd7",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_80aa27265891",
+    "relatedIds": [
+      "sys_5a763eb212a5",
+      "sys_cb117452740c"
+    ],
+    "note": "target unresolved (multiple_systems, rule R-MULTI); raw: APMP and AOP object stores",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_29e10078e811",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_950003f04fce",
+    "relatedIds": [],
+    "note": "target unresolved (any_granted_caller, rule R-ANY); raw: Registered application (embed_apps baseUrl), observed in Production: marketeres, rent",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2a216d64d91d",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_fda0bab08b64",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:SNAPCHAT (rules R-SYSTEM, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2b2d2b09b1df",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_e3ba510564ed",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN (no caller identified in this repository)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2d0114327346",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_fbf45be21185",
+    "relatedIds": [],
+    "note": "source unresolved (operator, rule R-OPERATOR); raw: Registry, platform, operators",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_2f96b1dea06f",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_98c66eee9d14",
+    "relatedIds": [],
+    "note": "source unresolved (operator, rule R-OPERATOR); raw: Operator-run script",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_33c4ec898e64",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_a03edd295172",
+    "relatedIds": [],
+    "note": "target unresolved (navigation_link, rule R-NAVIGATION+NAV); raw: WhatsApp (wa.me), Instagram, TikTok, Snapchat",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_33d5f3b71894",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_88a9133bcf78",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / ASSA; this importer: ASSA / UNRESOLVED (rules R-UNKNOWN, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_34554c563935",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_4f8f94a1a81e",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Any Asakin app holding an active Registry grant. Observed caller: MARKETERS.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_34b0b3705226",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_cd1df4b88c16",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"list\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_35afcbbe5af1",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_fd8b5ba148bc",
+    "relatedIds": [],
+    "note": "consolidator: APMP / PPE; this importer: APMP / UNRESOLVED (rules R-UNKNOWN, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_35b5a529e28b",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_811d096e48d4",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"originalFileName\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_3ae7e1356617",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_7bfe3579281b",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN (consumer identity not derivable from repository; reported as header X-Asakin-Caller or JWT claim caller)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_3b392db8a77e",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_d8828cb9a674",
+    "relatedIds": [
+      "sys_da050cc3fbe6",
+      "sys_e30a602002dd"
+    ],
+    "note": "target unresolved (multiple_systems, rule N-R-MULTI); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_41b16fd78e3c",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_5f878efd62eb",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: MARKETERS-LEGACY / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-INDIRECT)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_4284ad5c82bf",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_0a5687eb5580",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: PRG / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-UNRECOGNIZED)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_4e69f182a266",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_461bdc0abdfa",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Any Asakin app holding a Registry-issued JWT with audience APMS",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5306ed886670",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_f9483cfd9725",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"sourceAppCode\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_53acacafb3eb",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_6468d2d8f29e",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:AUTHENTICA (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_57ad06c82614",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_28ae366aadac",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN (any Asakin app holding reports:write)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5912ac33170a",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_d1a67934979f",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Destination application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5ae0b3f6312f",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_d8828cb9a674",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: APMS / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-MULTI)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5ae672709596",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_2c8d3c6453bf",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"actual\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5b057d6dbe29",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_9960a71574c4",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: ASAR / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-SYSTEM+NAV)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_5ea54cdc9787",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_2ec74123635c",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN (any Asakin app holding reports:read)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_63236be35a23",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_f5f273a545ad",
+    "relatedIds": [
+      "ch_12fc90cbbcd7"
+    ],
+    "note": "Consumer reads \"totalAreaSqm\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_63b2e9e9f752",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_0a5687eb5580",
+    "relatedIds": [],
+    "note": "target unresolved (unrecognized, rule N-R-UNRECOGNIZED); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6451d5ea43c2",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_d35f49102504",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN Asakin caller apps (the caller is identified only by the x-asakin-caller header or the JWT sub claim)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_64a0b0e64d31",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_c666cd7a1efd",
+    "relatedIds": [
+      "ch_87d742c2e084"
+    ],
+    "note": "Consumer reads \"actual\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6995091b1737",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_afda0c06143d",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:META (rules R-SYSTEM, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6beb3e1f2377",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_b40031ad39f2",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: PRG / PRG (rules R-BROWSER-OF-REPORTER, R-BROWSER-OF-REPORTER)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6c9e5164d791",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_28f3071ada4c",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-AUTH / DOCS; this importer: ASAKIN-AUTH / UNRESOLVED (rules R-OPERATOR, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6d0b27c0c2de",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_8810b815da02",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application and its embedded widget",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6d29e75c96a7",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_fbf45be21185",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / WEB; this importer: UNRESOLVED / WEB (rules R-OPERATOR, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6d40eb3cb549",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_59a308fa94e6",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"actual\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6e643e71a3b7",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_cef8cfc72271",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: APMP / CHAT-CENTER (rules R-REPORTER-IMPLIED, N-R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_6fd652dc9ae2",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_593ef8a699b1",
+    "relatedIds": [],
+    "note": "target unresolved (any_granted_caller, rule R-ANY); raw: Any Registry app that has granted PPE access (operator supplies targetAppCode, path, method)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_7133860df0da",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_fd8b5ba148bc",
+    "relatedIds": [
+      "sys_e81fdaaf5e4c"
+    ],
+    "note": "source unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (only PPE evidenced)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_7141cc8f716b",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_ef407e99d46d",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"projectId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_7ab1ccd970c2",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_156503bf7181",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:META (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_7da59e541a4e",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_45adc9d64835",
+    "relatedIds": [],
+    "note": "target unresolved (indirect_dependency, rule N-R-INDIRECT); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_81fce15c3479",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_4f103e082144",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"documentTypeName\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_850c91cd2746",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_d985d4f4b024",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN (any Asakin app holding a Registry grant for ASSA scopes)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_892919c2f89e",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_ff7c8b03f214",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"file\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_89b24af7444b",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_897a077c2a8b",
+    "relatedIds": [],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN third-party websites listed in embed_apps.allowed_urls",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_8ed52666b61a",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_a6f48d2f7a9d",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"sourceAppCode\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_90f3d11c1f9b",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_5d7e9b2061e0",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"overallProgressPct\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_940a3ffcc3e6",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_442d1457e29f",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / ASSA; this importer: ASSA / UNRESOLVED (rules R-SELF, R-UNKNOWN)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_9c9560664e5e",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_89117864c74c",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"sourceEntityId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_9cb4b8cc45ce",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_66067d79456f",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / WEB; this importer: UNRESOLVED / WEB (rules R-OR, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_a07b3c703d75",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_801cee4bc1fe",
+    "relatedIds": [],
+    "note": "consolidator: DOCS / UNRESOLVED; this importer: INP / UNRESOLVED (rules R-REPORTER-IMPLIED, R-UNKNOWN)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_a0b3b2fa47ab",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_fdc158ade99c",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:TAQNYAT (rules R-SYSTEM, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_a5fff7ee6419",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_cb254f90d7ea",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"constructionProgressPct\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_a6ab01ab4021",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_3538520db660",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_a858279fa9d6",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_eb4b8f566d53",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"constants\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_aad090dbd5b9",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_a831217e4880",
+    "relatedIds": [],
+    "note": "source unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN Asakin consumer apps",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ac8f554d355c",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_85028474e2f0",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"actual\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ad40b3ed265d",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_1419dfa22127",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"salesProgressPct\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ae86fa433c2f",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_c21e01eead2a",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: ASAR / EXT:TELEGRAM (rules R-REPORTER-IMPLIED, N-R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_aef5a5ebead9",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_431d47f57cb7",
+    "relatedIds": [],
+    "note": "target unresolved (unrecognized, rule N-R-UNRECOGNIZED); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_af338b9ae6a0",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_793ccdf509af",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"sourceApprovalRequestId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_b7ebc653b05e",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_ded65fa27306",
+    "relatedIds": [],
+    "note": "target unresolved (unrecognized, rule N-R-UNRECOGNIZED); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ba9271b0f1fe",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_d1474b12fb0a",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Calling Asakin app via AsakinTiny",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_c2d88abea370",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_c76cff6efd54",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_c60870dc9d91",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_e41f6b8ebc16",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"apmpProjectId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_cb00a257967d",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_04e06ec24926",
+    "relatedIds": [],
+    "note": "target unresolved (any_granted_caller, rule R-ANY); raw: any Registry app code",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_cbe30cc46bdc",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_fa535ae500de",
+    "relatedIds": [
+      "sys_5a763eb212a5"
+    ],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (comment example only: 'APMP')",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ccf3375839fb",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_0c641835f69f",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Consumer or browser",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_cdddc6c7eaf4",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_9960a71574c4",
+    "relatedIds": [
+      "sys_da050cc3fbe6"
+    ],
+    "note": "target unresolved (navigation_link, rule N-R-SYSTEM+NAV); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_d13f6e7d9443",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_98c66eee9d14",
+    "relatedIds": [],
+    "note": "consolidator: BUC / UNRESOLVED; this importer: ASAKIN-AUTH / UNRESOLVED (rules R-OPERATOR, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_d3abab09b3cd",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_64927748b1be",
+    "relatedIds": [],
+    "note": "target unresolved (any_granted_caller, rule R-ANY); raw: any Registry app code (caller supplies it; none wired)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_d494432738b5",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_fa535ae500de",
+    "relatedIds": [],
+    "note": "consolidator: APMP / PRG; this importer: PRG / UNRESOLVED (rules R-SELF, R-UNKNOWN)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_d5c0b4a8b44d",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_742191e2bd5d",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_d74052da8488",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_cd36eac23f8f",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "source unresolved (unknown, rule R-OR); raw: Registry or monitoring caller (UNKNOWN)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_db81929c3b07",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_c3e18e811b9a",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: ANY registered app (caller-chosen via URL segment)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_dbee00cf8c5e",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_5d25aa488a4d",
+    "relatedIds": [],
+    "note": "source unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_dc0902e44cf2",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_45adc9d64835",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: APMS / UNRESOLVED (rules R-REPORTER-IMPLIED, N-R-INDIRECT)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_de546dbc8ebb",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_d7bc67b9db32",
+    "relatedIds": [
+      "ch_161843548167"
+    ],
+    "note": "Consumer reads \"documentTypeId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_e1521be2731d",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_06f7fe80a8b3",
+    "relatedIds": [],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (no peer named)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_e659f777b10a",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_f1bc921a14ee",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / WEB; this importer: EXT:GOOGLE-MAPS / WEB (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_e6eba2f5ca4a",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_801cee4bc1fe",
+    "relatedIds": [],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (docs mention WhatsApp)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_e99168f5e871",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_60cd7d4f6a71",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: غير موثق",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ea72fc2c0efe",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_6893a6ff909e",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: any Registry app holding a grant",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_eb29bd45c051",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_091742008402",
+    "relatedIds": [
+      "ch_555be0ad1e87"
+    ],
+    "note": "Consumer reads \"preparationProgressPct\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ec60871f1744",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_28f3071ada4c",
+    "relatedIds": [],
+    "note": "source unresolved (operator, rule R-OPERATOR); raw: APP-DOCS (operator-run)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_eec0da45c46b",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_525bbf1d0a23",
+    "relatedIds": [],
+    "note": "target unresolved (end_user, rule R-ENDUSER); raw: none (file output to the user's browser)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ef138ed95a45",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_7d8f2343dbc6",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: any Registry-registered caller (UNKNOWN which)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_f2e43689cf6b",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_8d7297cd05e6",
+    "relatedIds": [
+      "ch_12fc90cbbcd7"
+    ],
+    "note": "Consumer reads \"bathroomsCount\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_f32731934691",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_f052cc63afa7",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: UNKNOWN callers (any Registry app with grants)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_f77ecc47df9e",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_e7a2e344f7bb",
+    "relatedIds": [
+      "ch_87d742c2e084"
+    ],
+    "note": "Consumer reads \"status\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_f86063041229",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_20d1e3c56d6c",
+    "relatedIds": [],
+    "note": "consolidator: ASAKIN-REGISTRY / MARKETERS; this importer: CHAT-CENTER / MARKETERS (rules R-SELF, R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fa4b85acb0a4",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_442d1457e29f",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "target unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (intended consumer: Registry)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fa8cd4788ada",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_3fbee7db3a7f",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fb401ca401f7",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_7bd6a59ace38",
+    "relatedIds": [],
+    "note": "consolidator: UNRESOLVED / UNRESOLVED; this importer: ASAKIN-REGISTRY / MARKETERS-LEGACY (rules R-REPORTER-IMPLIED, N-R-SYSTEM)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fc9e3d821a8b",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_5a2c7f868c19",
+    "relatedIds": [],
+    "note": "source unresolved (any_granted_caller, rule R-ANY); raw: Registered application",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fcbf4fbedfb5",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_275fc6b825e2",
+    "relatedIds": [],
+    "note": "consolidator: PRG / UNRESOLVED; this importer: PRG / PRG (rules R-SELF, R-SELF-GENERIC)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_fd484d44be94",
+    "kind": "field_not_found_on_counterpart",
+    "subjectId": "map_c06a0f5b93c5",
+    "relatedIds": [
+      "ch_87d742c2e084"
+    ],
+    "note": "Consumer reads \"apmpProjectId\" but the producer-side mappings for this channel do not emit a field with that name.",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ff51b46a3d3a",
+    "kind": "normalization_differs_from_consolidator",
+    "subjectId": "int_63f972ed3ac2",
+    "relatedIds": [],
+    "note": "consolidator: CHAT-CENTER / UNRESOLVED; this importer: CHAT-CENTER / EXT:TIKTOK (rules R-SYSTEM, R-SELF)",
+    "status": "new",
+    "decisionId": null
+  },
+  {
+    "id": "rev_ffaeae7378eb",
+    "kind": "unresolved_endpoint",
+    "subjectId": "int_88a9133bcf78",
+    "relatedIds": [
+      "sys_bcce0887b171"
+    ],
+    "note": "source unresolved (unknown, rule R-UNKNOWN); raw: UNKNOWN (monitors, Registry, deploy platform)",
+    "status": "new",
+    "decisionId": null
+  }
+]

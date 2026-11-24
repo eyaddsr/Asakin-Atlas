@@ -1,0 +1,1930 @@
+{
+  "records": [
+    {
+      "id": "reg_08c23be07647",
+      "code": "WEB",
+      "name": "Asakin Website",
+      "status": "ACTIVE",
+      "baseUrl": "https://asakin.sa",
+      "updated": "2026-11-04 08:05",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:06",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_efbface5fc7b",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 10"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code WEB"
+        }
+      ]
+    },
+    {
+      "id": "reg_0b289ec8a418",
+      "code": "ASAR",
+      "name": "Apartment Request",
+      "status": "INACTIVE",
+      "baseUrl": "https://ar.asakin.sa",
+      "updated": "2026-11-18 14:27",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-18 14:24:41",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_f4a9c580e222",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 4"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code ASAR"
+        }
+      ]
+    },
+    {
+      "id": "reg_15b3fb758992",
+      "code": "PRG",
+      "name": "Projects Reports Generator",
+      "status": "ACTIVE",
+      "baseUrl": "https://prg.asakin.sa",
+      "updated": "2026-09-29 15:17",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:36",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_aad0c0a85ddf",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 18"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code PRG"
+        }
+      ]
+    },
+    {
+      "id": "reg_18c1b9a8edb4",
+      "code": "RENT",
+      "name": "Renting Platform",
+      "status": "ACTIVE",
+      "baseUrl": "https://rent.asakin.sa",
+      "updated": "2026-07-02 15:14",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:45",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_fe02ea4f9991",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 20"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code RENT"
+        }
+      ]
+    },
+    {
+      "id": "reg_23bbc78cbca8",
+      "code": "ACC",
+      "name": "Cost Calculator",
+      "status": "ACTIVE",
+      "baseUrl": "https://acc.asakin.sa",
+      "updated": "2026-07-08 11:21",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:14",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_9c1ea5c91673",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 12"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code ACC"
+        }
+      ]
+    },
+    {
+      "id": "reg_23f594392a35",
+      "code": "PPE",
+      "name": "Project Progress Engine",
+      "status": "ACTIVE",
+      "baseUrl": "https://AsakinPPE.replit.app",
+      "updated": "2026-06-02 14:32",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:32",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_e81fdaaf5e4c",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 17"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code PPE"
+        }
+      ]
+    },
+    {
+      "id": "reg_39d37f94267b",
+      "code": "MARKETERS",
+      "name": "Marketers",
+      "status": "ACTIVE",
+      "baseUrl": "https://marketers.asakin.sa",
+      "updated": "2026-09-10 18:11",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:20",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_d749abcbfeda",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 14"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code MARKETERS"
+        }
+      ]
+    },
+    {
+      "id": "reg_448d4a4c9b35",
+      "code": "TEST1",
+      "name": "this app for test the registry",
+      "status": "INACTIVE",
+      "baseUrl": "https://earthapp.com.sa/api",
+      "updated": "2026-09-21 13:31",
+      "health": {
+        "api": "DOWN 404",
+        "integration": "DOWN 404",
+        "lastChecked": "2026-09-21 13:31:11",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 23"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code TEST1"
+        }
+      ]
+    },
+    {
+      "id": "reg_4a9dba6147f9",
+      "code": "INP",
+      "name": "Investors Portal",
+      "status": "ACTIVE",
+      "baseUrl": "https://ip.asakin.sa",
+      "updated": "2026-04-13 13:44",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:19",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_d8953034c957",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 13"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code INP"
+        }
+      ]
+    },
+    {
+      "id": "reg_4ba4f15fe333",
+      "code": "TENANT",
+      "name": "Tenants Portal",
+      "status": "ACTIVE",
+      "baseUrl": "https://tp.asakin.sa",
+      "updated": "2026-08-23 07:27",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:48",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_e30a602002dd",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 21"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code TENANT"
+        }
+      ]
+    },
+    {
+      "id": "reg_691999fad48e",
+      "code": "VIEW",
+      "name": "API Read Only",
+      "status": "ACTIVE",
+      "baseUrl": "https://view.asakin.sa",
+      "updated": "2026-10-21 11:41",
+      "health": {
+        "api": "DOWN",
+        "integration": "DOWN",
+        "lastChecked": "2026-11-22 10:16:46",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_833bfa702c71",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 2"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code VIEW"
+        }
+      ]
+    },
+    {
+      "id": "reg_8488015b4992",
+      "code": "AOP",
+      "name": "Asakin Opportunities",
+      "status": "ACTIVE",
+      "baseUrl": "https://ao.asakin.sa",
+      "updated": "2026-05-21 10:35",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:02",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_cb117452740c",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 8"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code AOP"
+        }
+      ]
+    },
+    {
+      "id": "reg_8541b8a25730",
+      "code": "MEDIA",
+      "name": "Asakin Media",
+      "status": "ACTIVE",
+      "baseUrl": "https://media.asakin.sa",
+      "updated": "2026-10-19 07:47",
+      "health": {
+        "api": "DOWN 404",
+        "integration": "DOWN 404",
+        "lastChecked": "2026-11-22 10:16:59",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_dfcff6c92779",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 6"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code MEDIA"
+        }
+      ]
+    },
+    {
+      "id": "reg_90540b103527",
+      "code": "IDP",
+      "name": "Asakin Internal Debt Platform",
+      "status": "ACTIVE",
+      "baseUrl": "https://AsakinIDP.replit.app",
+      "updated": "2026-03-15 10:33",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:16:53",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_36aee854d022",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 5"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code IDP"
+        }
+      ]
+    },
+    {
+      "id": "reg_adbca03a562e",
+      "code": "ASSA",
+      "name": "Asakin Sales",
+      "status": "INACTIVE",
+      "baseUrl": "https://sales.asakin.sa",
+      "updated": "2026-11-18 14:09",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-18 14:06:36",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_770eafc97434",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 9"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code ASSA"
+        }
+      ]
+    },
+    {
+      "id": "reg_b997d23df9c3",
+      "code": "INVP",
+      "name": "Old Investor Portal",
+      "status": "ACTIVE",
+      "baseUrl": "https://invp.replit.app",
+      "updated": "2026-05-21 10:36",
+      "health": {
+        "api": "DOWN 404",
+        "integration": "DOWN 404",
+        "lastChecked": "2026-11-22 10:17:23",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_fdabc73484c3",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 15"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code INVP"
+        }
+      ]
+    },
+    {
+      "id": "reg_bbadaab5ae91",
+      "code": "TEST_APP",
+      "name": "Test Application",
+      "status": "INACTIVE",
+      "baseUrl": "https://test.example.com/api",
+      "updated": "2026-09-21 13:32",
+      "health": {
+        "api": "DOWN",
+        "integration": "DOWN",
+        "lastChecked": "2026-09-21 13:31:09",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 22"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code TEST_APP"
+        }
+      ]
+    },
+    {
+      "id": "reg_c6482c9d91c2",
+      "code": "OWNER",
+      "name": "Owners Portal",
+      "status": "ACTIVE",
+      "baseUrl": "https://op.asakin.sa",
+      "updated": "2026-08-23 07:26",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:27",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_da050cc3fbe6",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 16"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code OWNER"
+        }
+      ]
+    },
+    {
+      "id": "reg_e0bb3b1d1c0f",
+      "code": "APMP",
+      "name": "APMP Investment Portfolio Manager",
+      "status": "ACTIVE",
+      "baseUrl": "https://apmp.asakin.sa",
+      "updated": "2026-04-13 13:35",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:16:49",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_5a763eb212a5",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 3"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code APMP"
+        }
+      ]
+    },
+    {
+      "id": "reg_e5d631f99849",
+      "code": "APMS",
+      "name": "Automated Property Management System",
+      "status": "ACTIVE",
+      "baseUrl": "https://apms.asakin.sa",
+      "updated": "2026-08-24 14:35",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:11",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_eee8d6e14f32",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 11"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code APMS"
+        }
+      ]
+    },
+    {
+      "id": "reg_e9193fb17b5c",
+      "code": "PPC",
+      "name": "Purchase Plan Calculator",
+      "status": "ACTIVE",
+      "baseUrl": "https://ppc.asakin.sa",
+      "updated": "2026-11-17 08:10",
+      "health": {
+        "api": "HEALTHY 200",
+        "integration": "HEALTHY 200",
+        "lastChecked": "2026-11-22 10:17:41",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_58ad036babbd",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 19"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code PPC"
+        }
+      ]
+    },
+    {
+      "id": "reg_f1841fd88f8e",
+      "code": "AOPP",
+      "name": "Asakin Opportunities",
+      "status": "INACTIVE",
+      "baseUrl": "https://ao.asakin.sa",
+      "updated": "2026-09-21 13:31",
+      "health": {
+        "api": "UNKNOWN",
+        "integration": "UNKNOWN",
+        "lastChecked": "Never",
+        "note": "registry_monitor_snapshot_not_live"
+      },
+      "systemId": "sys_910c46c57589",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-apps.csv",
+          "pointer": "row 7"
+        },
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-health.csv",
+          "pointer": "code AOPP"
+        }
+      ]
+    }
+  ],
+  "grants": [
+    {
+      "id": "reg_09df095adeb5",
+      "callerCode": "MARKETERS",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_d749abcbfeda",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "contracts:read",
+        "invoices:read",
+        "transactions:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-10 18:20",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 14"
+        }
+      ]
+    },
+    {
+      "id": "reg_13bc637c5b44",
+      "callerCode": "MARKETERS",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_d749abcbfeda",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-08-03 10:49",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 13"
+        }
+      ]
+    },
+    {
+      "id": "reg_186780791dfc",
+      "callerCode": "MARKETERS",
+      "providerCode": "ASAR",
+      "callerSystemId": "sys_d749abcbfeda",
+      "providerSystemId": "sys_f4a9c580e222",
+      "scopes": [
+        "apartments:read",
+        "apartments:write"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:26",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 15"
+        }
+      ]
+    },
+    {
+      "id": "reg_1ea00db748ba",
+      "callerCode": "RENT",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_fe02ea4f9991",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-08-27 14:52",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 23"
+        }
+      ]
+    },
+    {
+      "id": "reg_2cbedfd1831c",
+      "callerCode": "RENT",
+      "providerCode": "ASAR",
+      "callerSystemId": "sys_fe02ea4f9991",
+      "providerSystemId": "sys_f4a9c580e222",
+      "scopes": [
+        "apartments:read"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:26",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 25"
+        }
+      ]
+    },
+    {
+      "id": "reg_32b293f32220",
+      "callerCode": "TENANT",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_e30a602002dd",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "contracts:read",
+        "invoices:read",
+        "owners:read",
+        "tenants:read",
+        "transactions:read",
+        "units:read",
+        "wallets:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-08-24 14:37",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 26"
+        }
+      ]
+    },
+    {
+      "id": "reg_3d357ec73ad7",
+      "callerCode": "INVP",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_fdabc73484c3",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "companies:read",
+        "holdings:read",
+        "investors:read",
+        "projects:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-04-07 14:37",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 11"
+        }
+      ]
+    },
+    {
+      "id": "reg_488f3bb44cf4",
+      "callerCode": "VIEW",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_833bfa702c71",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "companies:read",
+        "holdings:read",
+        "investors:read",
+        "project_document_types:read",
+        "project_documents:read",
+        "projects:read",
+        "unit_documents:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-21 11:49",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 27"
+        }
+      ]
+    },
+    {
+      "id": "reg_4d6f742b8b61",
+      "callerCode": "ACC",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_9c1ea5c91673",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-07-08 12:09",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 2"
+        }
+      ]
+    },
+    {
+      "id": "reg_5ad11c3d2088",
+      "callerCode": "VIEW",
+      "providerCode": "MARKETERS",
+      "callerSystemId": "sys_833bfa702c71",
+      "providerSystemId": "sys_d749abcbfeda",
+      "scopes": [
+        "activity:read",
+        "customers:read",
+        "sources:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-21 11:51",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 30"
+        }
+      ]
+    },
+    {
+      "id": "reg_5da7016d82f9",
+      "callerCode": "WEB",
+      "providerCode": "AOP",
+      "callerSystemId": "sys_efbface5fc7b",
+      "providerSystemId": "sys_cb117452740c",
+      "scopes": [
+        "investment_requests:read",
+        "investment_requests:write",
+        "opportunities:read",
+        "opportunities:write"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-21 16:11",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 32"
+        }
+      ]
+    },
+    {
+      "id": "reg_72a5da6feded",
+      "callerCode": "PPC",
+      "providerCode": "WEB",
+      "callerSystemId": "sys_58ad036babbd",
+      "providerSystemId": "sys_efbface5fc7b",
+      "scopes": [
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-11-17 10:21",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 20"
+        }
+      ]
+    },
+    {
+      "id": "reg_741ac55c4cf3",
+      "callerCode": "WEB",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_efbface5fc7b",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-21 16:11",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 33"
+        }
+      ]
+    },
+    {
+      "id": "reg_782fad03a103",
+      "callerCode": "ASAR",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_f4a9c580e222",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:26",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 5"
+        }
+      ]
+    },
+    {
+      "id": "reg_7feae077abf1",
+      "callerCode": "PRG",
+      "providerCode": "PPE",
+      "callerSystemId": "sys_aad0c0a85ddf",
+      "providerSystemId": "sys_e81fdaaf5e4c",
+      "scopes": [
+        "construction:read",
+        "preparation:read",
+        "projects:read",
+        "sales:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-29 15:17",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 22"
+        }
+      ]
+    },
+    {
+      "id": "reg_854d91f0905b",
+      "callerCode": "WEB",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_efbface5fc7b",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "contracts:read",
+        "invoices:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-14 16:16",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 34"
+        }
+      ]
+    },
+    {
+      "id": "reg_88b9ca0981cf",
+      "callerCode": "APMS",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_eee8d6e14f32",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-10 08:54",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 4"
+        }
+      ]
+    },
+    {
+      "id": "reg_8c62bacd78ba",
+      "callerCode": "PPC",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_58ad036babbd",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-11-17 08:15",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 19"
+        }
+      ]
+    },
+    {
+      "id": "reg_97e9cf45946a",
+      "callerCode": "MEDIA",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_dfcff6c92779",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-18 16:20",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 17"
+        }
+      ]
+    },
+    {
+      "id": "reg_a918d157c887",
+      "callerCode": "INP",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_d8953034c957",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "companies:read",
+        "holdings:read",
+        "investors:read",
+        "project_documents:read",
+        "projects:read",
+        "unit_documents:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-06-03 07:25",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 9"
+        }
+      ]
+    },
+    {
+      "id": "reg_c2234a85a5d9",
+      "callerCode": "WEB",
+      "providerCode": "PPE",
+      "callerSystemId": "sys_efbface5fc7b",
+      "providerSystemId": "sys_e81fdaaf5e4c",
+      "scopes": [
+        "construction:read",
+        "preparation:read",
+        "projects:read",
+        "sales:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-09-21 16:11",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 35"
+        }
+      ]
+    },
+    {
+      "id": "reg_c46ca22890d3",
+      "callerCode": "PPE",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_e81fdaaf5e4c",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "project_document_types:read",
+        "project_documents:write",
+        "projects:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-06-04 07:47",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 21"
+        }
+      ]
+    },
+    {
+      "id": "reg_cc5e9f9fd5de",
+      "callerCode": "ASSA",
+      "providerCode": "ASAR",
+      "callerSystemId": "sys_770eafc97434",
+      "providerSystemId": "sys_f4a9c580e222",
+      "scopes": [
+        "apartments:read",
+        "apartments:write",
+        "inquiries:read",
+        "inquiries:write"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:09",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 7"
+        }
+      ]
+    },
+    {
+      "id": "reg_cea47394f6a6",
+      "callerCode": "MARKETERS",
+      "providerCode": "WEB",
+      "callerSystemId": "sys_d749abcbfeda",
+      "providerSystemId": "sys_efbface5fc7b",
+      "scopes": [
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-11-05 08:12",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 16"
+        }
+      ]
+    },
+    {
+      "id": "reg_cfe5ed63fb96",
+      "callerCode": "OWNER",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_da050cc3fbe6",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "contracts:read",
+        "invoices:read",
+        "owners:read",
+        "tenants:read",
+        "transactions:read",
+        "units:read",
+        "wallets:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-08-24 14:36",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 18"
+        }
+      ]
+    },
+    {
+      "id": "reg_d4c6a05dbee8",
+      "callerCode": "INP",
+      "providerCode": "PPE",
+      "callerSystemId": "sys_d8953034c957",
+      "providerSystemId": "sys_e81fdaaf5e4c",
+      "scopes": [
+        "construction:read",
+        "preparation:read",
+        "projects:read",
+        "sales:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-06-03 07:24",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 10"
+        }
+      ]
+    },
+    {
+      "id": "reg_daafc786c8d5",
+      "callerCode": "INVP",
+      "providerCode": "ASSA",
+      "callerSystemId": "sys_fdabc73484c3",
+      "providerSystemId": "sys_770eafc97434",
+      "scopes": [
+        "contacts:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-04-07 19:59",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 12"
+        }
+      ]
+    },
+    {
+      "id": "reg_e214926f52e1",
+      "callerCode": "VIEW",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_833bfa702c71",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "activity-log:read",
+        "contracts:read",
+        "documents:read",
+        "invoices:read",
+        "owners:read",
+        "photos:read",
+        "tenants:read",
+        "transactions:read",
+        "units:read",
+        "wallets:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-21 11:51",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 28"
+        }
+      ]
+    },
+    {
+      "id": "reg_e23d23b67d53",
+      "callerCode": "VIEW",
+      "providerCode": "ASAR",
+      "callerSystemId": "sys_833bfa702c71",
+      "providerSystemId": "sys_f4a9c580e222",
+      "scopes": [
+        "apartments:read",
+        "inquiries:read"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:26",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 29"
+        }
+      ]
+    },
+    {
+      "id": "reg_e360fb8a5f41",
+      "callerCode": "VIEW",
+      "providerCode": "RENT",
+      "callerSystemId": "sys_833bfa702c71",
+      "providerSystemId": "sys_fe02ea4f9991",
+      "scopes": [
+        "activity:read",
+        "customer_sources:read",
+        "customers:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-21 11:50",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 31"
+        }
+      ]
+    },
+    {
+      "id": "reg_e9cbb53bce35",
+      "callerCode": "RENT",
+      "providerCode": "APMS",
+      "callerSystemId": "sys_fe02ea4f9991",
+      "providerSystemId": "sys_eee8d6e14f32",
+      "scopes": [
+        "activity-log:read",
+        "contracts:read",
+        "owners:read",
+        "tenants:read",
+        "units:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-10-01 16:48",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 24"
+        }
+      ]
+    },
+    {
+      "id": "reg_f329fda33a7d",
+      "callerCode": "IDP",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_36aee854d022",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "companies:read",
+        "holdings:read",
+        "investors:read",
+        "projects:read"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-03-29 08:30",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 8"
+        }
+      ]
+    },
+    {
+      "id": "reg_fcb759d45bc1",
+      "callerCode": "AOP",
+      "providerCode": "APMP",
+      "callerSystemId": "sys_cb117452740c",
+      "providerSystemId": "sys_5a763eb212a5",
+      "scopes": [
+        "projects:read"
+      ],
+      "status": "ACTIVE",
+      "compatibility": "COMPATIBLE",
+      "updated": "2026-05-21 14:28",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 3"
+        }
+      ]
+    },
+    {
+      "id": "reg_ff1dd3ec8a35",
+      "callerCode": "ASAR",
+      "providerCode": "ASSA",
+      "callerSystemId": "sys_f4a9c580e222",
+      "providerSystemId": "sys_770eafc97434",
+      "scopes": [
+        "audit-logs:read",
+        "contacts:read",
+        "contacts:write",
+        "units:read",
+        "units:write"
+      ],
+      "status": "REVOKED",
+      "compatibility": null,
+      "updated": "2026-11-18 14:09",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-data/registry-grants.csv",
+          "pointer": "row 6"
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "id": "reg_054ccf8979ae",
+      "replitProject": "BUC",
+      "systemId": "sys_19305898134b",
+      "registryCode": null,
+      "authAppCode": "BUC",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Auth-only app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 31"
+        }
+      ]
+    },
+    {
+      "id": "reg_056854a9217a",
+      "replitProject": null,
+      "systemId": "sys_910c46c57589",
+      "registryCode": "AOPP",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "POSSIBLE_MATCH",
+      "note": "Duplicate \"Asakin Opportunities\" record for ao.asakin.sa, INACTIVE; probably superseded by AOP",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 37"
+        }
+      ]
+    },
+    {
+      "id": "reg_08f25042ea06",
+      "replitProject": "Asakin-Website-1",
+      "systemId": "sys_efbface5fc7b",
+      "registryCode": "WEB",
+      "authAppCode": "UNKNOWN",
+      "claimedInCode": "UNKNOWN in repo (secret not read)",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Confirmed by the app's own health payload shown in Registry monitoring (provider appCode WEB). Registry base_url https://asakin.sa vs project domain web.asakin.sa",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 13"
+        }
+      ]
+    },
+    {
+      "id": "reg_1fa287832337",
+      "replitProject": "OSP",
+      "systemId": "sys_240cc6d7e6aa",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 23"
+        }
+      ]
+    },
+    {
+      "id": "reg_38023a02d89f",
+      "replitProject": "AO",
+      "systemId": "sys_cb117452740c",
+      "registryCode": "AOP",
+      "authAppCode": "AO",
+      "claimedInCode": "AOP",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Second Registry record AOPP (same name, same base URL, INACTIVE, never health-checked) looks like a leftover duplicate",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 7"
+        }
+      ]
+    },
+    {
+      "id": "reg_429cf0cd19ad",
+      "replitProject": "PCC",
+      "systemId": "sys_46e5af94aac2",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "No Registry record for PCC. Registry has PPC \"Purchase Plan Calculator\" (ppc.asakin.sa) — different name and domain; not treated as a match",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 18"
+        }
+      ]
+    },
+    {
+      "id": "reg_4396c1b4058d",
+      "replitProject": "APMP",
+      "systemId": "sys_5a763eb212a5",
+      "registryCode": "APMP",
+      "authAppCode": "APMP",
+      "claimedInCode": "APMP",
+      "matchStatus": "EXACT_MATCH",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 11"
+        }
+      ]
+    },
+    {
+      "id": "reg_4cc379cb43e9",
+      "replitProject": "CFM",
+      "systemId": "sys_56cac354f391",
+      "registryCode": null,
+      "authAppCode": "CFM",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 22"
+        }
+      ]
+    },
+    {
+      "id": "reg_53cd8707d6e9",
+      "replitProject": null,
+      "systemId": "sys_833bfa702c71",
+      "registryCode": "VIEW",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "UNKNOWN",
+      "note": "\"API Read Only\" app with broad read grants on APMP, APMS, MARKETERS, RENT; health DOWN (DNS failure for view.asakin.sa). No matching project found",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 36"
+        }
+      ]
+    },
+    {
+      "id": "reg_57672a779791",
+      "replitProject": "PM",
+      "systemId": "sys_39b8bcdd2559",
+      "registryCode": null,
+      "authAppCode": "PM",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Auth-only app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 32"
+        }
+      ]
+    },
+    {
+      "id": "reg_585dfec7adcf",
+      "replitProject": "Vibe-Docs",
+      "systemId": "sys_00e935831fe6",
+      "registryCode": null,
+      "authAppCode": "DOCS",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 21"
+        }
+      ]
+    },
+    {
+      "id": "reg_595cd89f076f",
+      "replitProject": "ABP",
+      "systemId": "sys_3fadba103633",
+      "registryCode": null,
+      "authAppCode": "ABP",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Auth-only app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 29"
+        }
+      ]
+    },
+    {
+      "id": "reg_5af46a5b28cc",
+      "replitProject": "Asakin-Apps",
+      "systemId": "sys_3c89cb877461",
+      "registryCode": null,
+      "authAppCode": "APPS",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "No Registry/Tiny code in repo",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 19"
+        }
+      ]
+    },
+    {
+      "id": "reg_6ba6cc7d56ac",
+      "replitProject": "ACC",
+      "systemId": "sys_9c1ea5c91673",
+      "registryCode": "ACC",
+      "authAppCode": "ACC",
+      "claimedInCode": "ACC",
+      "matchStatus": "EXACT_MATCH",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 8"
+        }
+      ]
+    },
+    {
+      "id": "reg_7e0cccd00aec",
+      "replitProject": "Media",
+      "systemId": "sys_dfcff6c92779",
+      "registryCode": "MEDIA",
+      "authAppCode": "MEDIA",
+      "claimedInCode": "MEDIA (DOCUMENTED_ONLY)",
+      "matchStatus": "POSSIBLE_MATCH",
+      "note": "Registry monitoring shows MEDIA health DOWN (HTTP 404) at https://media.asakin.sa; the Replit project has no published domain recorded",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 17"
+        }
+      ]
+    },
+    {
+      "id": "reg_811d334e0013",
+      "replitProject": "Asakin-Design-System",
+      "systemId": "sys_4ff61f34d080",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Design system; no runtime integrations",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 24"
+        }
+      ]
+    },
+    {
+      "id": "reg_90e40db9cd25",
+      "replitProject": null,
+      "systemId": null,
+      "registryCode": "TEST_APP",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "UNKNOWN",
+      "note": "Test record, INACTIVE",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 40"
+        }
+      ]
+    },
+    {
+      "id": "reg_96b3eb53ad74",
+      "replitProject": "PPE",
+      "systemId": "sys_e81fdaaf5e4c",
+      "registryCode": "PPE",
+      "authAppCode": "PPE",
+      "claimedInCode": "PPE",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Registry base_url is https://AsakinPPE.replit.app while the published domain is ppe.asakin.sa",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 12"
+        }
+      ]
+    },
+    {
+      "id": "reg_9719fc4d5430",
+      "replitProject": "TP",
+      "systemId": "sys_e30a602002dd",
+      "registryCode": "TENANT",
+      "authAppCode": null,
+      "claimedInCode": "UNKNOWN in repo (secret not read)",
+      "matchStatus": "ALIAS_MATCH",
+      "note": "Matched by base URL tp.asakin.sa = project domain; app code itself not visible in repo or health payload",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 16"
+        }
+      ]
+    },
+    {
+      "id": "reg_9a1a81a66f65",
+      "replitProject": "Chat",
+      "systemId": "sys_7a285aafb421",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Registry lookup returns APP_NOT_FOUND for CHATCENTER/CHAT (reported by MARKETERS agent); no record in Registry UI",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 20"
+        }
+      ]
+    },
+    {
+      "id": "reg_9b4f08d47a64",
+      "replitProject": "Asakin-Registry",
+      "systemId": "sys_bcce0887b171",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "n/a",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "The Registry itself",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 35"
+        }
+      ]
+    },
+    {
+      "id": "reg_9fb732aef0d5",
+      "replitProject": "Payments",
+      "systemId": null,
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "UNKNOWN",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "No Registry record with payments.asakin.sa",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 33"
+        }
+      ]
+    },
+    {
+      "id": "reg_a26b53549d9e",
+      "replitProject": "Renting",
+      "systemId": "sys_fe02ea4f9991",
+      "registryCode": "RENT",
+      "authAppCode": "RENT",
+      "claimedInCode": "RENT",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Chat Center code: rent",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 3"
+        }
+      ]
+    },
+    {
+      "id": "reg_a6814e2ff858",
+      "replitProject": "Investor-Portal",
+      "systemId": "sys_d8953034c957",
+      "registryCode": "INP",
+      "authAppCode": null,
+      "claimedInCode": "INP",
+      "matchStatus": "EXACT_MATCH",
+      "note": "health payload app_code INP",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 10"
+        }
+      ]
+    },
+    {
+      "id": "reg_a72148bb32ac",
+      "replitProject": null,
+      "systemId": "sys_fdabc73484c3",
+      "registryCode": "INVP",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "UNKNOWN",
+      "note": "\"Old Investor Portal\" (invp.replit.app); grants on APMP and ASSA still ACTIVE; health DOWN (404). Superseded by INP",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 38"
+        }
+      ]
+    },
+    {
+      "id": "reg_aa2c00f8503e",
+      "replitProject": "Sales-System",
+      "systemId": "sys_770eafc97434",
+      "registryCode": "ASSA",
+      "authAppCode": null,
+      "claimedInCode": "ASSA",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Registry status INACTIVE since 2026-11-18 14:09; ASSA<->ASAR grants REVOKED; INVP->ASSA grant still ACTIVE against an inactive provider",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 6"
+        }
+      ]
+    },
+    {
+      "id": "reg_aabe2959c04c",
+      "replitProject": "Contract",
+      "systemId": "sys_37b4a137fed5",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 25"
+        }
+      ]
+    },
+    {
+      "id": "reg_b14d96c90be7",
+      "replitProject": "OwnerPortal",
+      "systemId": "sys_da050cc3fbe6",
+      "registryCode": "OWNER",
+      "authAppCode": null,
+      "claimedInCode": "OWNER (DOCUMENTED_ONLY)",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Confirmed by health payload appCode OWNER shown in Registry monitoring",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 15"
+        }
+      ]
+    },
+    {
+      "id": "reg_b1fde14e53d9",
+      "replitProject": "Marketers",
+      "systemId": "sys_d749abcbfeda",
+      "registryCode": "MARKETERS",
+      "authAppCode": "MARKETERS",
+      "claimedInCode": "MARKETERS",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Chat Center uses a different code (marketeres) for this app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 2"
+        }
+      ]
+    },
+    {
+      "id": "reg_b3d77bb90f11",
+      "replitProject": null,
+      "systemId": null,
+      "registryCode": "TEST1",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "UNKNOWN",
+      "note": "Test record, INACTIVE",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 41"
+        }
+      ]
+    },
+    {
+      "id": "reg_b8e9aa6d2674",
+      "replitProject": "Auth",
+      "systemId": "sys_347e7c8c3723",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "n/a",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Identity provider; separate from Registry by design",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 34"
+        }
+      ]
+    },
+    {
+      "id": "reg_c318fd437dae",
+      "replitProject": "FMC",
+      "systemId": "sys_7b130690018b",
+      "registryCode": null,
+      "authAppCode": "FMC",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Auth-only app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 30"
+        }
+      ]
+    },
+    {
+      "id": "reg_e07ccce9ac19",
+      "replitProject": "ApartReq",
+      "systemId": "sys_f4a9c580e222",
+      "registryCode": "ASAR",
+      "authAppCode": "AR",
+      "claimedInCode": "ASAR",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Registry status INACTIVE since 2026-11-18 14:27; all ASAR grants REVOKED the same day. Auth code AR and Chat Center code asakin_ar differ from the Registry code",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 5"
+        }
+      ]
+    },
+    {
+      "id": "reg_e451f6d0c819",
+      "replitProject": "Calendar",
+      "systemId": "sys_39b5161d72c8",
+      "registryCode": null,
+      "authAppCode": "CAL",
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Auth-only app",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 28"
+        }
+      ]
+    },
+    {
+      "id": "reg_e8742aebc7d0",
+      "replitProject": "OffPlanTracker",
+      "systemId": "sys_b938b42dda85",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 27"
+        }
+      ]
+    },
+    {
+      "id": "reg_ee537f17bc5b",
+      "replitProject": "APMS-v15",
+      "systemId": "sys_eee8d6e14f32",
+      "registryCode": "APMS",
+      "authAppCode": "APMS",
+      "claimedInCode": "APMS",
+      "matchStatus": "EXACT_MATCH",
+      "note": null,
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 4"
+        }
+      ]
+    },
+    {
+      "id": "reg_f0fd03523c89",
+      "replitProject": "Marketers-Platform",
+      "systemId": "sys_4d44e3131a83",
+      "registryCode": null,
+      "authAppCode": null,
+      "claimedInCode": "none",
+      "matchStatus": "NOT_REGISTERED",
+      "note": "Legacy marketers platform; the Registry code MARKETERS belongs to the Marketers project",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 26"
+        }
+      ]
+    },
+    {
+      "id": "reg_f53d16160c5c",
+      "replitProject": "IDP",
+      "systemId": "sys_36aee854d022",
+      "registryCode": "IDP",
+      "authAppCode": "IDP",
+      "claimedInCode": "IDP",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Registry base_url is https://AsakinIDP.replit.app while the published domain is idp.asakin.sa. IDP->APMP grant is REVOKED (2026-03-29) although IDP code still calls APMP",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 9"
+        }
+      ]
+    },
+    {
+      "id": "reg_f5c71ca33b21",
+      "replitProject": null,
+      "systemId": "sys_58ad036babbd",
+      "registryCode": "PPC",
+      "authAppCode": null,
+      "claimedInCode": null,
+      "matchStatus": "UNKNOWN",
+      "note": "\"Purchase Plan Calculator\" (ppc.asakin.sa), created 2026-11-17; grants PPC->APMP and PPC->WEB. No project with this domain in the 45-project inventory",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 39"
+        }
+      ]
+    },
+    {
+      "id": "reg_fe1534dee6c5",
+      "replitProject": "PRG",
+      "systemId": "sys_aad0c0a85ddf",
+      "registryCode": "PRG",
+      "authAppCode": null,
+      "claimedInCode": "UNKNOWN in repo (secret not read)",
+      "matchStatus": "EXACT_MATCH",
+      "note": "Confirmed by health payload app_code PRG shown in Registry monitoring",
+      "provenance": [
+        {
+          "member": "ASAKIN-INTEGRATION-AUDIT/registry-application-mapping.csv",
+          "pointer": "row 14"
+        }
+      ]
+    }
+  ]
+}

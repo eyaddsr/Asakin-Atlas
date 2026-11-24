@@ -1,0 +1,64 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 · الأطلس — نقطة البداية الهادئة",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Reveal.dc.html",
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "2 · الأطلس — الروابط تظهر عند التمرير فقط",
+      "is_interactive": true
+    },
+    {
+      "file": "Focus.dc.html",
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "3 · التركيز على نظام — الوارد والصادر",
+      "is_interactive": true
+    },
+    {
+      "file": "Integration.dc.html",
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "4 · فحص تكامل وتتبّع حقل عبر الأنظمة",
+      "is_interactive": true
+    },
+    {
+      "file": "Impact.dc.html",
+      "x": 6080,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "5 · ماذا لو تغيّر نظام؟ — محاكاة الأثر",
+      "is_interactive": true
+    }
+  ],
+  "annotations": [
+    {
+      "id": "journey",
+      "x": 0,
+      "y": -300,
+      "w": 240,
+      "maxW": 7520,
+      "text": "خريطة تكاملات أساكن — رحلة الاستكشاف (نموذج تفاعلي · بيانات توضيحية)",
+      "kind": "title1"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

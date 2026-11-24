@@ -1,0 +1,77 @@
+{
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "subjectType": "system",
+      "subjectKey": "EXT:REPLIT-OBJECT-STORAGE",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-002",
+      "subjectType": "system",
+      "subjectKey": "EXT:BROWSER-PUSH",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-003",
+      "subjectType": "system",
+      "subjectKey": "EXT:EJAR",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-004",
+      "subjectType": "system",
+      "subjectKey": "EXT:EXPO-PUSH",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-005",
+      "subjectType": "system",
+      "subjectKey": "EXT:GCS",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-006",
+      "subjectType": "system",
+      "subjectKey": "EXT:GOOGLE-FONTS",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-007",
+      "subjectType": "system",
+      "subjectKey": "EXT:UNSPLASH",
+      "decision": "exclude",
+      "rationale": "Removed from the integration map, together with every claim and field mapping that touches it, at the technical team's request in the 2026-11-23 design review session. The audit archive is unchanged.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    },
+    {
+      "id": "DEC-008",
+      "subjectType": "system",
+      "subjectKey": "WEB",
+      "decision": "rename",
+      "displayName": "الموقع العام",
+      "rationale": "Display name changed to «الموقع العام» (the public website) at the technical team's request in the 2026-11-23 review session. The archive name stays searchable as an alias.",
+      "reviewer": "technical team (in-session request)",
+      "reviewedAt": "2026-11-23"
+    }
+  ]
+}
